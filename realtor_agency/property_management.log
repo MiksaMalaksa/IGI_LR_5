@@ -1,0 +1,1809 @@
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Admin accessed property list
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Admin accessed property list
+Admin accessed property list
+Admin accessed property list
+Admin accessed property list
+Admin accessed property list
+Admin accessed property list
+Admin accessed property list
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Admin accessed property list
+Admin accessed property list
+Property None deleted successfully
+Admin accessed property list
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/1.1" 200 308
+Admin accessed property list
+Admin accessed property list
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Watching for file changes with StatReloader
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Not Found: /favicon.ico
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Home page accessed
+Home page accessed
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Admin accessed property list
+Admin accessed property list
+Admin accessed property list
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'tEXt' 62 17
+STREAM b'tEXt' 91 19
+STREAM b'zTXt' 122 45
+STREAM b'IDAT' 179 20391711
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+Property created successfully
+Admin accessed property list
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Property detail page accessed
+Admin accessed property list
+Admin accessed property list
+Watching for file changes with StatReloader
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Not Found: /favicon.ico
+Home page accessed
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Admin accessed property list
+Admin accessed property list
+Admin accessed property list
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Property detail page accessed
+Admin accessed property list
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/1.1" 200 308
+Admin accessed property list
+Admin accessed property list
+Starting new HTTPS connection (1): api.nationalize.io:443
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/1.1" 200 308
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/1.1" 200 308
+Statistics page accessed
+Admin accessed property list
+Home page accessed
+Home page accessed
+Watching for file changes with StatReloader
+Looking up time zone info from registry
+Home page accessed
+Not Found: /favicon.ico
+Home page accessed
+Internal Server Error: /agency/register/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py", line 18, in register
+    return render(request, 'users/register.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/register.html
+D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /agency/register/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py", line 18, in register
+    return render(request, 'agency/register.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: agency/register.html
+Internal Server Error: /agency/register/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py", line 18, in register
+    return render(request, 'agency/register.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: agency/register.html
+D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /agency/register/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py", line 11, in register
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\forms\forms.py", line 197, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\forms\forms.py", line 192, in errors
+    self.full_clean()
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\forms\forms.py", line 327, in full_clean
+    self._clean_fields()
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\forms\forms.py", line 342, in _clean_fields
+    value = getattr(self, "clean_%s" % name)()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\agency\forms.py", line 16, in clean_date_of_birth
+    age = timezone.now().year - dob.year
+          ^^^^^^^^^^^^
+AttributeError: type object 'datetime.timezone' has no attribute 'now'
+D:\uni\4sem\igi\lab5\realtor_agency\agency\forms.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\agency\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /agency/register/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py", line 24, in register
+    return render(request, 'agency/register.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: agency/register.html
+Internal Server Error: /agency/register/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py", line 24, in register
+    return render(request, 'agency/register.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: agency/register.html
+Looking up time zone info from registry
+Home page accessed
+Home page accessed
+Internal Server Error: /agency/register/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py", line 24, in register
+    return render(request, 'agency/register.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: agency/register.html
+D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /agency/register/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: agency_profile.birthdate
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py", line 15, in register
+    user = form.save()
+           ^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\contrib\auth\forms.py", line 151, in save
+    user.save()
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\contrib\auth\base_user.py", line 78, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 924, in save_base
+    post_save.send(
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\dispatch\dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\agency\signals.py", line 10, in create_user_profile
+    Profile.objects.create(user=instance)
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 1071, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 1112, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: agency_profile.birthdate
+D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /agency/register/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: agency_profile.birthdate
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py", line 15, in register
+    user = form.save()
+           ^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\contrib\auth\forms.py", line 151, in save
+    user.save()
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\contrib\auth\base_user.py", line 78, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 924, in save_base
+    post_save.send(
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\dispatch\dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\agency\signals.py", line 10, in create_user_profile
+    Profile.objects.create(user=instance)
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 1071, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 1112, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: agency_profile.birthdate
+D:\uni\4sem\igi\lab5\realtor_agency\agency\apps.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\agency\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /agency/register/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py", line 23, in register
+    return render(request, 'agency/register.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: agency/register.html
+Internal Server Error: /agency/register/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py", line 23, in register
+    return render(request, 'agency/register.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: agency/register.html
+Looking up time zone info from registry
+Home page accessed
+Internal Server Error: /agency/register/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py", line 23, in register
+    return render(request, 'agency/register.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: agency/register.html
+Internal Server Error: /agency/register/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py", line 23, in register
+    return render(request, 'agency/register.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: agency/register.html
+D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+Looking up time zone info from registry
+Home page accessed
+Property detail page accessed
+Forbidden (CSRF token from POST incorrect.): /agency/login/
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/1.1" 200 308
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 254, in statistics
+    profitable_category = Property.objects.values('property_types__name').annotate(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1680, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1198, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\aggregates.py", line 65, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 975, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 854, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 2014, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1867, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1772, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'sales' into field. Choices are: created_at, floor, id, image, location, owner, owner_id, price, property_types, sale, square_meters, title, updated_at
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 287, in statistics
+    profitable_category = Property.objects.values('property_types__name').annotate(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1680, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1198, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\aggregates.py", line 65, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 975, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 854, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 2014, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1867, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1772, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'sales' into field. Choices are: created_at, floor, id, image, location, owner, owner_id, price, property_types, sale, square_meters, title, updated_at
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 287, in statistics
+    profitable_category = Property.objects.values('property_types__name').annotate(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1680, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1198, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\aggregates.py", line 65, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 975, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 854, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 2014, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1867, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1772, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'sales' into field. Choices are: created_at, floor, id, image, location, owner, owner_id, price, property_types, sale, square_meters, title, updated_at
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 287, in statistics
+    profitable_category = Property.objects.values('property_types__name').annotate(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1680, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1198, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\aggregates.py", line 65, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 975, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 854, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 2014, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1867, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1772, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'sales' into field. Choices are: created_at, floor, id, image, location, owner, owner_id, price, property_types, sale, square_meters, title, updated_at
+D:\uni\4sem\igi\lab5\realtor_agency\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 306, in statistics
+    profitable_category = Property.objects.values('property_types__name').annotate(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1680, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1198, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\aggregates.py", line 65, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 975, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 854, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 2014, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1867, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1772, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'sales' into field. Choices are: created_at, floor, id, image, location, owner, owner_id, price, property_types, sale, square_meters, title, updated_at
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/1.1" 200 308
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 306, in statistics
+    profitable_category = Property.objects.values('property_types__name').annotate(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1680, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1198, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\aggregates.py", line 65, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 975, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 854, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 2014, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1867, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1772, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'sales' into field. Choices are: created_at, floor, id, image, location, owner, owner_id, price, property_types, sale, square_meters, title, updated_at
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Statistics page accessed
+Looking up time zone info from registry
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=yelechacha20203w HTTP/1.1" 200 50
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Property detail page accessed
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Property detail page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/1.1" 200 308
+Statistics page accessed
+Admin accessed property list
+Admin accessed property list
+Admin accessed property list
+Not Found: /purchase
+Internal Server Error: /purchase/1/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 105, in purchase_property
+    sale = Sale.objects.create(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 677, in create
+    obj = self.model(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Sale() got unexpected keyword arguments: 'user'
+D:\uni\4sem\igi\lab5\realtor_agency\company\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /purchase/1/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 105, in purchase_property
+    sale = Sale.objects.create(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 677, in create
+    obj = self.model(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Sale() got unexpected keyword arguments: 'user'
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Property detail page accessed
+Internal Server Error: /purchase/1/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 105, in purchase_property
+    sale = Sale.objects.create(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 677, in create
+    obj = self.model(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Sale() got unexpected keyword arguments: 'user'
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\agency\models.py changed, reloading.
+Watching for file changes with StatReloader
+Property detail page accessed
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/1.1" 200 308
+Statistics page accessed
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Statistics page accessed
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Property detail page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Property detail page accessed
+Property detail page accessed
+Property detail page accessed
+Property detail page accessed
+Property detail page accessed
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Property detail page accessed
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/1.1" 200 308
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/1.1" 200 308
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Property detail page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Property detail page accessed
+Property detail page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\models.py changed, reloading.
+Watching for file changes with StatReloader
+Property detail page accessed
+Watching for file changes with StatReloader
+Property detail page accessed
+Internal Server Error: /purchase/1/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: agency_sale.sale_date
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 105, in purchase_property
+    sale = Sale.objects.create(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 1071, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\base.py", line 1112, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: agency_sale.sale_date
+Watching for file changes with StatReloader
+Property detail page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Property detail page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /purchase/1/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 110, in purchase_property
+    sale_date=datetime.date.today(),
+              ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'method_descriptor' object has no attribute 'today'
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Watching for file changes with StatReloader
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Not Found: /favicon.ico
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/1.1" 200 308
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Internal Server Error: /purchase/1/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 100, in purchase_property
+    logger.log(f'final_price {final_price}')
+TypeError: Logger.log() missing 1 required positional argument: 'msg'
+Internal Server Error: /purchase/1/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 100, in purchase_property
+    logger.log(f'final_price {final_price}')
+TypeError: Logger.log() missing 1 required positional argument: 'msg'
+Internal Server Error: /purchase/1/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 100, in purchase_property
+    logger.log(f'final_price {final_price}')
+TypeError: Logger.log() missing 1 required positional argument: 'msg'
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Home page accessed
+Not Found: /accounts/login/
+Home page accessed
+Home page accessed
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/1.1" 200 308
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/1.1" 200 308
+Statistics page accessed
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 373, in statistics
+    return render(request, 'statistics.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 110: 'endblock'. Did you forget to register or load this tag?
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Statistics page accessed
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/1.1" 200 308
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Statistics page accessed
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/1.1" 200 308
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Statistics page accessed
+Watching for file changes with StatReloader
+Statistics page accessed
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Statistics page accessed
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 365, in statistics
+    return render(request, 'statistics.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 515, in parse
+    self.unclosed_block_tag(parse_until)
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 578, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 5: 'block'. Looking for one of: endblock.
+Statistics page accessed
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Statistics page accessed
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Statistics page accessed
+Statistics page accessed
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Statistics page accessed
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Statistics page accessed
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 177, in statistics
+    client_purchase_counts = User.objects.values('username').annotate(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1680, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1198, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\aggregates.py", line 65, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 975, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 854, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 2014, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1867, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1772, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'sale' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, profile, user, user_permissions, username
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 177, in statistics
+    client_purchase_counts = User.objects.values('username').annotate(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1680, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1198, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\aggregates.py", line 65, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 975, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 854, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 2014, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1867, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1772, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'sale' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, profile, user, user_permissions, username
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 349, in statistics
+    profitable_category = Property.objects.values('property_types__name').annotate(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1680, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1198, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\aggregates.py", line 65, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 975, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 854, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 2014, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1867, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1772, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'sale' into field. Choices are: created_at, floor, id, image, location, owner, owner_id, price, property_types, sales, square_meters, title, updated_at
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 349, in statistics
+    profitable_category = Property.objects.values('property_types__name').annotate(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\query.py", line 1680, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1198, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\aggregates.py", line 65, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 975, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\expressions.py", line 854, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 2014, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1867, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\db\models\sql\query.py", line 1772, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'sale' into field. Choices are: created_at, floor, id, image, location, owner, owner_id, price, property_types, sales, square_meters, title, updated_at
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\uni\4sem\igi\lab5\realtor_agency\company\views.py", line 331, in statistics
+    return render(request, 'statistics.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Home\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 134: 'endblock'. Did you forget to register or load this tag?
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+D:\uni\4sem\igi\lab5\realtor_agency\company\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Looking up time zone info from registry
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/1.1" 200 None
+Home page accessed
+Watching for file changes with StatReloader

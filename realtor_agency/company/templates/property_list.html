@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Properties{% endblock %}
+
+{% block content %}
+<h1>Properties</h1>
+
+{% if user.is_superuser %}
+<div class="button-container">
+    <a href="{% url 'property_create' %}" class="button">Add Property</a>
+</div>
+{% endif %}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Location</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for property in properties %}
+        <tr>
+            <td>{{ property.title }}</td>
+            <td>{{ property.price }}</td>
+            <td>{{ property.location }}</td>
+            <td class="action-buttons">
+                <a href="{% url 'property_update' property.id %}" class="button">Edit</a>
+                <form action="{% url 'property_delete' property.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="delete">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

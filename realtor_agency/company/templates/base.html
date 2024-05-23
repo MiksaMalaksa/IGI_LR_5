@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My company{% endblock %}</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'news' %}">News</a></li>
+                <li><a href="{% url 'dictionary' %}">Dictionary</a></li>
+                <li><a href="{% url 'contacts' %}">Contacts</a></li>
+                <li><a href="{% url 'privacy_policy' %}">Policies</a></li>
+                <li><a href="{% url 'vacancies' %}">Vacancies</a></li>
+                <li><a href="{% url 'reviews' %}">Reviews</a></li>
+                <li><a href="{% url 'coupons' %}">Promos</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                    <li><a href="{% url 'profile' %}">Profile</a></li>
+                    {% if user.is_superuser %}
+                        <li><a href="{% url 'property_list' %}">Manage Properties</a></li>
+                    {% endif %}
+                {% else %}
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'register' %}">Register</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

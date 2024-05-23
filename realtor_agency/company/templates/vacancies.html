@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Vacancies{% endblock %}
+
+{% block content %}
+<h1>Vacancies</h1>
+{% if vacancies %}
+    <ul>
+    {% for vacancy in vacancies %}
+        <li>
+            <h2>{{ vacancy.title }}</h2>
+            <p>{{ vacancy.description }}</p>
+            <p>Salary: {{ vacancy.salary }}</p>
+            <p>Experience: {{ vacancy.experience_required }} years</p>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No vacancies right now!</p>
+{% endif %}
+{% endblock %}

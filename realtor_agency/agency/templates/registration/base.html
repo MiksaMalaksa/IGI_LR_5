@@ -1,0 +1,39 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Моя компания{% endblock %}</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li><a href="{% url 'about' %}">О компании</a></li>
+                <li><a href="{% url 'news' %}">Новости</a></li>
+                <li><a href="{% url 'dictionary' %}">Словарь терминов</a></li>
+                <li><a href="{% url 'contacts' %}">Контакты</a></li>
+                <li><a href="{% url 'privacy_policy' %}">Политика конфиденциальности</a></li>
+                <li><a href="{% url 'vacancies' %}">Вакансии</a></li>
+                <li><a href="{% url 'reviews' %}">Отзывы</a></li>
+                <li><a href="{% url 'coupons' %}">Промокоды и купоны</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}">Выход</a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}">Вход</a></li>
+                    <li><a href="{% url 'register' %}">Регистрация</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

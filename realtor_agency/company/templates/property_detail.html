@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Property Detail
+{% endblock %}
+
+{% block content %}
+<div style="background-color: #2f25c1; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+    <h1 style="color: #fff;">{{ property.title }}</h1>
+    <p style="color: #fff;">Price: {{ property.price }}</p>
+    <p style="color: #fff;">Location: {{ property.location }}</p>
+    <p style="color: #fff;">Floor: {{ property.floor }}</p>
+    <p style="color: #fff;">Square Meters: {{ property.square_meters }}</p>
+    {% if property.image %}
+        <img src="{{ property.image.url }}" alt="{{ property.title }}" style="max-width: 500px;">
+    {% endif %}
+</div>
+{% if user.is_authenticated %}
+<div style="display: flex; flex-direction: column; align-items: flex-start;">
+    <div style="display: flex; align-items: center;">
+        <a href="{% url 'home' %}" style="padding: 10px 20px; background-color: #28a745; color: #fff; text-decoration: none; border-radius: 5px; width: 150px; text-align: center;">Back to Home</a>
+        <form method="post" action="{% url 'purchase_property' property.id %}" style="margin-left: 20px;">
+            {% csrf_token %}
+            <input type="hidden" name="property_id" value="{{ property.id }}">
+            <button type="submit" name="purchase" style="padding: 10px 20px; background-color: #28a745; color: #fff; border: none; border-radius: 5px; width: 150px; text-align: center;">Purchase</button>
+        </form>
+    </div>
+    {% if not active_coupons %}
+        <div style="color: red; margin-top: 10px;">No active coupons available.</div>
+    {% else %}
+        <form method="post" action="{% url 'purchase_property' property.id %}" style="display: flex; align-items: center; margin-top: 10px;">
+            {% csrf_token %}
+            <input type="hidden" name="property_id" value="{{ property.id }}">
+            <label for="coupons" style="color: #fff; margin-right: 10px;">Enter Coupon:</label>
+            <select name="coupons" id="coupons" style="padding: 5px; border-radius: 5px;">
+                {% for coupon in active_coupons %}
+                    <option value="{{ coupon.code }}">{{ coupon.code }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" style="padding: 10px 20px; background-color: #28a745; color: #fff; border: none; border-radius: 5px; margin-left: 10px; width: 150px; text-align: center;">Apply Coupon</button>
+        </form>
+    {% endif %}
+</div>
+{% endif %}
+{% if messages %}
+    <div style="margin-top: 20px;">
+        {% for message in messages %}
+            <div style="color: {% if message.tags == 'error' %}red{% else %}green{% endif %};">{{ message }}</div>
+        {% endfor %}
+    </div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<div
+    style="max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <h1 style="text-align: center;">Profile</h1>
+    <p style="font-size: 18px;"><strong>Full Name:</strong> {{ full_name }}</p>
+    <p style="font-size: 18px;"><strong>Email:</strong> {{ email }}</p>
+    <p style="font-size: 18px;"><strong>Join date:</strong> {{ joined }}</p>
+    <p style="font-size: 18px;"><strong>Role:</strong> {{ role }}</p>
+    <p style="font-size: 18px;"><strong>Nationality:</strong> {{ nationalities }}</p>
+    {% if role == 'admin' %}
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="{% url 'statistics' %}" style="padding: 10px 20px; background-color: #4b4bf0; color: white; border: none; border-radius: 5px; font-size: 1.2em; text-decoration: none;">Statistics</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

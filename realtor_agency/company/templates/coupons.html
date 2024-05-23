@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Coupons{% endblock %}
+
+{% block content %}
+<h1>Coupons</h1>
+{% if active_coupons %}
+    <ul>
+    {% for coupon in active_coupons %}
+        <li>
+            <h2>{{ coupon.code }}</h2>
+            <p>{{ coupon.active|yesno:"Active, Expired" }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Coupons!</p>
+{% endif %}
+{% endblock %}

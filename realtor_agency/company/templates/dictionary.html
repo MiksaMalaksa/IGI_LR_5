@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Dictionary{% endblock %}
+
+{% block content %}
+<h1>Dictionary</h1>
+{% if terms %}
+    <ul>
+    {% for term in terms %}
+        <li>
+            <h2>{{ term.term }}</h2>
+            <p>{{ term.definition }}</p>
+            <p>Added: {{ term.added_at }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Dictionary is empty!</p>
+{% endif %}
+{% endblock %}

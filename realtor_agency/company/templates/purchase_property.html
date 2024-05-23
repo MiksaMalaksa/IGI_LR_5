@@ -1,0 +1,33 @@
+<!-- purchase_property.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Purchase Property</h2>
+<form method="post" id="purchase-form">
+  {% csrf_token %}
+  <input type="hidden" name="property_id" value="{{ property.id }}">
+  <label for="coupons">Enter Coupons (comma separated):</label>
+  <input type="text" id="coupons" name="coupons">
+  <button type="submit">Purchase</button>
+</form>
+<div id="message"></div>
+<script>
+  document.getElementById('purchase-form').onsubmit = function(e) {
+      e.preventDefault();
+      var form = e.target;
+      var data = new FormData(form);
+      fetch(form.action, {
+          method: 'POST',
+          body: data,
+      })
+      .then(response => response.json())
+      .then(data => {
+          if (data.status === 'success') {
+              document.getElementById('message').innerText = 'Purchase successful! Sale ID: ' + data.sale_id;
+          } else {
+              document.getElementById('message').innerText = 'Error: ' + data.message;
+          }
+      });
+  };
+</script>
+{% endblock %}

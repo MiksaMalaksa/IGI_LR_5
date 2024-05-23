@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Statistics
+{% endblock %}
+
+{% block content %}
+<h1>Statistics</h1>
+
+<h2>Clients</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for client in clients %}
+        <tr>
+            <td>{{ client.username }}</td>
+            <td>{{ client.email }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h2>Sales Summary</h2>
+<p>Total Sales: {{ total_sales }}</p>
+<p>Average Sale: {{ avg_sales }}</p>
+<p>Max Sale: {{ max_sales }}</p>
+
+<h2>Popular and Profitable Categories</h2>
+<p>Most Popular Category: {{ popular_category.property_types__name }}</p>
+<p>Most Profitable Property: {{ most_profitable_property.property__title }} with total profit of {{ most_profitable_property.total_profit }}</p>
+<h2>Client Purchases</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Purchase Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for client_purchase in client_purchase_counts %}
+        <tr>
+            <td>{{ client_purchase.buyer__username }}</td>
+            <td>{{ client_purchase.purchase_count }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h2>Sales Charts</h2>
+<div class="chart-container">
+    <div class="canvas-container">
+        <canvas id="salesChart" class="chart-canvas"></canvas>
+    </div>
+</div>
+<div class="chart-container">
+    <div class="canvas-container">
+        <canvas id="categoryChart" class="chart-canvas"></canvas>
+    </div>
+</div>
+<div class="chart-container">
+    <div class="canvas-container">
+        <canvas id="popularityChart" class="chart-canvas"></canvas>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Sales Chart
+    const salesCtx = document.getElementById('salesChart').getContext('2d');
+    const salesChart = new Chart(salesCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Total Sales', 'Average Sale', 'Max Sale'],
+            datasets: [{
+                label: 'Sales Data',
+                data: [{{ total_sales }}, {{ avg_sales }}, {{ max_sales }}],
+                backgroundColor: ['rgba(54, 162, 235, 0.6)', 'rgba(75, 192, 192, 0.6)', 'rgba(153, 102, 255, 0.6)'],
+                borderColor: ['rgba(54, 162, 235, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+
+    // Popularity Chart (Pie)
+    const popularityCtx = document.getElementById('popularityChart').getContext('2d');
+    const popularityChart = new Chart(popularityCtx, {
+        type: 'pie',
+        data: {
+            labels: [{% for category in category_counts %}'{{ category.property_types__name }}',{% endfor %}],
+            datasets: [{
+                label: 'Popular Property Types',
+                data: [{% for category in category_counts %}{{ category.count }},{% endfor %}],
+                backgroundColor: ['rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(255, 206, 86, 0.6)', 'rgba(75, 192, 192, 0.6)', 'rgba(153, 102, 255, 0.6)', 'rgba(255, 159, 64, 0.6)'],
+                borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return context.label + ': ' + context.raw;
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+{% endblock %}
