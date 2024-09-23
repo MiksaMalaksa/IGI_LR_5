@@ -3,13 +3,6 @@ from django import forms
 from .models import Review
 from agency.models import Property
 
-
-class ReviewForm(forms.ModelForm):
-    class Meta:
-        model = Review
-        fields = ['name', 'rating', 'text']
-
-
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
@@ -21,5 +14,14 @@ class PropertyForm(forms.ModelForm):
         model = Property
         fields = ['title', 'price', 'location', 'floor',
                   'square_meters', 'owner', 'property_types', 'image']
+        
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ['rating', 'text']
+        widgets = {
+            'rating': forms.NumberInput(attrs={'min': 1, 'max': 5}),
+        }
+
 
 

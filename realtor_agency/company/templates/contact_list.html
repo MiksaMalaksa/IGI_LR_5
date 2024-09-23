@@ -3,22 +3,95 @@
 {% block title %}Contacts{% endblock %}
 
 {% block content %}
-<h1>Contacts</h1>
+<style>
+    .contacts-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .contacts-list li {
+        list-style: none;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        width: 30%;
+        background-color: #f9f9f9;
+        transition: transform 0.3s ease;
+    }
+
+    .contacts-list li:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    p {
+        font-size: 16px;
+        color: #666;
+    }
+
+    .contact-image {
+        display: block;
+        margin: 15px auto;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #4CAF50;
+    }
+
+    a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+        background-color: #45a049;
+    }
+
+    .delete {
+        background-color: #f44336;
+    }
+
+    .delete:hover {
+        background-color: #e53935;
+    }
+</style>
+
+<h1 style="text-align: center;">Contacts</h1>
 {% if user.is_superuser %}
-    <a href="{% url 'contact_create' %}">Add Contact</a>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <a href="{% url 'contact_create' %}" class="add-button">Add Contact</a>
+    </div>
 {% endif %}
 {% if contacts %}
     <ul class="contacts-list">
         {% for contact in contacts %}
             <li>
                 <h2>{{ contact.employer.first_name }} {{ contact.employer.last_name }}</h2>
+                <p><strong>Job:</strong> {{ contact.employer.job }}</p>
+                <p><strong>Phone:</strong> {{ contact.employer.phone_number }}</p>
+                <p><strong>Email:</strong> <a href="mailto:{{ contact.employer.email }}">{{ contact.employer.email }}</a></p>
                 <p>{{ contact.description }}</p>
                 {% if contact.image %}
                     <img src="{{ contact.image.url }}" class="contact-image">
                 {% endif %}
                 {% if user.is_superuser %}
-                    <a href="{% url 'contact_update' contact.pk %}">Edit</a>
-                    <a href="{% url 'contact_delete' contact.pk %}">Delete</a>
+                    <a href="{% url 'contact_update' contact.pk %}" class="button">Edit</a>
+                    <a href="{% url 'contact_delete' contact.pk %}" class="button delete">Delete</a>
                 {% endif %}
             </li>
         {% endfor %}

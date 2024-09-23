@@ -1,0 +1,124 @@
+/* General Body Styling */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #0d0d0d; /* Dark, sleek background */
+    color: #f5f5f7; /* Soft white text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Coupons Container */
+.coupons-container {
+    max-width: 1100px; /* Slightly wider for a more balanced look */
+    margin: 60px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #1d1d2e, #13132b); /* Gradient for a modern look */
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5); /* Deep shadow for depth */
+}
+
+/* Coupons Header */
+.coupons-header {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4); /* Cool text shadow */
+}
+
+/* Coupons List */
+.coupons-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Coupon Item */
+.coupon-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2f3640; /* Slightly lighter background for the coupon cards */
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); /* Elevation effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coupon-item:hover {
+    transform: translateY(-10px); /* Makes the coupon lift up */
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.5); /* Higher shadow on hover */
+}
+
+/* Price Drop Animation Section */
+.percentage-drop {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem; /* Bigger for better emphasis */
+    color: #9c2ce1; /* Bright gold for attention */
+    text-shadow: 0px 4px 15px rgba(255, 223, 0, 0.7); /* Soft gold shadow */
+}
+
+.percentage-number {
+    font-size: 3rem; /* Bigger for impact */
+    color: #e74c3c; /* Bright red for urgency */
+    font-weight: bold;
+    animation: pulse 1.5s infinite ease-in-out; /* Subtle pulsing animation */
+}
+
+.dollar-sign {
+    font-size: 2rem;
+    margin-left: 10px;
+    color: #ffffff;
+}
+
+.price-drop-animation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    animation: shake 1.5s infinite; /* Subtle shaking animation */
+}
+
+.price-tag {
+    font-size: 1.8rem;
+    color: #27ae60; /* Bright green for savings */
+    font-weight: bold;
+    text-shadow: 0px 4px 10px rgba(39, 174, 96, 0.7);
+}
+
+/* Animations */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); color: #e74c3c; }
+    50% { transform: scale(1.2); color: #c0392b; }
+    100% { transform: scale(1); color: #e74c3c; }
+}
+
+@keyframes drop {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-10px); opacity: 0.5; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Additional Hover Effect for Coupon */
+.coupon-item:hover .percentage-number {
+    animation: pulse 0.8s infinite;
+}
+
+/* Style for No Coupons Message */
+.no-coupons-message {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #ff4d4d; /* Eye-catching red for no coupons */
+    margin-top: 40px;
+}

@@ -1,8 +1,86 @@
 {% extends 'base.html' %}
+{% load static %} 
 
-{% block title %}Policies{% endblock %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/policies.css' %}">
+</head>
+
+{% block title %}Privacy Policy{% endblock %}
 
 {% block content %}
-<h1>Policies</h1>
-<h2>They said we do not need this page!</h2>
+<div class="policy-container">
+    <h1>Privacy Policy</h1>
+    <p>At Card Housing, we prioritize your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. By accessing or using our website, you agree to this Privacy Policy. If you do not agree with the terms of this policy, please do not use our website or services.</p>
+
+    <section class="policy-section">
+        <h2>Information We Collect</h2>
+        <ul>
+            <li><strong>Personal Information:</strong> We collect your name, email address, phone number, and any additional information you provide when you register on our site or fill out a form.</li>
+            <li><strong>Property Information:</strong> When you inquire about properties, we may collect details like property preferences, price range, and location preferences.</li>
+            <li><strong>Automated Information:</strong> We may collect your IP address, browser type, and data on how you navigate our website through cookies and tracking technologies.</li>
+        </ul>
+    </section>
+
+    <section class="policy-section">
+        <h2>How We Use Your Information</h2>
+        <p>Your information is used to:</p>
+        <ul>
+            <li>Provide you with tailored real estate recommendations.</li>
+            <li>Respond to your inquiries and requests.</li>
+            <li>Communicate with you regarding new properties, promotions, and company updates.</li>
+            <li>Improve our website functionality and the services we offer.</li>
+        </ul>
+    </section>
+
+    <section class="policy-section">
+        <h2>Sharing Your Information</h2>
+        <p>We do not sell, trade, or rent your personal information to third parties. We may share your information in the following circumstances:</p>
+        <ul>
+            <li><strong>Service Providers:</strong> With trusted partners who assist us in operating our website and conducting our business.</li>
+            <li><strong>Legal Obligations:</strong> When required by law or to protect our rights, property, or safety.</li>
+        </ul>
+    </section>
+
+    <section class="policy-section">
+        <h2>How We Protect Your Data</h2>
+        <p>We implement a variety of security measures to maintain the safety of your personal information. This includes encrypted transmissions and secure databases, only accessible by authorized personnel.</p>
+    </section>
+
+    <section class="policy-section">
+        <h2>Cookies Policy</h2>
+        <p>We use cookies to enhance your experience on our site. Cookies are small files that your browser stores on your device to help personalize your experience and track site usage. You can choose to disable cookies through your browser settings, but this may affect the functionality of our website.</p>
+    </section>
+
+    <section class="policy-section">
+        <h2>Third-Party Links</h2>
+        <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices of these external sites. We encourage you to review the privacy policies of these websites before providing any personal information.</p>
+    </section>
+
+    <section class="policy-section">
+        <h2>Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+            <li>Access the personal data we hold about you.</li>
+            <li>Request corrections to any inaccurate data.</li>
+            <li>Request deletion of your data under certain conditions.</li>
+            <li>Opt-out of receiving promotional communications.</li>
+        </ul>
+        <p>If you would like to exercise any of these rights, please contact us at <a href="mailto:privacy@cardhousing.com">privacy@cardhousing.com</a>.</p>
+    </section>
+
+    <section class="policy-section">
+        <h2>Updates to Our Privacy Policy</h2>
+        <p>We reserve the right to update or change this Privacy Policy at any time. Changes will be posted on this page, and we will notify you via email if we make significant updates.</p>
+    </section>
+
+    <section class="policy-section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy or how we handle your data, please contact us:</p>
+        <ul>
+            <li>Email: <a href="mailto:privacy@cardhousing.com">privacy@cardhousing.com</a></li>
+            <li>Phone: +123 (456) 789-1011</li>
+            <li>Address: 123 Main St, City, Country</li>
+        </ul>
+    </section>
+</div>
 {% endblock %}

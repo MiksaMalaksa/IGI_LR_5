@@ -1,13 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}My company{% endblock %}</title>
+    <title>{% block title %}My Company{% endblock %}</title>
     {% load static %}
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/company_info.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dictionary.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contacts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/policies.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vacancies.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reviews.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reviews_form.css' %}">
+    <link rel="stylesheet" href="{% static 'css/news_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/coupons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+    <link rel="stylesheet" href="{% static 'css/statistics.css' %}">
+    <link rel="stylesheet" href="{% static 'css/house.css' %}">
+
+    <style>
+        :root {
+            --color-bg1: rgb(34, 0, 64);
+            --color-bg2: rgb(0, 17, 60);
+            --color1: 58, 0, 128;
+            --color2: 33, 50, 160;
+            --color3: 43, 60, 180;
+            --color4: 120, 30, 180;
+            --color5: 90, 90, 150;
+            --color-interactive: 60, 30, 170;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+            color: white;
+        }
+
+        header {
+            background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            z-index: 999;
+            /* Ensure header stays on top */
+            position: relative;
+            /* Ensure it isn't affected by absolute elements */
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+            padding: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            /* Ensure navigation stays on top */
+            position: relative;
+            /* Prevent it from being pushed by absolute elements */
+        }
+
+        .nav-menu li {
+            margin: 0 15px;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 12px 20px;
+            background: linear-gradient(40deg, rgba(var(--color1), 0.8), rgba(var(--color2), 0.8));
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            z-index: 1001;
+            /* Ensure the links are clickable */
+        }
+
+        .nav-menu a:hover {
+            background: linear-gradient(40deg, rgba(var(--color2), 0.9), rgba(var(--color3), 0.9));
+            transform: scale(1.1);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3), 0px 0px 20px rgba(100, 100, 255, 0.6);
+        }
+
+        main {
+            padding: 40px;
+            background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-menu a {
+                margin: 5px 0;
+                width: 80%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -22,14 +128,14 @@
                 <li><a href="{% url 'reviews' %}">Reviews</a></li>
                 <li><a href="{% url 'coupons' %}">Promos</a></li>
                 {% if user.is_authenticated %}
-                    <li><a href="{% url 'logout' %}">Logout</a></li>
-                    <li><a href="{% url 'profile' %}">Profile</a></li>
-                    {% if user.is_superuser %}
-                        <li><a href="{% url 'property_list' %}">Manage Properties</a></li>
-                    {% endif %}
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                {% if user.is_superuser %}
+                <li><a href="{% url 'property_list' %}">Manage Properties</a></li>
+                {% endif %}
                 {% else %}
-                    <li><a href="{% url 'login' %}">Login</a></li>
-                    <li><a href="{% url 'register' %}">Register</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
                 {% endif %}
             </ul>
         </nav>
@@ -39,4 +145,5 @@
         {% endblock %}
     </main>
 </body>
+
 </html>

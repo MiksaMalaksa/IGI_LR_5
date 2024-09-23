@@ -3,27 +3,32 @@
 {% block title %}Contacts{% endblock %}
 
 {% block content %}
-<h1>Contacts</h1>
-{% if user.is_superuser %}
-    <a href="{% url 'contact_create' %}">Add Contact</a>
-{% endif %}
-{% if contacts %}
-    <ul class="contacts-list">
-        {% for contact in contacts %}
-            <li>
-                <h2>{{ contact.employer.first_name }} {{ contact.employer.last_name }}</h2>
-                <p>{{ contact.description }}</p>
-                {% if contact.image %}
+<div class="contacts-container">
+    <h1>Contacts</h1>
+    {% if user.is_superuser %}
+        <a href="{% url 'contact_create' %}" class="button add-contact">Add Contact</a>
+    {% endif %}
+    {% if contacts %}
+        <ul class="contacts-list">
+            {% for contact in contacts %}
+                <li class="contact-item">
                     <img src="{{ contact.image.url }}" class="contact-image">
-                {% endif %}
-                {% if user.is_superuser %}
-                    <a href="{% url 'contact_update' contact.pk %}">Edit</a>
-                    <a href="{% url 'contact_delete' contact.pk %}">Delete</a>
-                {% endif %}
-            </li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p>No contacts for now!</p>
-{% endif %}
+                    <h2>{{ contact.employer.first_name }} {{ contact.employer.last_name }}</h2>
+                    <p class="job-title"><strong>Job:</strong> {{ contact.employer.job }}</p>
+                    <p class="contact-info"><strong>Phone:</strong> {{ contact.employer.phone_number }}</p>
+                    <p class="contact-info"><strong>Email:</strong> <a href="mailto:{{ contact.employer.email }}" class="email-link">{{ contact.employer.email }}</a></p>
+                    <p class="description">{{ contact.description }}</p>
+                    {% if user.is_superuser %}
+                        <div class="admin-buttons">
+                            <a href="{% url 'contact_update' contact.pk %}" class="button edit-button">Edit</a>
+                            <a href="{% url 'contact_delete' contact.pk %}" class="button delete-button">Delete</a>
+                        </div>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="no-contacts-message">No contacts for now!</p>
+    {% endif %}
+</div>
 {% endblock %}

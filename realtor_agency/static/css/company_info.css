@@ -1,0 +1,154 @@
+/* Main Container - общий контейнер для страницы "О компании" */
+.about-container {
+    max-width: 900px; /* Максимальная ширина контейнера */
+    margin: 40px auto; /* Центрирование контейнера */
+    padding: 20px; /* Внутренний отступ */
+    background-color: #f7f7f7; /* Светлый фон для контраста */
+    border-radius: 12px; /* Скругленные углы */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Тень для объема */
+    color: #2c3e50; /* Темный текст */
+    position: relative;
+    z-index: 1; /* Z-index для корректного наложения элементов */
+}
+
+/* Header Title - заголовок страницы */
+.about-container h1 {
+    font-size: 40px; /* Увеличенный шрифт заголовка */
+    color: #2c3e50; /* Цвет текста */
+    margin-bottom: 30px; /* Отступ снизу */
+    text-align: center; /* Центрирование текста */
+    font-weight: 700; /* Жирный шрифт */
+    letter-spacing: 1.5px; /* Расстояние между буквами */
+}
+
+/* Section Styling - стили для секций */
+.company-section {
+    margin-bottom: 30px; /* Отступ снизу для разделов */
+}
+
+.company-section h2 {
+    font-size: 28px; /* Увеличенный размер заголовка секции */
+    color: #34495e; /* Темный цвет заголовков секций */
+    margin-bottom: 15px; /* Отступ снизу */
+    border-bottom: 2px solid #ccc; /* Линия под заголовком */
+    padding-bottom: 10px; /* Отступ снизу для текста */
+    text-transform: uppercase; /* Заглавные буквы для заголовков */
+    letter-spacing: 1px; /* Расстояние между буквами */
+}
+
+.company-section p {
+    font-size: 18px; /* Размер шрифта текста секции */
+    line-height: 1.7; /* Высота строки для лучшей читабельности */
+    color: #4d4d4d; /* Цвет текста */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Image Styling - стили для изображения логотипа компании */
+.company-logo {
+    max-width: 220px; /* Максимальная ширина изображения */
+    display: block; /* Блочный элемент для центрирования */
+    margin: 20px auto; /* Центрирование логотипа */
+    border-radius: 12px; /* Скругленные углы изображения */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для объема */
+    transition: transform 0.3s ease; /* Плавная трансформация при наведении */
+    transform: rotate(0deg); /* Изначальное состояние без вращения */
+}
+
+.company-logo:hover {
+    /* Плавная трансформация логотипа при наведении */
+    transform: rotate(360deg) scale(1.05); /* Вращение на 360 градусов и увеличение */
+}
+
+/* Certificate Container - оформление для сертификата */
+.certificate-container {
+    position: relative; /* Позиционирование для использования z-index */
+    padding: 20px; /* Внутренний отступ */
+    background: linear-gradient(135deg, #8e44ad, #3498db); /* Градиент для фона сертификата */
+    border-radius: 20px; /* Скругленные углы */
+    border: 10px solid transparent; /* Прозрачная граница */
+    background-clip: padding-box; /* Градиент не попадает на границы */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Тень для объема */
+}
+
+.certificate-container:before {
+    content: ''; /* Псевдоэлемент для границ */
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+    left: -20px;
+    background: url('/path/to/border-image.png') no-repeat; /* Изображение для границ */
+    background-size: cover; /* Изображение заполняет все пространство */
+    z-index: -1; /* Изображение ниже основного контента */
+}
+
+.company-certificate {
+    max-width: 300px; /* Максимальная ширина сертификата */
+    display: block; /* Блочный элемент для центрирования */
+    margin: 20px auto; /* Центрирование сертификата */
+    border-radius: 12px; /* Скругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для объема */
+    z-index: 1; /* Сертификат выше изображения границы */
+}
+
+.certificate-text {
+    text-align: center; /* Центрирование текста под сертификатом */
+    font-size: 16px; /* Размер шрифта */
+    color: #fff; /* Белый цвет текста */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+/* Video Wrapper - контейнер для видео */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Соотношение сторон 16:9 для видео */
+    height: 0; /* Высота равна нулю, так как соотношение сторон задает контейнер */
+    overflow: hidden; /* Скрытие излишков */
+    max-width: 100%; /* Максимальная ширина видео */
+    background-color: #000; /* Черный фон для видео */
+    border-radius: 12px; /* Скругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для объема */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px; /* Скругленные углы для самого видео */
+}
+
+/* Requisites List Styling - стили для списка реквизитов */
+.requisites-list {
+    list-style-type: disc; /* Маркеры для списка */
+    padding-left: 20px; /* Отступ для списка */
+    font-size: 18px; /* Размер шрифта */
+    color: #555; /* Цвет текста */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.requisites-list li {
+    margin-bottom: 12px; /* Отступ между элементами списка */
+    font-weight: bold; /* Жирный шрифт для выделения реквизитов */
+}
+
+/* History List Styling - стили для списка истории */
+.history-list {
+    list-style-type: decimal; /* Нумерация для списка */
+    padding-left: 20px; /* Отступ для списка */
+    font-size: 18px; /* Размер шрифта */
+    color: #555; /* Цвет текста */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* General Styling for Links - стили для ссылок */
+a {
+    color: #2980b9; /* Синий цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: 600; /* Полужирный шрифт для ссылок */
+}
+
+a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}

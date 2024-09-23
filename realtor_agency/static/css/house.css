@@ -1,0 +1,336 @@
+body {
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 550px;
+    width: 600px;
+    background-color: #96ebff;
+    border-radius: 20%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.container * {
+    position: absolute;
+}
+
+.house {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: 200px;
+    width: 260px;
+    background: #FFF;
+}
+
+.house::before {
+    content: '';
+    position: absolute;
+    top: -95px;
+    left: 33px;
+    height: 183px;
+    width: 183.5px;
+    background: white;
+    transform: rotate(45deg);
+    border-top: 10px solid blue;
+    border-left: 10px solid blue;
+    z-index: 2;
+}
+
+.house::after {
+    content: '';
+    position: absolute;
+    top: -70px;
+    left: 15px;
+    height: 70px;
+    width: 30px;
+    background: blue;
+    z-index: 1;
+    border-top: 7px solid rgba(0, 0, 0, .3);
+}
+
+/* Black rectangle behind the door */
+.door-behind {
+    top: 70px;
+    left: 150px;
+    height: 130px;
+    width: 70px;
+    background: black;
+    z-index: 2; /* Below the door */
+}
+
+@keyframes openDoor {
+    0% {
+        transform: rotateY(0deg); /* Closed door */
+    }
+    100% {
+        transform: rotateY(-120deg); /* Door opens to the right */
+    }
+}
+
+.door {
+    top: 70px;
+    left: 150px;
+    height: 130px;
+    width: 70px;
+    background: blue;
+    z-index: 3;
+    transform-origin: right; /* Door opens to the right */
+    animation: openDoor 3s ease-in-out 2s forwards; /* Opens slower, starts after 2s */
+}
+
+.door::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    border: 1px solid #FFF;
+    background: #96ebff;
+}
+
+/* Text that will pop from the door entrance to the top center */
+@keyframes popText {
+    0% {
+        top: 70%; /* Start near the entrance */
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    50% {
+        top: 30%; /* Midway towards the center */
+        left: 50%;
+        transform: translateX(-50%) scale(1.5); /* Scale up slightly in the middle */
+        opacity: 0.5;
+    }
+    100% {
+        top: 10%; /* End at the top */
+        left: 50%;
+        transform: translateX(-50%) scale(1); /* Reset size */
+        opacity: 1;
+    }
+}
+
+.card-text {
+    font-size: 34px;
+    font-weight: bold;
+    color: #ff0000;
+    opacity: 0;
+    animation: popText 3s ease-in-out 2.5s forwards; 
+}
+
+@keyframes windowLight {
+    0% {
+        background-color: #454a00; /* Light off */
+    }
+    10% {
+        background-color: #fff700; /* Bright yellow */
+    }
+    20% {
+        background-color: #ff007f; /* Hot pink */
+    }
+    30% {
+        background-color: #00ff7f; /* Neon green */
+    }
+    40% {
+        background-color: #00ffff; /* Cyan */
+    }
+    50% {
+        background-color: #ff4500; /* Orange red */
+    }
+    60% {
+        background-color: #9400d3; /* Dark violet */
+    }
+    70% {
+        background-color: #00ff00; /* Bright green */
+    }
+    80% {
+        background-color: #ff00ff; /* Magenta */
+    }
+    90% {
+        background-color: #ff6347; /* Tomato red */
+    }
+    100% {
+        background-color: #454a00; /* Back to light off */
+    }
+}
+
+.window {
+    top: 35px;
+    left: 25px;
+    height: 80px;
+    width: 70px;
+    background: #454a00;
+    z-index: 3;
+    border-top: 7px solid blue;
+    animation: windowLight 3s infinite ease-in-out;
+}
+
+.window::before,
+.window::after {
+    content: '';
+    position: absolute;
+    background: silver;
+}
+
+.window::before {
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 1px;
+}
+
+.window::after {
+    top: 50%;
+    height: 1px;
+    width: 100%;
+}
+
+/* Tree 1 - Pine Tree */
+.pine-tree {
+    position: absolute;
+    bottom: 80px;
+    height: 130px;
+    width: 50px;
+    background: brown;
+    left: 50px;
+    z-index: 5;
+}
+
+.pine-tree::before, 
+.pine-tree::after {
+    content: '';
+    position: absolute;
+    background: green;
+    border-radius: 50%;
+    left: -45px;
+}
+
+.pine-tree::before {
+    bottom: 80px;
+    height: 100px;
+    width: 140px;
+}
+
+.pine-tree::after {
+    bottom: 40px;
+    height: 80px;
+    width: 100px;
+}
+
+/* Tree 2 */
+.tree {
+    position: absolute;
+    bottom: 80px;
+    height: 150px;
+    width: 50px;
+    background: brown;
+    left: 500px; /* Move trees farther from house */
+    z-index: 5;
+}
+
+.tree::before {
+    content: '';
+    position: absolute;
+    bottom: 120px;
+    left: -40px;
+    height: 80px;
+    width: 120px;
+    background: green;
+    border-radius: 50%;
+    z-index: 6;
+}
+
+.tree::after {
+    content: '';
+    position: absolute;
+    bottom: 140px;
+    left: -20px;
+    height: 70px;
+    width: 90px;
+    background: green;
+    border-radius: 50%;
+    z-index: 6;
+}
+
+.ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: green;
+    z-index: 1;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Clouds */
+.cloud {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background: white;
+    border-radius: 50px;
+    z-index: 10;
+    opacity: 0.8;
+    animation: moveClouds 15s linear infinite;
+}
+
+.cloud::before,
+.cloud::after {
+    content: '';
+    position: absolute;
+    background: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    top: -30px;
+}
+
+.cloud::before {
+    left: -20px;
+}
+
+.cloud::after {
+    right: -20px;
+}
+
+.cloud.small {
+    width: 70px;
+    height: 30px;
+    animation-duration: 12s;
+    opacity: 0.6;
+}
+
+.cloud.large {
+    width: 150px;
+    height: 80px;
+    animation-duration: 20s;
+    opacity: 0.9;
+}
+
+@keyframes moveClouds {
+    0% {
+        left: -150px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Stone */
+.stone {
+    position: absolute;
+    bottom: 20px;
+    left: 130px;
+    width: 40px;
+    height: 20px;
+    background: gray;
+    border-radius: 20px;
+    z-index: 4;
+}

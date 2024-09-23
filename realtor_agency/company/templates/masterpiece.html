@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Эпичная Анимация Дома</title>
+  <style>
+    /* 1. Общие настройки */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to top, #87CEEB, #FFF);
+      overflow: hidden;
+    }
+
+    /* 2. Основная сцена */
+    .scene {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to top, #87CEEB, #E0FFFF);
+      overflow: hidden;
+    }
+
+    /* 3. Земля */
+    .ground {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 150px;
+      background: linear-gradient(to top, #228B22, #32CD32);
+      border-top: 5px solid #006400;
+      box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    /* 4. Облака */
+    .cloud {
+      position: absolute;
+      width: 250px;
+      height: 100px;
+      background: #FFF;
+      border-radius: 50%;
+      box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.1);
+    }
+
+    .cloud-1 {
+      top: 50px;
+      left: 10px;
+      animation: moveCloud 30s linear infinite;
+    }
+
+    .cloud-2 {
+      top: 150px;
+      left: 200px;
+      animation: moveCloud 50s linear infinite;
+    }
+
+    .cloud-3 {
+      top: 100px;
+      right: 100px;
+      animation: moveCloud 40s linear infinite;
+    }
+
+    @keyframes moveCloud {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(150vw); }
+    }
+
+    /* 5. Дом */
+    .house {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      background: #8B4513;
+      border: 5px solid #000;
+      border-radius: 10px;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+    }
+
+    /* 6. Треугольная крыша */
+    .roof {
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 150px solid transparent;
+      border-right: 150px solid transparent;
+      border-bottom: 100px solid #A52A2A;
+      z-index: 1;
+    }
+
+    .roof-shadow {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      width: 450px;
+      height: 20px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 50%;
+      transform: translateX(-50%);
+      opacity: 0.5;
+    }
+
+    /* 7. Окна */
+    .window {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 3px solid #000;
+      border-radius: 10px;
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .window-1 {
+      top: 50px;
+      left: 50px;
+    }
+
+    .window-2 {
+      top: 50px;
+      right: 50px;
+    }
+
+    .window-3 {
+      bottom: 120px;
+      left: 50px;
+    }
+
+    .window-4 {
+      bottom: 120px;
+      right: 50px;
+    }
+
+    @keyframes lightUp {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* 8. Свет в окнах */
+    .light {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 0, 0.5);
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .window-1 .light {
+      animation: lightBlink 10s ease-in-out infinite;
+    }
+
+    @keyframes lightBlink {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    /* 9. Дверь */
+    .door {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 200px;
+      background: #3E2723;
+      border: 3px solid #000;
+      border-radius: 10px;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7);
+      transition: transform 1s ease-in-out;
+      transform-origin: right;
+    }
+
+    .door.open {
+      transform: rotateY(-120deg);
+    }
+
+    .door-handle {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      width: 20px;
+      height: 30px;
+      background: gold;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* 10. Дымоход */
+    .chimney {
+      position: absolute;
+      top: -80px;
+      left: 20px;
+      width: 40px;
+      height: 80px;
+      background: #4B2F19;
+      border: 2px solid #000;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* 11. Дым из дымохода */
+    .smoke {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      background: rgba(192, 192, 192, 0.7);
+      border-radius: 50%;
+      animation: smoke 5s ease-in-out infinite;
+      opacity: 0;
+    }
+
+    .smoke-1 { animation-delay: 0s; }
+    .smoke-2 { animation-delay: 1s; }
+    .smoke-3 { animation-delay: 2s; }
+
+    @keyframes smoke {
+      0% { transform: translateY(0) scale(0.3); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(-150px) scale(1); opacity: 0; }
+    }
+
+    /* 12. Ели с стволами */
+    .tree {
+      position: absolute;
+      width: 50px;
+      height: 150px;
+      background: #8B4513;
+      border-radius: 10px;
+    }
+
+    .tree-1 {
+      bottom: 0;
+      left: 100px;
+    }
+
+    .tree-2 {
+      bottom: 0;
+      right: 100px;
+    }
+
+    .tree-top {
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 100px solid #228B22;
+    }
+
+    /* 13. Цветы на земле */
+    .flower {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #FF69B4;
+      border-radius: 50%;
+      animation: flowerBloom 10s infinite;
+    }
+
+    .flower-1 {
+      bottom: 10px;
+      left: 200px;
+    }
+
+    .flower-2 {
+      bottom: 20px;
+      right: 200px;
+    }
+
+    .flower-3 {
+      bottom: 15px;
+      left: 400px;
+    }
+
+    @keyframes flowerBloom {
+      0% { transform: scale(0.5); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    /* 14. Анимация кнопки */
+    .open-button {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 15px 30px;
+      background-color: #FF4500;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      z-index: 10;
+    }
+
+    .open-button:hover {
+      background-color: #FF6347;
+    }
+
+    /* 15. Текст "Card Housing" */
+    .card-housing-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      font-size: 48px;
+      font-weight: bold;
+      color: white;
+      opacity: 0;
+      text-shadow: 3px 3px 15px #000;
+      font-family: 'Comic Sans MS', sans-serif;
+      transition: transform 1s ease-out, opacity 1s ease-out;
+    }
+
+    .show-text {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <!-- Земля -->
+    <div class="ground"></div>
+
+    <!-- Дом -->
+    <div class="house">
+      <div class="roof"></div>
+      <div class="chimney">
+        <div class="smoke smoke-1"></div>
+        <div class="smoke smoke-2"></div>
+        <div class="smoke smoke-3"></div>
+      </div>
+      <div class="window window-1">
+        <div class="light"></div>
+      </div>
+      <div class="window window-2">
+        <div class="light"></div>
+      </div>
+      <div class="window window-3">
+        <div class="light"></div>
+      </div>
+      <div class="window window-4">
+        <div class="light"></div>
+      </div>
+      <div class="door">
+        <div class="door-handle"></div>
+      </div>
+    </div>
+
+    <!-- Облака -->
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+
+    <!-- Деревья -->
+    <div class="tree tree-1">
+      <div class="tree-top"></div>
+    </div>
+    <div class="tree tree-2">
+      <div class="tree-top"></div>
+    </div>
+
+    <!-- Цветы -->
+    <div class="flower flower-1"></div>
+    <div class="flower flower-2"></div>
+    <div class="flower flower-3"></div>
+
+    <!-- Текст "Card Housing" -->
+    <div class="card-housing-text">Card Housing</div>
+
+    <!-- Кнопка открытия двери -->
+    <button class="open-button">Открыть дверь</button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const door = document.querySelector('.door');
+      const text = document.querySelector('.card-housing-text');
+      const button = document.querySelector('.open-button');
+      const windows = document.querySelectorAll('.window');
+
+      // Окна зажигаются по очереди
+      windows.forEach((window, index) => {
+        setTimeout(() => {
+          window.style.opacity = 1;
+        }, index * 1000);
+      });
+
+      // Открытие двери
+      button.addEventListener('click', () => {
+        door.classList.toggle('open');
+        setTimeout(() => {
+          text.classList.add('show-text');
+        }, 1000);
+      });
+    });
+  </script>
+</body>
+</html>

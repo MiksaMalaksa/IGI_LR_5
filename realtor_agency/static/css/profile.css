@@ -1,0 +1,79 @@
+/* General Styling for Profile Container */
+.profile-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Nunito', sans-serif;
+    color: #2c3e50;
+    position: relative;
+    text-align: left;
+}
+
+/* Title Styling */
+.profile-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #4b4bf0;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+/* Paragraph Styling */
+.profile-container p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #34495e;
+}
+
+/* Highlighted Label Styling */
+.profile-container p strong {
+    font-weight: 600;
+    color: #4b4bf0;
+}
+
+/* Button Group Styling */
+.profile-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Button Styling */
+.profile-buttons a {
+    padding: 12px 25px;
+    background-color: #4b4bf0;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-buttons a:hover {
+    background-color: #3a3adc;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 20px;
+    }
+
+    .profile-container h1 {
+        font-size: 2rem;
+    }
+
+    .profile-buttons a {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}

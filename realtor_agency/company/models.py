@@ -1,9 +1,9 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.utils import timezone
-
-# from realtor_agency.agency.models import Employer
 from agency.models import Employer
+from django import forms
 
 
 class BaseModel(models.Model):
@@ -27,9 +27,14 @@ class Article(models.Model):
     def __str__(self):
         return self.title
 
-
 class CompanyInfo(models.Model):
     information = models.TextField()
+    video_url = models.URLField(blank=True, null=True)
+    logo = models.ImageField(upload_to='logos/', blank=True, null=True)
+    history = models.TextField(blank=True, null=True)
+    requisites = models.TextField(blank=True, null=True)
+    certificate = models.ImageField(upload_to='certificates/', blank=True, null=True) 
+    certificate_text = models.CharField(max_length=50)
 
     class Meta:
         verbose_name = _("company info")
@@ -40,8 +45,10 @@ class CompanyInfo(models.Model):
 
 
 class Dictionary(models.Model):
-    term = models.CharField(max_length=255)
-    definition = models.TextField()
+    term = models.CharField(max_length=255)  # Question or term
+    definition = models.TextField()  # Brief answer or definition
+    expanded_answer = models.TextField(blank=True, null=True)  # Detailed answer
+    is_frequently_asked = models.BooleanField(default=False)  # FAQ indicator
     added_at = models.DateTimeField(default=timezone.now)
 
     class Meta:
@@ -79,8 +86,8 @@ class Vacancy(models.Model):
     def __str__(self):
         return self.title
 
-
 class Review(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name=_("User"), default=1)  # Set a default user ID
     name = models.CharField(max_length=255)
     rating = models.PositiveSmallIntegerField()
     text = models.TextField()
@@ -91,7 +98,15 @@ class Review(models.Model):
         verbose_name_plural = _("reviews")
 
     def __str__(self):
-        return f"{self.name} - {self.rating}"
+        return f"{self.user.username} - {self.rating}"
+    
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ['rating', 'text']
+        widgets = {
+            'rating': forms.NumberInput(attrs={'min': 1, 'max': 5}),
+        }
 
 
 class Coupon(models.Model):

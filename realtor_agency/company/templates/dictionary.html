@@ -1,20 +1,32 @@
 {% extends 'base.html' %}
 
-{% block title %}Dictionary{% endblock %}
+{% block title %}Dictionary of Terms{% endblock %}
 
 {% block content %}
-<h1>Dictionary</h1>
-{% if terms %}
-    <ul>
-    {% for term in terms %}
-        <li>
-            <h2>{{ term.term }}</h2>
-            <p>{{ term.definition }}</p>
-            <p>Added: {{ term.added_at }}</p>
+<div class="dictionary-container">
+    <h1>Dictionary of Terms</h1>
+    <ul class="term-list">
+        {% for term in terms %}
+        <li class="term-item">
+            <div class="term-header">
+                <h2>{{ term.term }}</h2>
+                <p class="term-date"><strong>Added on:</strong> {{ term.added_at }}</p>
+                <button class="toggle-button" onclick="toggleDefinition('{{ term.id }}')">Show/Hide Definition</button>
+            </div>
+            <p id="definition-{{ term.id }}" class="term-definition">{{ term.definition }}</p>
         </li>
-    {% endfor %}
+        {% endfor %}
     </ul>
-{% else %}
-    <p>Dictionary is empty!</p>
-{% endif %}
+</div>
+
+<script>
+    function toggleDefinition(termId) {
+        var definition = document.getElementById('definition-' + termId);
+        if (definition.style.display === 'none') {
+            definition.style.display = 'block';
+        } else {
+            definition.style.display = 'none';
+        }
+    }
+</script>
 {% endblock %}

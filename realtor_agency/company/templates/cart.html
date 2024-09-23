@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Your Cart{% endblock %}
+
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+</head>
+
+{% block content %}
+<div class="cart-container">
+    <h1 class="cart-header">Your Cart</h1>
+    {% if cart_items %}
+    <form method="post" action="{% url 'update_cart' %}">
+        {% csrf_token %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in cart_items %}
+                <tr>
+                    <td>{{ item.property.title }}</td>
+                    <td>${{ item.property.price|floatformat:2 }}</td>
+                    <td class="quantity-control">
+                        <button type="submit" name="decrease_{{ item.property.id }}" class="btn decrease" {% if item.quantity <= 1 %}disabled{% endif %}>-</button>
+                        <span>{{ item.quantity }}</span>
+                        <button type="submit" name="increase_{{ item.property.id }}" class="btn increase">+</button>
+                    </td>
+                    <td class="action-buttons">
+                        <button type="submit" name="purchase_{{ item.property.id }}" class="btn buy">Buy</button>
+                        <button type="submit" name="remove_{{ item.property.id }}" class="btn remove">Remove</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </form>
+    <p class="total-price">Final Price: ${{ total_price|floatformat:2 }}</p>
+    {% else %}
+    <p class="empty-cart-message">Your cart is empty.</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,12 +1,66 @@
 {% extends 'base.html' %}
 
-{% block title %}About{% endblock %}
+{% block title %}About Our Company{% endblock %}
 
 {% block content %}
-<h1>About</h1>
-{% if company_info %}
-    <p>{{ company_info.information }}</p>
-{% else %}
+<div class="about-container">
+    <h1>About Our Company</h1>
+
+    {% if company_info %}
+    <section class="company-section">
+        <h2>Information</h2>
+        <p>{{ company_info.information }}</p>
+    </section>
+
+    {% if company_info.logo %}
+    <section class="company-section">
+        <h2>Company Logo</h2>
+        <img src="{{ company_info.logo.url }}" alt="Company Logo" class="company-logo">
+    </section>
+    {% endif %}
+
+    {% if company_info.video_url %}
+    <section class="company-section">
+        <h2>Company Video</h2>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/{{ company_info.video_url|slice:'17:28' }}"
+                    frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+    {% endif %}
+
+    {% if company_info.history %}
+    <section class="company-section">
+        <h2>Company History</h2>
+        <ul class="history-list">
+            {{ company_info.history|linebreaksbr }}
+        </ul>
+    </section>
+    {% endif %}
+
+    {% if company_info.requisites %}
+    <section class="company-section">
+        <h2>Company Requisites</h2>
+        <ul class="requisites-list">
+            {% for line in company_info.requisites.splitlines %}
+            <li>{{ line }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
+    {% if company_info.certificate %}
+    <section class="company-section">
+        <h2>Company Certificate</h2>
+        <div class="certificate-container">
+            <img src="{{ company_info.certificate.url }}" alt="Company Certificate" class="company-certificate">
+            <p class="certificate-text">{{ company_info.certificate_text }}</p>
+        </div>
+    </section>
+    {% endif %}
+
+    {% else %}
     <p>No info right now!</p>
-{% endif %}
+    {% endif %}
+</div>
 {% endblock %}

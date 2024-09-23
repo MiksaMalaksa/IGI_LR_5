@@ -1,0 +1,84 @@
+/* General styling for the dictionary */
+.dictionary-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1e1e2f;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dictionary-container h1 {
+    font-size: 2.5rem;
+    color: #e6e6fa;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Styling the list of terms */
+.term-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.term-item {
+    background-color: #2b2b3a;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.term-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Styling the term headers and button */
+.term-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.term-header h2 {
+    font-size: 1.8rem;
+    color: #f4f4f4;
+    margin: 0;
+}
+
+.term-date {
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+.toggle-button {
+    padding: 8px 15px;
+    background-color: #6a11cb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: #2575fc;
+}
+
+/* Styling for the hidden definitions */
+.term-definition {
+    display: none;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ddd;
+    padding: 15px;
+    background-color: #3c3c4f;
+    border-radius: 8px;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}

@@ -1,21 +1,31 @@
 {% extends 'base.html' %}
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/vacancies.css' %}">
+</head>
 
 {% block title %}Vacancies{% endblock %}
 
 {% block content %}
-<h1>Vacancies</h1>
-{% if vacancies %}
-    <ul>
-    {% for vacancy in vacancies %}
-        <li>
+<div class="vacancies-container">
+    <h1>Available Vacancies</h1>
+
+    {% if vacancies %}
+    <ul class="vacancies-list">
+        {% for vacancy in vacancies %}
+        <li class="vacancy-item">
             <h2>{{ vacancy.title }}</h2>
-            <p>{{ vacancy.description }}</p>
-            <p>Salary: {{ vacancy.salary }}</p>
-            <p>Experience: {{ vacancy.experience_required }} years</p>
+            <p class="vacancy-description">{{ vacancy.description }}</p>
+            <div class="vacancy-details">
+                <span class="vacancy-salary">💼 Salary: {{ vacancy.salary }}</span>
+                <span class="vacancy-experience">👔 Experience Required: {{ vacancy.experience_required }} years</span>
+            </div>
         </li>
-    {% endfor %}
+        {% endfor %}
     </ul>
-{% else %}
-    <p>No vacancies right now!</p>
-{% endif %}
+    {% else %}
+    <p class="no-vacancies">No vacancies available right now!</p>
+    {% endif %}
+</div>
 {% endblock %}

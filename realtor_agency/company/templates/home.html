@@ -1,129 +1,135 @@
 {% extends 'base.html' %}
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+</head>
 
 {% block title %}
-<a href="{% url 'news' %}" style="color: rgb(75, 75, 240); text-decoration: none;">
-    Home
-</a>
+<a href="{% url 'news' %}" style="color: rgb(75, 75, 240); text-decoration: none;">Home</a>
 {% endblock %}
 
 {% block content %}
-<h1 style="display: inline-block; margin-right: 10px; font-size: 24px;">Home</h1>
-<div style="display: inline-block;">
-  {% if username %}
-    <p style="display: inline-block; font-weight: bold; color: black; font-size: 24px;">
-      Hello {{ username }} {{ user_timezone }} - {{ current_date_formatted }}
-    </p>
-    <br>
-    {% if quote %}
-      <p style="display: inline-block; font-weight: bold; color: black; font-size: 24px;">
-        Quote of the moment: {{ quote }}
-      </p>
-    {% endif %}
-  {% endif %}
+<!-- Company Header -->
+<header class="animated-header">
+    <h1 class="header-title" style="font-size: 3rem; font-family: 'Nunito', sans-serif; letter-spacing: 2px;">Card Housing</h1>
+    <img src="{% static 'images/company_logo.jpg' %}" alt="Company Logo" class="company-logo">
+</header>
+
+<!-- Banners Section -->
+<section class="banners">
+    <h2 class="section-title">Why we?</h2>
+    <div class="banner-container">
+        <img src="{% static 'images/banner1.jpeg' %}" alt="Banner 1" class="banner-img">
+        <img src="{% static 'images/banner2.jpeg' %}" alt="Banner 2" class="banner-img">
+        <img src="{% static 'images/banner3.jpeg' %}" alt="Banner 3" class="banner-img">
+    </div>
+</section>
+
+<div class="container">
+    <div class="ground"></div>
+    <div class="house">
+        <div class="window"></div>
+        <div class="door-behind"></div> <!-- Black rectangle behind the door -->
+        <div class="door"></div>
+        <div class="flower"></div>
+    </div>
+    <div class="pine-tree"></div>
+    <div class="tree"></div>
+    <div class="cloud"></div>
+    <div class="cloud small" style="top: 15%; left: 200px;"></div>
+    <div class="cloud large" style="top: 5%;"></div>
+    <div class="stone"></div>
+    <div class="card-text">Card Housing</div> <!-- Animated text -->
 </div>
 
+<!-- Partners Section -->
+<section class="partners-section">
+    <h2 class="section-title">Our Partners</h2>
+    <div class="partner-logos">
+        <a href="https://www.meta.com" target="_blank"><img src="{% static 'images/meta.png' %}" alt="Meta" class="partner-logo"></a>
+        <a href="https://www.amazon.com" target="_blank"><img src="{% static 'images/amazon.png' %}" alt="Amazon" class="partner-logo"></a>
+        <a href="https://www.apple.com" target="_blank"><img src="{% static 'images/apple.png' %}" alt="Apple" class="partner-logo"></a>
+        <a href="https://www.netflix.com" target="_blank"><img src="{% static 'images/netflix.png' %}" alt="Netflix" class="partner-logo"></a>
+        <a href="https://www.google.com" target="_blank"><img src="{% static 'images/google_logo.png' %}" alt="Google" class="partner-logo"></a>
+    </div>
+</section>
 
+<!-- Welcome Section -->
+<div class="welcome-container">
+    {% if username %}
+    <p class="welcome-text">Hello {{ username }} {{ user_timezone }} - {{ current_date_formatted }}</p>
+    {% if quote %}
+    <p class="quote">Quote of the moment: {{ quote }}</p>
+    {% endif %}
+    {% endif %}
+</div>
+
+<!-- Latest Article -->
 {% if latest_article %}
-<h2>
-    <a href="{% url 'article_detail' latest_article.id %}" style="color: rgb(67, 21, 217); text-decoration: none;">
+<!-- Используем абсолютное позиционирование для отображения инфо о последней статье -->
+<h2 style="position: relative; top: 20px; margin-bottom: 50px;"> <!-- Добавлен отступ для последнего элемента -->
+    <a href="{% url 'article_detail' latest_article.id %}" class="latest-news-link">
         {{ latest_article.title }}
     </a>
     - the latest piece of news!
 </h2>
 {% else %}
-<p>Nothing for now!</p>
+<p style="margin-bottom: 50px;">No articles for now!</p> <!-- Отступ добавлен к последнему элементу -->
 {% endif %}
-<pre style="font-size: 16px;">{{ calendar_text }}</pre>
 
-<h2>Properties</h2>
-
-<!-- Sorting Options -->
-<div style="margin-bottom: 20px;">
+<!-- Filter Section -->
+<section class="filters-section">
+    <h2 class="section-title">Properties</h2>
     <form method="get" action="{% url 'home' %}">
-        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
-            <div style="flex: 1; min-width: 200px;">
+        <div class="filters-container">
+            <div class="filter-item">
                 <label for="sort_price">Sort by price:</label>
-                <select id="sort_price" name="sort_price"
-                    style="width: 100%; padding: 5px; border-radius: 5px; border: 1px solid rgb(75, 75, 240);">
+                <select id="sort_price" name="sort_price" class="filter-select">
                     <option value="none">None</option>
                     <option value="ascending_price">Ascending</option>
                     <option value="descending_price">Descending</option>
                 </select>
             </div>
-            <div style="flex: 1; min-width: 200px;">
+            <div class="filter-item">
                 <label for="sort_area">Sort by area:</label>
-                <select id="sort_area" name="sort_area"
-                    style="width: 100%; padding: 5px; border-radius: 5px; border: 1px solid rgb(75, 75, 240);">
+                <select id="sort_area" name="sort_area" class="filter-select">
                     <option value="none">None</option>
                     <option value="ascending_area">Ascending</option>
                     <option value="descending_area">Descending</option>
                 </select>
             </div>
-        </div>
-
-        <!-- Price Filters -->
-        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
-            <div style="flex: 1; min-width: 200px;">
+            <div class="filter-item">
                 <label for="min_price">Min price:</label>
-                <input type="number" id="min_price" name="min_price"
-                    style="width: 100%; padding: 5px; border-radius: 5px; border: 1px solid rgb(75, 75, 240);">
+                <input type="number" id="min_price" name="min_price" class="filter-input">
             </div>
-            <div style="flex: 1; min-width: 200px;">
+            <div class="filter-item">
                 <label for="max_price">Max price:</label>
-                <input type="number" id="max_price" name="max_price"
-                    style="width: 100%; padding: 5px; border-radius: 5px; border: 1px solid rgb(75, 75, 240);">
+                <input type="number" id="max_price" name="max_price" class="filter-input">
             </div>
-        </div>
-
-        <!-- Area Filters -->
-        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
-            <div style="flex: 1; min-width: 200px;">
-                <label for="min_area">Min area:</label>
-                <input type="number" id="min_area" name="min_area"
-                    style="width: 100%; padding: 5px; border-radius: 5px; border: 1px solid rgb(75, 75, 240);">
-            </div>
-            <div style="flex: 1; min-width: 200px;">
-                <label for="max_area">Max area:</label>
-                <input type="number" id="max_area" name="max_area"
-                    style="width: 100%; padding: 5px; border-radius: 5px; border: 1px solid rgb(75, 75, 240);">
-            </div>
-        </div>
-
-        <!-- Title Filter -->
-        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
-            <div style="flex: 1; min-width: 200px;">
+            <div class="filter-item">
                 <label for="title">Title:</label>
-                <input type="text" id="title" name="title"
-                    style="width: 100%; padding: 5px; border-radius: 5px; border: 1px solid rgb(75, 75, 240);">
+                <input type="text" id="title" name="title" class="filter-input">
             </div>
         </div>
-
-        <!-- Submit Button -->
-        <div style="display: flex; gap: 10px; margin-bottom: 20px;">
-            <div style="flex: 1; min-width: 200px;">
-                <button type="submit"
-                    style="width: 100%; padding: 10px; background-color: rgb(75, 75, 240); color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Apply</button>
-            </div>
-        </div>
+        <button type="submit" class="filter-submit">Apply</button>
     </form>
-</div>
+</section>
 
-<div style="display: flex; flex-wrap: wrap;">
+<!-- Property Cards -->
+<div class="property-grid">
     {% for property in properties %}
-    <div style="margin-right: 20px; margin-bottom: 20px; border: 1px solid black; padding: 10px;">
-        <h3>{{ property.title }}</h3>
+    <div class="property-card">
+        <h3 class="property-title">{{ property.title }}</h3>
         <p>Price: {{ property.price }}</p>
         <p>Location: {{ property.location }}</p>
         <p>Floor: {{ property.floor }}</p>
         <p>Square Meters: {{ property.square_meters }}</p>
-        <a href="{% url 'property_detail' property.id %}"><img src="{{ property.image.url }}" alt="{{ property.title }}"
-                style="max-width: 300px;"></a>
+        <a href="{% url 'property_detail' property.id %}"><img src="{{ property.image.url }}" alt="{{ property.title }}" class="property-img"></a>
         {% if is_admin %}
-        <div style="margin-top: 10px;">
-            <button
-                style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Change</button>
-            <button
-                style="padding: 5px 10px; background-color: #f44336; color: white; border: none; border-radius: 5px; cursor: pointer;">Delete</button>
+        <div class="admin-actions">
+            <button class="btn-change">Change</button>
+            <button class="btn-delete">Delete</button>
         </div>
         {% endif %}
     </div>
@@ -132,4 +138,10 @@
     {% endfor %}
 </div>
 
+<!-- Preloader -->
+<div class="preloader">
+    <div class="dot dot1"></div>
+    <div class="dot dot2"></div>
+    <div class="dot dot3"></div>
+</div>
 {% endblock %}

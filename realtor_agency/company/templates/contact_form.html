@@ -1,12 +1,267 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 
-{% block title %}{{ title }}{% endblock %}
+    <style>
+        /* GENERAL STYLES */
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(40deg, rgb(34, 0, 64), rgb(0, 17, 60));
+            color: white;
+        }
 
-{% block content %}
-<h1>{{ title }}</h1>
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save</button>
-</form>
-{% endblock %}
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #4CAF50;
+        }
+
+        /* FORM STYLING */
+        form {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+
+        label {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #141E30;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+            box-shadow: 0px 0px 8px rgba(76, 175, 80, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
+        }
+
+        button:hover {
+            background-color: #3E8E41;
+        }
+
+        /* NAVIGATION BAR STYLES */
+        header {
+            background: rgba(24, 2, 68, 0.948);
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-menu li {
+            margin: 0 20px;
+        }
+
+        .nav-menu a {
+            padding: 15px 25px;
+            background: linear-gradient(45deg, rgba(58, 0, 128, 0.9), rgba(43, 60, 180, 0.9));
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-menu a:hover {
+            background: linear-gradient(45deg, rgba(90, 30, 180, 0.9), rgba(120, 30, 180, 0.9));
+            box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.4);
+            transform: translateY(-5px);
+        }
+
+        /* LIST AND TEXT STYLING */
+        p::first-letter {
+            font-size: 200%;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        p::before {
+            content: "Начало текста: ";
+            font-style: italic;
+            color: #888;
+        }
+
+        p::after {
+            content: " (конец текста)";
+            font-style: italic;
+            color: #888;
+        }
+
+        ul.custom-bullets {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        ul.custom-bullets li::before {
+            content: "\2022";
+            color: #4CAF50;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            font-size: 1rem;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* FOCUS AND FORM STATES */
+        input:required {
+            border-color: red;
+        }
+
+        input:optional {
+            border-color: blue;
+        }
+
+        input:disabled {
+            background-color: #e0e0e0;
+        }
+
+        input:checked {
+            outline: 2px solid green;
+        }
+
+        blockquote {
+            quotes: auto;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 5px solid #4CAF50;
+            font-style: italic;
+        }
+
+        blockquote:before {
+            content: open-quote;
+        }
+
+        blockquote:after {
+            content: close-quote;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'news' %}">News</a></li>
+                <li><a href="{% url 'dictionary' %}">Dictionary</a></li>
+                <li><a href="{% url 'contacts' %}">Contacts</a></li>
+                <li><a href="{% url 'privacy_policy' %}">Policies</a></li>
+                <li><a href="{% url 'vacancies' %}">Vacancies</a></li>
+                <li><a href="{% url 'reviews' %}">Reviews</a></li>
+                <li><a href="{% url 'coupons' %}">Promos</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                {% if user.is_superuser %}
+                <li><a href="{% url 'property_list' %}">Manage Properties</a></li>
+                {% endif %}
+                {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>{{ title }}</h1>
+
+        <!-- Form -->
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save</button>
+        </form>
+
+        <!-- Example with text and pseudo-elements -->
+        <p>Этот текст содержит различные стили с использованием псевдоэлементов и псевдоклассов.</p>
+
+        <!-- Example list with Unicode markers -->
+        <ul class="custom-bullets">
+            <li>Первый элемент</li>
+            <li>Второй элемент</li>
+            <li>Третий элемент</li>
+        </ul>
+
+        <!-- Example blockquote -->
+        <blockquote lang="ru">Это пример цитаты на русском языке.</blockquote>
+        <blockquote lang="en">This is an example of a quote in English.</blockquote>
+
+        <!-- Example table -->
+        <table>
+            <tr><th>Заголовок 1</th><th>Заголовок 2</th></tr>
+            <tr><td>Строка 1</td><td>Данные 1</td></tr>
+            <tr><td>Строка 2</td><td>Данные 2</td></tr>
+        </table>
+    </main>
+</body>
+</html>

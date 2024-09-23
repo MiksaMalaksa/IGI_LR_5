@@ -1,0 +1,4 @@
+<form method="post" action="{% url 'add_to_cart' property.id %}" style="margin-left: 20px;">
+    {% csrf_token %}
+    <button type="submit" name="add_to_cart" style="padding: 10px 20px; background-color: #4b4bf0; color: #fff; border: none; border-radius: 5px; width: 150px; text-align: center;">Add to Cart</button>
+</form>

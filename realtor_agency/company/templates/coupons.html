@@ -2,18 +2,40 @@
 
 {% block title %}Coupons{% endblock %}
 
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/coupons.css' %}">
+</head>
+
 {% block content %}
-<h1>Coupons</h1>
-{% if active_coupons %}
-    <ul>
-    {% for coupon in active_coupons %}
-        <li>
-            <h2>{{ coupon.code }}</h2>
-            <p>{{ coupon.active|yesno:"Active, Expired" }}</p>
+<div class="coupons-container">
+    <h1 class="coupons-header">Coupons</h1>
+
+    <!-- Debugging: Check if coupons are passed correctly -->
+    <p>Number of coupons: {{ active_coupons.count }}</p>
+
+    {% if active_coupons %}
+    <ul class="coupons-list">
+        {% for coupon in active_coupons %}
+        <li class="coupon-item">
+            <div class="coupon-content">
+                <h2 class="coupon-code">{{ coupon.code }}</h2>
+                <p class="coupon-status">{{ coupon.active|yesno:"Active, Expired" }}</p>
+                <div class="percentage-drop">
+                    <div class="percentage-number">{{ coupon.percentage }}%</div>
+                    <div class="dollar-sign">$</div>
+                </div>
+            </div>
+            <div class="price-drop-animation">
+                <div class="price-tag">Price drops!</div>
+            </div>
         </li>
-    {% endfor %}
+        {% endfor %}
     </ul>
-{% else %}
-    <p>Coupons!</p>
-{% endif %}
+    {% else %}
+    <p>No coupons available right now!</p>
+    {% endif %}
+
+</div>
 {% endblock %}

@@ -1,28 +1,33 @@
 {% extends 'base.html' %}
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/reviews.css' %}">
+</head>
 
 {% block title %}Reviews{% endblock %}
 
 {% block content %}
-<h1>Reviews</h1>
-{% if reviews %}
-<ul style="list-style: none; padding: 0;">
-    {% for review in reviews %}
-    <li style="border-bottom: 1px solid #ddd; padding: 15px;">
-        <h2>{{ review.name }}</h2>
-        <p>Mark: {{ review.rating }}</p>
-        <p>{{ review.text }}</p>
-        <p>Date: {{ review.created_at }}</p>
-    </li>
-    {% endfor %}
-</ul>
-{% else %}
-<p>No reviews right now!</p>
-{% endif %}
-<a href="{% url 'add_review' %}" style="background-color: #4CAF50; /* Green background color */
-                                     color: white;
-                                     padding: 10px 20px;
-                                     border: none;
-                                     border-radius: 5px;
-                                     cursor: pointer;
-                                     text-decoration: none; /* Remove underline */">Add review</a>
+<div class="reviews-container">
+    <h1>Customer Reviews</h1>
+
+    {% if reviews %}
+    <ul class="reviews-list">
+        {% for review in reviews %}
+        <li class="review-item">
+            <h2>{{ review.user.username }}</h2>
+            <div class="review-details">
+                <p class="review-rating">⭐ Rating: {{ review.rating }}</p>
+                <p class="review-text">{{ review.text }}</p>
+                <p class="review-date">📅 Date: {{ review.created_at|date:"F j, Y" }}</p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p class="no-reviews">No reviews yet.</p>
+    {% endif %}
+    
+    <a href="{% url 'add_review' %}" class="add-review-btn">Add Your Review</a>
+</div>
 {% endblock %}

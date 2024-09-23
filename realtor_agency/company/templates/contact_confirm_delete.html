@@ -3,10 +3,62 @@
 {% block title %}Delete Contact{% endblock %}
 
 {% block content %}
-<h1>Are you sure you want to delete "{{ contact.employer.first_name }} {{ contact.employer.last_name }}"?</h1>
-<form method="post">
-    {% csrf_token %}
-    <button type="submit">Yes, delete</button>
+<style>
+    .confirm-box {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        color: #f44336;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    form {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    button, a {
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    button {
+        background-color: #f44336;
+        color: white;
+        border: none;
+    }
+
+    button:hover {
+        background-color: #e53935;
+    }
+
+    a {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    a:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<div class="confirm-box">
+    <h1>Are you sure you want to delete "{{ contact.employer.first_name }} {{ contact.employer.last_name }}"?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, delete</button>
+    </form>
     <a href="{% url 'contact_list' %}">Cancel</a>
-</form>
+</div>
 {% endblock %}
