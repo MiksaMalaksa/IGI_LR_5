@@ -9,3 +9,4 @@ admin.site.register(Sale)
 admin.site.register(Profile)
 
 
+

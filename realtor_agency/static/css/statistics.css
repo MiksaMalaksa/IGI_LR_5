@@ -1,74 +1,116 @@
 /* General styling for the container */
 .statistics-container {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #1d1d2e;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    color: #f5f5f7;
-    font-family: 'Nunito', sans-serif;
+    max-width: 1200px; /* Максимальная ширина для контейнера */
+    margin: 50px auto; /* Центрирование контейнера */
+    padding: 20px; /* Внутренние отступы */
+    background-color: #1d1d2e; /* Фон контейнера */
+    border-radius: 15px; /* Скругленные углы */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Тень для объема */
+    color: #f5f5f7; /* Цвет текста */
+    font-family: 'Nunito', sans-serif; /* Шрифт */
 }
 
-/* Section Title Styling */
+/* Section Title Styling - стилизация заголовка секции */
 .section-title {
-    font-size: 2.2rem;
-    text-align: left;
-    color: #ffffff;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    border-bottom: 2px solid #4b4bf0;
-    padding-bottom: 10px;
+    font-size: 2.2rem; /* Размер шрифта заголовка */
+    text-align: left; /* Выравнивание текста заголовка по левому краю */
+    color: #ffffff; /* Цвет текста заголовка */
+    margin-bottom: 20px; /* Отступ снизу */
+    text-transform: uppercase; /* Преобразование текста заголовка в верхний регистр */
+    border-bottom: 2px solid #4b4bf0; /* Линия под заголовком */
+    padding-bottom: 10px; /* Отступ для линии под заголовком */
 }
 
-/* Table Styling */
+/* Table Styling - оформление таблицы */
 .styled-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 30px;
-    background-color: #2c2c3b;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
+    width: 100%; /* Таблица занимает всю ширину контейнера */
+    border-collapse: collapse; /*! Убираем двойные границы между ячейками */
+    margin-bottom: 30px; /* Отступ снизу */
+    background-color: #2c2c3b; /* Фон таблицы */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Тень для объема */
+    border-radius: 8px; /* Скругленные углы таблицы */
+    overflow: hidden; /* Для корректного отображения скругленных углов */
+    text-align: center; /* Центрирование содержимого ячеек */
 }
 
-.styled-table th, .styled-table td {
-    padding: 15px;
-    text-align: center;
-    vertical-align: middle;
-    color: #fff;
-    border: none; /* Remove double borders */
+/*! Table Header - оформление заголовка таблицы */
+.table-header {
+    font-size: 1.8rem; /* Размер шрифта заголовка таблицы */
+    color: #ffffff; /* Цвет текста */
+    text-align: center; /* Центрирование текста */
+    margin-bottom: 10px; /* Отступ снизу */
 }
 
+/* Table Heading - оформление заголовков столбцов */
 .styled-table th {
-    background-color: #4b4bf0;
-    font-weight: bold;
+    background-color: #4b4bf0; /* Фон заголовков */
+    color: white; /* Цвет текста */
+    font-weight: bold; /* Жирный шрифт для заголовков */
+    padding: 15px; /* Внутренние отступы */
 }
 
+/* Table Body - оформление ячеек */
 .styled-table td {
-    background-color: #333;
-    color: #ddd;
+    background-color: #333; /* Фон для ячеек */
+    color: #ddd; /* Цвет текста */
+    padding: 15px; /* Внутренние отступы */
+    vertical-align: middle; /* Вертикальное выравнивание содержимого */
+    text-align: center; /* Горизонтальное выравнивание содержимого */
 }
 
+/*! Empty Cells - оформление пустых ячеек */
 .empty-cell {
-    background-color: #ff6f61;
-    font-weight: bold;
+    background-color: #ff6f61; /* Фон для пустых ячеек */
+    font-weight: bold; /* Жирный шрифт */
+    color: #fff; /* Белый текст для пустых ячеек */
 }
 
-/* Chart Container */
+/* Table Row Hover Effect - эффект наведения на строки таблицы */
+.styled-table tr:hover {
+    background-color: #444; /* Изменение фона при наведении */
+}
+
+/* Alternating Row Colors - чередование цветов строк */
+.styled-table tr:nth-child(even) {
+    background-color: #2f2f3e; /* Цвет для четных строк */
+}
+
+.styled-table tr:nth-child(odd) {
+    background-color: #333; /* Цвет для нечетных строк */
+}
+
+/* Chart Container - оформление контейнера для диаграмм */
 .chart-container {
-    position: relative;
-    height: 400px;
-    width: 100%;
-    margin-bottom: 40px;
+    position: relative; /* Позиционирование контейнера для графиков */
+    height: 400px; /* Высота контейнера */
+    width: 100%; /* Ширина контейнера */
+    margin-bottom: 40px; /* Отступ снизу */
 }
 
+/* Canvas Container - контейнер для холста (графики) */
 .canvas-container {
-    height: 100%;
-    width: 100%;
+    height: 100%; /* Высота холста */
+    width: 100%; /* Ширина холста */
 }
 
 .chart-canvas {
-    width: 100% !important;
-    height: 100% !important;
+    width: 100% !important; /* Ширина холста */
+    height: 100% !important; /* Высота холста */
+}
+
+/* Floating Action Button - пример кнопки для взаимодействия с графиком */
+.floating-action-btn {
+    position: absolute; /* Абсолютное позиционирование кнопки */
+    bottom: 20px; /* Отступ от нижнего края контейнера */
+    right: 20px; /* Отступ от правого края контейнера */
+    padding: 10px 20px; /* Внутренние отступы */
+    background-color: #4b4bf0; /* Цвет кнопки */
+    color: white; /* Цвет текста кнопки */
+    border-radius: 50px; /* Скругленные углы для кнопки */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+.floating-action-btn:hover {
+    background-color: #333; /* Изменение фона при наведении */
 }

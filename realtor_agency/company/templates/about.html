@@ -23,8 +23,8 @@
     <section class="company-section">
         <h2>Company Video</h2>
         <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/{{ company_info.video_url|slice:'17:28' }}"
-                    frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/{{ company_info.video_url|slice:'17:28' }}" frameborder="0"
+                allowfullscreen></iframe>
         </div>
     </section>
     {% endif %}
@@ -50,11 +50,31 @@
     {% endif %}
 
     {% if company_info.certificate %}
-    <section class="company-section">
+    <section class="certificate-section">
         <h2>Company Certificate</h2>
         <div class="certificate-container">
-            <img src="{{ company_info.certificate.url }}" alt="Company Certificate" class="company-certificate">
-            <p class="certificate-text">{{ company_info.certificate_text }}</p>
+            <div class="certificate-gradient-border">
+                <div class="certificate-content">
+                    <!-- Заголовок сертификата -->
+                    <h3 class="certificate-title">{{ company_info.certificate.title }}</h3>
+                    <p class="certificate-subtitle">{{ company_info.certificate.subtitle }}</p>
+
+                    <!-- Основная информация -->
+                    <p><strong>Company:</strong> {{ company_info.certificate.company_name }}</p>
+                    <p><strong>Date Issued:</strong> {{ company_info.certificate.date_issued }}</p>
+                    <p><strong>Registry Number:</strong> {{ company_info.certificate.registry_number }}</p>
+
+                    <!-- Логотип компании -->
+                    {% if company_info.certificate.logo %}
+                    <div class="certificate-logo">
+                        <img src="{{ company_info.certificate.logo.url }}" alt="Company Logo"
+                            class="company-logo-small">
+                    </div>
+                    {% endif %}
+                    <!-- Футер сертификата -->
+                    <p class="certificate-footer">{{ company_info.certificate.certificate_footer }}</p>
+                </div>
+            </div>
         </div>
     </section>
     {% endif %}

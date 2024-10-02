@@ -1,0 +1,97 @@
+/* General layout and style */
+.property-detail-container {
+    background-color: #1c2d3f;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 40px auto;
+    color: white;
+}
+
+.property-info h1 {
+    font-size: 28px;
+    color: #fcbf49;
+    margin-bottom: 20px;
+}
+
+.property-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.property-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.action-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.add-to-cart-btn {
+    padding: 10px 20px;
+    background-color: #4b4bf0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #2a2abf;
+}
+
+/* Messages Section */
+.message-section {
+    margin-top: 15px;
+}
+
+.message {
+    background-color: #2f8d46;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Coupon section styling */
+.coupon-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.coupon-label {
+    color: white;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.coupon-input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 200px;
+    margin-right: 10px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.apply-coupon-btn {
+    padding: 8px 15px;
+    background-color: #4b4bf0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.apply-coupon-btn:hover {
+    background-color: #2a2abf;
+}

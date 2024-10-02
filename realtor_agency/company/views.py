@@ -11,7 +11,8 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from .utils import get_user_time
-from company.models import Article, CompanyInfo, Dictionary, Vacancy, Review, Coupon
+from company.models import Article, CompanyInfo, Dictionary, Vacancy, Review, Coupon, Sponsor
+from django.contrib import admin
 
 logger = logging.getLogger(__name__)
 
@@ -33,38 +34,18 @@ def reviews(request):
     all_reviews = Review.objects.all()
     return render(request, 'reviews.html', {'reviews': all_reviews})
 
-@login_required
-def add_to_cart(request, property_id):
-    # Get the property object
-    property_obj = get_object_or_404(Property, id=property_id)
-
-    # Ensure a Profile exists for the user, create if not
-    profile, created = Profile.objects.get_or_create(user=request.user)
-
-    # Get or create the cart associated with the user's profile
-    cart, created = Cart.objects.get_or_create(user=profile)  # Ensure Profile instance is used
-
-    # Get or create the cart item
-    cart_item, created = CartItem.objects.get_or_create(cart=cart, property=property_obj)
-
-    # If the item already exists, increment the quantity
-    if not created:
-        cart_item.quantity += 1
-        cart_item.save()
-
-    # Add a success message
-    messages.success(request, f'{property_obj.title} has been added to your cart.')
-    return redirect('cart')
+def html_demo(request):
+    return render(request, 'html_demo.html')
 
 @login_required
 def cart_view(request):
-    profile, created = Profile.objects.get_or_create(
-        user=request.user,
-        defaults={'birthdate': date.today()}  # Use a default birthdate, such as today's date
-    )
+    profile, created = Profile.objects.get_or_create(user=request.user)
     cart, created = Cart.objects.get_or_create(user=profile)
     cart_items = CartItem.objects.filter(cart=cart)
 
+    total_price = sum(item.property.price * item.quantity for item in cart_items)
+    
+    # Handle cart actions if needed (e.g., updates, removals)
     if request.method == 'POST':
         for item in cart_items:
             if f'increase_{item.property.id}' in request.POST:
@@ -75,15 +56,50 @@ def cart_view(request):
                 item.save()
             elif f'remove_{item.property.id}' in request.POST:
                 item.delete()
-            elif f'purchase_{item.property.id}' in request.POST:
-                purchase_property(request, item.property.id)
-                item.delete()
 
         return redirect('cart')
 
-    total_price = sum(item.property.price * item.quantity for item in cart_items)
     context = {'cart_items': cart_items, 'total_price': total_price}
     return render(request, 'cart.html', context)
+
+@login_required
+def add_to_cart(request, property_id):
+    property_item = get_object_or_404(Property, id=property_id)
+    user_profile = request.user.profile
+
+    # Retrieve the coupon code from the form
+    coupon_code = request.POST.get('coupon_code')
+    coupon = None
+    discount = 0
+
+    # Validate the coupon
+    if coupon_code:
+        try:
+            coupon = Coupon.objects.get(code=coupon_code, active=True)
+            discount = coupon.discount_amount
+        except Coupon.DoesNotExist:
+            messages.error(request, "Invalid coupon code.")
+        else:
+            messages.success(request, f"Coupon applied! You get a discount of {discount}.")
+
+    # Calculate the final price after applying the coupon
+    final_price = property_item.price - discount
+    if final_price < 0:
+        final_price = 0
+
+    # Add the property to the cart with the final price
+    cart, created = Cart.objects.get_or_create(user=user_profile)
+    cart_item, created = CartItem.objects.get_or_create(cart=cart, property=property_item, defaults={'quantity': 1})
+
+    # Update the cart item's final price (you may need a separate field to store this in the cart model)
+    cart_item.final_price = final_price
+    cart_item.save()
+
+    messages.success(request, f"Property {property_item.title} added to cart with a final price of {final_price}.")
+
+    # Redirect to the cart view to show the updated cart
+    return redirect('cart')
+
 
 @login_required
 def update_quantity(request, property_id):
@@ -165,6 +181,7 @@ def home(request):
     latest_article = Article.objects.first()
     user_info = get_user_time()
     properties = Property.objects.all()
+    sponsors = Sponsor.objects.all() 
 
     sort_price = request.GET.get('sort_price', 'none')
     sort_area = request.GET.get('sort_area', 'none')
@@ -202,7 +219,7 @@ def home(request):
         properties = properties.order_by(
             'square_meters' if sort_area == 'ascending_area' else '-square_meters'
         )
-
+    sponsors = Sponsor.objects.all()  # Fetch all sponsors
     context = {
         'latest_article': latest_article,
         'username': request.user.username if request.user.is_authenticated else None,
@@ -211,6 +228,7 @@ def home(request):
         'calendar_text': user_info['calendar_text'],
         'properties': properties,
         'quote': api_quote,
+        'sponsors': sponsors
     }
     logger.info("Home page accessed")
     return render(request, 'home.html', context)

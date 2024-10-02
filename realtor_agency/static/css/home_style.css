@@ -276,10 +276,12 @@
 }
 
 .property-image {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 100%;  /* Установим максимальную ширину */
+    height: auto;  /* Автоматическая высота в зависимости от ширины */
+    display: block;
+    margin: 0 auto;  /* Центровка изображения */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Небольшая тень для улучшения стиля */
 }
 
 /* Action Section */

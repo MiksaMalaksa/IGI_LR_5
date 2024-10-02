@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/detail.css' %}">
+</head>
 
 {% block title %}
     Property Detail
@@ -33,5 +38,15 @@
         {% endfor %}
     </div>
     {% endif %}
+
+    <div class="coupon-section">
+        <form method="post" action="{% url 'add_to_cart' property.id %}">
+            {% csrf_token %}
+            <label for="coupon_code" class="coupon-label">Coupon Code:</label>
+            <input type="text" id="coupon_code" name="coupon_code" placeholder="Enter your coupon code" class="coupon-input">
+            <button type="submit" class="apply-coupon-btn">Apply Coupon</button>
+        </form>
+    </div>
+    
 </div>
 {% endblock %}

@@ -1,0 +1,98 @@
+.demo-container {
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.demo-header h1, .demo-section h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.demo-nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.demo-nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.demo-nav ul li a {
+    text-decoration: none;
+    color: #337ab7;
+    font-weight: bold;
+}
+
+.demo-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #337ab7;
+    border-radius: 5px;
+}
+
+.demo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.demo-table th, .demo-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.demo-table th {
+    background-color: #337ab7;
+    color: white;
+}
+
+.demo-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.demo-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.demo-form input, .demo-form select, .demo-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.demo-form button {
+    padding: 10px;
+    background-color: #337ab7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.demo-form button:hover {
+    background-color: #0056b3;
+}
+
+.demo-video, .demo-audio, .demo-iframe {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.demo-footer {
+    text-align: center;
+    margin-top: 40px;
+}

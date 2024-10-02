@@ -45,10 +45,14 @@ body {
     transform: translateY(-5px);
 }
 
+/*! !*/
 .news-content {
     flex: 2;
     margin-right: 20px;
+    column-count: 2; /* Устанавливает количество колонок */
+    column-gap: 30px; /* Расстояние между колонками */
 }
+
 
 /* Название статьи */
 .news-title {
@@ -63,7 +67,6 @@ body {
     font-size: 1.2rem;
     margin-bottom: 10px;
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Ограничиваем двумя строками */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis; /* Добавляем многоточие, если текст не помещается */

@@ -5,14 +5,12 @@
     <link rel="stylesheet" href="{% static 'css/home_style.css' %}">
 </head>
 
-{% block title %}
-<a href="{% url 'news' %}" style="color: rgb(75, 75, 240); text-decoration: none;">Home</a>
-{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block content %}
 <!-- Company Header -->
 <header class="animated-header">
-    <h1 class="header-title" style="font-size: 3rem; font-family: 'Nunito', sans-serif; letter-spacing: 2px;">Card Housing</h1>
+    <h1 class="header-title" style="font-size: 3rem; font-family: 'Nunito', sans-serif; letter-spacing: 10px;">Card Housing</h1>
     <img src="{% static 'images/company_logo.jpg' %}" alt="Company Logo" class="company-logo">
 </header>
 
@@ -30,7 +28,7 @@
     <div class="ground"></div>
     <div class="house">
         <div class="window"></div>
-        <div class="door-behind"></div> <!-- Black rectangle behind the door -->
+        <div class="door-behind"></div> 
         <div class="door"></div>
         <div class="flower"></div>
     </div>
@@ -44,16 +42,18 @@
 </div>
 
 <!-- Partners Section -->
+
 <section class="partners-section">
     <h2 class="section-title">Our Partners</h2>
     <div class="partner-logos">
-        <a href="https://www.meta.com" target="_blank"><img src="{% static 'images/meta.png' %}" alt="Meta" class="partner-logo"></a>
-        <a href="https://www.amazon.com" target="_blank"><img src="{% static 'images/amazon.png' %}" alt="Amazon" class="partner-logo"></a>
-        <a href="https://www.apple.com" target="_blank"><img src="{% static 'images/apple.png' %}" alt="Apple" class="partner-logo"></a>
-        <a href="https://www.netflix.com" target="_blank"><img src="{% static 'images/netflix.png' %}" alt="Netflix" class="partner-logo"></a>
-        <a href="https://www.google.com" target="_blank"><img src="{% static 'images/google_logo.png' %}" alt="Google" class="partner-logo"></a>
+        {% for sponsor in sponsors %}
+            <a href="{{ sponsor.website }}" target="_blank">
+                <img src="{% static sponsor.logo %}" alt="{{ sponsor.name }}" class="partner-logo">
+            </a>
+        {% endfor %}
     </div>
 </section>
+
 
 <!-- Welcome Section -->
 <div class="welcome-container">

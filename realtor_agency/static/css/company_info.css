@@ -59,15 +59,14 @@
     transform: rotate(360deg) scale(1.05); /* Вращение на 360 градусов и увеличение */
 }
 
-/* Certificate Container - оформление для сертификата */
 .certificate-container {
-    position: relative; /* Позиционирование для использования z-index */
-    padding: 20px; /* Внутренний отступ */
-    background: linear-gradient(135deg, #8e44ad, #3498db); /* Градиент для фона сертификата */
-    border-radius: 20px; /* Скругленные углы */
-    border: 10px solid transparent; /* Прозрачная граница */
-    background-clip: padding-box; /* Градиент не попадает на границы */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Тень для объема */
+    position: relative;
+    padding: 20px;
+    background: linear-gradient(135deg, #8e44ad, #3498db); /* Градиентный фон */
+    border-radius: 20px;
+    border: 10px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Тень */
 }
 
 .certificate-container:before {
@@ -78,9 +77,17 @@
     bottom: -20px;
     left: -20px;
     background: url('/path/to/border-image.png') no-repeat; /* Изображение для границ */
-    background-size: cover; /* Изображение заполняет все пространство */
-    z-index: -1; /* Изображение ниже основного контента */
+    background-size: cover;
+    z-index: -1; /* Изображение границ ниже основного контента */
 }
+
+.certificate-text {
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 10px;
+}
+
 
 .company-certificate {
     max-width: 300px; /* Максимальная ширина сертификата */
@@ -89,13 +96,6 @@
     border-radius: 12px; /* Скругленные углы */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для объема */
     z-index: 1; /* Сертификат выше изображения границы */
-}
-
-.certificate-text {
-    text-align: center; /* Центрирование текста под сертификатом */
-    font-size: 16px; /* Размер шрифта */
-    color: #fff; /* Белый цвет текста */
-    margin-top: 10px; /* Отступ сверху */
 }
 
 /* Video Wrapper - контейнер для видео */

@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/demo.css' %}">
+</head>
+
+{% block title %}
+HTML Advanced Demo - Шедевр
+{% endblock %}
+
+{% block content %}
+<div class="demo-container">
+    <header class="demo-header">
+        <h1>Полная демонстрация возможностей HTML5</h1>
+        <nav class="demo-nav">
+            <ul>
+                <li><a href="#meta-data">Мета и микро данные</a></li>
+                <li><a href="#citations">Цитаты, сокращения и определения</a></li>
+                <li><a href="#datetime">Дата и время</a></li>
+                <li><a href="#poetry">Четверостишие</a></li>
+                <li><a href="#tables">Таблицы и списки</a></li>
+                <li><a href="#forms">Формы и элементы управления</a></li>
+                <li><a href="#media">Медиа и файлы</a></li>
+                <li><a href="#code-listing">Листинг кода</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="demo-main">
+        <!-- Мета и микро данные -->
+        <section id="meta-data" class="demo-section">
+            <h2>Мета и микро данные</h2>
+            <p>
+                Мета и микро данные играют ключевую роль в SEO-оптимизации веб-страниц. Вот пример использования мета
+                данных:
+            </p>
+            <pre>
+&lt;meta name="description" content="Описание страницы для поисковых систем"&gt;
+&lt;meta name="keywords" content="HTML5, демо, примеры"&gt;
+&lt;meta name="author" content="My Company"&gt;
+            </pre>
+        </section>
+
+        <!-- Цитаты, сокращения и определения -->
+        <section id="citations" class="demo-section">
+            <h2>Цитаты, сокращения и определения</h2>
+            <blockquote cite="https://example.com">
+                "Будь собой, все остальные роли уже заняты." — Оскар Уайльд
+            </blockquote>
+            <blockquote cite="https://example.com">
+                "Успех — это переход от неудачи к неудаче без потери энтузиазма." — Уинстон Черчилль
+            </blockquote>
+            <p>
+                Веб-разработка включает в себя множество сокращений. Например: <abbr
+                    title="Cascading Style Sheets">CSS</abbr> используется для стилизации веб-страниц.
+            </p>
+            <p>
+                Определение HTML: <dfn>HTML</dfn> — это язык гипертекстовой разметки, который используется для создания
+                веб-страниц.
+            </p>
+        </section>
+
+        <!-- Дата и время -->
+        <section id="datetime" class="demo-section">
+            <h2>Дата и время</h2>
+            <p>Текущая дата: <time datetime="2024-09-30">30 сентября 2024</time></p>
+            <p>Запланированная встреча: <time datetime="2024-10-05T14:30">5 октября 2024 года в 14:30</time></p>
+        </section>
+
+        <!-- Четверостишие -->
+        <section id="poetry" class="demo-section">
+            <h2>Четверостишие</h2>
+            <pre>
+Утро встало на пороге,
+Зажглись огни в дороге.
+Светит солнце, жизнь зовёт,
+Вперёд, вперёд, вперёд!
+            </pre>
+        </section>
+
+        <!-- Таблицы и списки -->
+        <section id="tables" class="demo-section">
+            <h2>Таблицы и списки</h2>
+            <table class="demo-table">
+                <caption>Пример таблицы с объединением ячеек</caption>
+                <thead>
+                    <tr>
+                        <th>Название продукта</th>
+                        <th>Категория</th>
+                        <th colspan="2">Цена</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Товар 1</td>
+                        <td>Электроника</td>
+                        <td headers="Цена">5000 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Товар 2</td>
+                        <td>Мебель</td>
+                        <td headers="Цена">15000 ₽</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Списки</h3>
+            <ul>
+                <li>Первый пункт</li>
+                <li>Второй пункт</li>
+                <li>Третий пункт</li>
+            </ul>
+
+            <ol>
+                <li>Первый шаг</li>
+                <li>Второй шаг</li>
+                <li>Третий шаг</li>
+            </ol>
+        </section>
+
+        <!-- Формы и элементы управления -->
+        <section id="forms" class="demo-section">
+            <h2>Формы и элементы управления</h2>
+            <form action="#" method="POST" class="demo-form">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="country">Страна:</label>
+                <select id="country" name="country">
+                    <option value="RU">Россия</option>
+                    <option value="US">США</option>
+                    <option value="UK">Великобритания</option>
+                </select>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+
+        <!-- Медиа и файлы -->
+        <section id="media" class="demo-section">
+            <h2>Медиа и файлы</h2>
+            <video controls class="demo-video">
+                <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+
+            <!-- Аудио -->
+            <audio controls class="demo-audio">
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает аудио.
+            </audio>
+
+            <p>Скачать PDF-файл: <a href="{% static 'files/sample.pdf' %}" download>Скачать PDF</a></p>
+
+            <iframe src="https://www.example.com" width="600" height="400" title="Пример iframe"></iframe>
+        </section>
+
+        <!-- Листинг кода -->
+        <section id="code-listing" class="demo-section">
+            <h2>Листинг кода</h2>
+            <pre>
+# Пример Python-кода
+def add(a, b):
+    return a + b
+
+# Использование функции
+result = add(5, 3)
+print(f"Результат: {result}")
+            </pre>
+        </section>
+    </main>
+
+    <footer class="demo-footer">
+        <p>&copy; 2024 My Company</p>
+    </footer>
+</div>
+{% endblock %}

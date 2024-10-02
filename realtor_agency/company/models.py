@@ -27,22 +27,23 @@ class Article(models.Model):
     def __str__(self):
         return self.title
 
-class CompanyInfo(models.Model):
-    information = models.TextField()
-    video_url = models.URLField(blank=True, null=True)
-    logo = models.ImageField(upload_to='logos/', blank=True, null=True)
-    history = models.TextField(blank=True, null=True)
-    requisites = models.TextField(blank=True, null=True)
-    certificate = models.ImageField(upload_to='certificates/', blank=True, null=True) 
-    certificate_text = models.CharField(max_length=50)
+class Certificate(models.Model):
+    title = models.CharField(max_length=255, verbose_name=_("Title"))  # Название сертификата
+    subtitle = models.CharField(max_length=255, verbose_name=_("Subtitle"), blank=True, null=True)  # Подзаголовок
+    company_name = models.CharField(max_length=255, verbose_name=_("Company Name"))  # Название компании
+    date_issued = models.DateField(default=timezone.now, verbose_name=_("Date Issued"))  # Дата выдачи
+    registry_number = models.CharField(max_length=50, verbose_name=_("Registry Number"))  # Реестровый номер
+    logo = models.ImageField(upload_to='certificates/', blank=True, null=True, verbose_name=_("Logo"))  # Логотип сертификата
+    certificate_footer = models.TextField(verbose_name=_("Footer Text"), blank=True, null=True)  # Подпись или футер сертификата
+    certificate_image = models.ImageField(upload_to='certificates/images/', blank=True, null=True, verbose_name=_("Certificate Image"))  # Картинка сертификата
+    signature_image = models.ImageField(upload_to='certificates/signatures/', blank=True, null=True, verbose_name=_("Signature Image"))  # Картинка подписи
 
     class Meta:
-        verbose_name = _("company info")
-        verbose_name_plural = _("company info")
+        verbose_name = _("Certificate")
+        verbose_name_plural = _("Certificates")
 
     def __str__(self):
-        return "Company Info"
-
+        return self.title
 
 class Dictionary(models.Model):
     term = models.CharField(max_length=255)  # Question or term
@@ -58,6 +59,41 @@ class Dictionary(models.Model):
     def __str__(self):
         return self.term
 
+class CompanyInfo(models.Model):
+    information = models.TextField(verbose_name=_("Information"))
+    video_url = models.URLField(blank=True, null=True, verbose_name=_("Video URL"))
+    logo = models.ImageField(upload_to='logos/', blank=True, null=True, verbose_name=_("Logo"))
+    history = models.TextField(blank=True, null=True, verbose_name=_("History"))
+    requisites = models.TextField(blank=True, null=True, verbose_name=_("Requisites"))
+    
+    # Связь с сертификатом
+    certificate = models.ForeignKey(Certificate, on_delete=models.SET_NULL, null=True, blank=True, verbose_name=_("Certificate"))
+
+    class Meta:
+        verbose_name = _("Company Info")
+        verbose_name_plural = _("Company Info")
+
+    def __str__(self):
+        return "Company Info"
+
+
+
+
+class Sponsor(models.Model):
+    name = models.CharField(max_length=255)
+    logo = models.CharField(max_length=255)  # This stores the relative path to the logo in static
+    website = models.URLField()
+
+    class Meta:
+        verbose_name = _("sponsor")
+        verbose_name_plural = _("sponsors")
+
+    def __str__(self):
+        return self.name
+
+    # Method to get the logo path using static URL
+    def get_logo_path(self):
+        return f"images/{self.logo}"
 
 class Contact(models.Model):
     employer = models.ForeignKey(

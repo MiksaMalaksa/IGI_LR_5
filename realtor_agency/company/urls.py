@@ -32,6 +32,7 @@ urlpatterns = [
     re_path(r'^purchase/(?P<property_id>\d+)/$',
             views.purchase_property, name='purchase_property'),
     re_path(r'^profile/cart/', views.cart_view, name='cart'),
+    re_path(r'^profile/html_demo/$', views.html_demo, name='html_demo'),  
     re_path(r'^remove_from_cart/(?P<property_id>\d+)/$', views.remove_from_cart, name='remove_from_cart'),
     re_path(r'^add_to_cart/(?P<property_id>\d+)/$', views.add_to_cart, name='add_to_cart'),
     re_path(r'^update_quantity/(?P<property_id>\d+)/$', views.update_quantity, name='update_quantity'),
