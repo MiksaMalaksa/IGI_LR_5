@@ -1,3 +1,20 @@
+
+p.custom-text {
+    padding: 20px; /* Внутренний отступ */
+    margin: 20px 0; /* Внешний отступ сверху и снизу */
+    text-indent: 30px; /* Красная строка */
+    line-height: 1.6; /* Межстрочный интервал */
+    font-variant: small-caps; /* Капитель */
+    letter-spacing: 1.5px; /* Интервал между символами */
+    word-spacing: 3px; /* Интервал между словами */
+    word-break: break-word; /* Разрыв слов */
+    hyphens: auto; /* Автоматический перенос */
+    font-family: 'Georgia', serif; /* Шрифт Georgia */
+    text-align: justify; /* Выравнивание текста по ширине */
+    position: relative; /* Относительное позиционирование */
+    top: 10px; /* Смещение вниз */
+}
+
 /* Main Container - общий контейнер для страницы "О компании" */
 .about-container {
     max-width: 900px; /* Максимальная ширина контейнера */
@@ -11,6 +28,7 @@
     z-index: 1; /* Z-index для корректного наложения элементов */
 }
 
+/*MARK*/
 /* Header Title - заголовок страницы */
 .about-container h1 {
     font-size: 40px; /* Увеличенный шрифт заголовка */
@@ -76,7 +94,7 @@
     right: -20px;
     bottom: -20px;
     left: -20px;
-    background: url('/path/to/border-image.png') no-repeat; /* Изображение для границ */
+    background: url('/path/to/border-image.png') no-repeat; /* Изображение для границ MARK*/
     background-size: cover;
     z-index: -1; /* Изображение границ ниже основного контента */
 }

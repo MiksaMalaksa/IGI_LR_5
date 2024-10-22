@@ -38,10 +38,8 @@
     max-width: 800px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     /* Использование Flexbox */
-    display: flex;
     flex-direction: column;
     align-items: center;
 }

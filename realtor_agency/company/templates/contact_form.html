@@ -67,12 +67,13 @@
             border-radius: 6px;
             font-size: 1.2rem;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, cursor 0.3s ease; /* MARK: Изменяем вид курсора */
             box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
         }
 
         button:hover {
             background-color: #3E8E41;
+            cursor: pointer; /* MARK: Указатель курсора изменяется на pointer при наведении */
         }
 
         /* NAVIGATION BAR STYLES */
@@ -117,12 +118,14 @@
         }
 
         /* LIST AND TEXT STYLING */
+        /* MARK: Выделяем первую букву текста абзаца */
         p::first-letter {
             font-size: 200%;
             font-weight: bold;
-            color: #4CAF50;
+            color: #4CAF50; /* Зеленый цвет для первой буквы */
         }
 
+        /* MARK: Добавляем контекст в начале и конце фрагмента текста */
         p::before {
             content: "Начало текста: ";
             font-style: italic;
@@ -135,6 +138,7 @@
             color: #888;
         }
 
+        /* MARK: Использование символов Юникода в списке */
         ul.custom-bullets {
             list-style-type: none;
             padding: 0;
@@ -142,12 +146,18 @@
         }
 
         ul.custom-bullets li::before {
-            content: "\2022";
+            content: "\2022"; /* Используем символ Юникода для маркера */
             color: #4CAF50;
             font-weight: bold;
             display: inline-block;
             width: 1em;
             margin-left: -1em;
+        }
+
+        /* MARK: Изменение стиля при выделении текста */
+        ::selection {
+            background-color: #4CAF50;
+            color: white;
         }
 
         table {

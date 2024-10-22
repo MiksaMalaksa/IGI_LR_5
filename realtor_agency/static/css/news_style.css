@@ -23,13 +23,16 @@ body {
     text-transform: uppercase;
 }
 
-/* Список новостей */
-.news-list {
+/* Селектор потомков: применяем стиль к элементам <li>, которые находятся внутри <ul> с классом .news-list */
+/* MARK */
+.news-list li {
     list-style: none;
     padding: 0;
 }
 
-.news-item {
+/* Комбинация селекторов: применяем стили к элементам, у которых есть класс .news-item, которые являются дочерними элементами .news-list */
+/* MARK */
+.news-list > .news-item {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -41,39 +44,9 @@ body {
     transition: transform 0.3s ease;
 }
 
-.news-item:hover {
-    transform: translateY(-5px);
-}
-
-/*! !*/
-.news-content {
-    flex: 2;
-    margin-right: 20px;
-    column-count: 2; /* Устанавливает количество колонок */
-    column-gap: 30px; /* Расстояние между колонками */
-}
-
-
-/* Название статьи */
-.news-title {
-    font-size: 1.8rem;
-    color: #00a8ff;
-    margin-bottom: 15px;
-}
-
-/* Сниппет статьи с overflow и многоточием */
-.news-snippet {
-    color: #f5f6fa;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis; /* Добавляем многоточие, если текст не помещается */
-}
-
-/* Кнопка "Читать далее" */
-.read-more-btn {
+/* Атрибутный селектор: стили для кнопок с атрибутом href, содержащим слово "read" */
+/* MARK */
+a[href*="read"] {
     display: inline-block;
     padding: 10px 20px;
     background-color: #4b7bec;
@@ -85,22 +58,37 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.read-more-btn:hover {
-    background-color: #3867d6;
-}
-
-/* Изображение новости */
+/* Селектор для изображения, которое является потомком блока с классом .news-image */
+/* MARK */
 .news-image img {
-    max-width: 100%; /* Изображение не выходит за пределы контейнера */
-    width: 250px; /* Фиксированная ширина */
+    max-width: 100%;
+    width: 250px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    object-fit: cover; /* Сохранение соотношения сторон изображения */
+    object-fit: cover;
 }
 
-.no-news {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #f5f6fa;
+/* Псевдокласс для кнопок при наведении курсора */
+/* MARK */
+a[href*="read"]:hover {
+    background-color: #3867d6;
+}
+
+/* Селектор атрибута: применяем стиль ко всем элементам input с типом submit */
+/* MARK */
+input[type="submit"] {
+    padding: 10px;
+    background-color: #4b4bf0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Псевдокласс: изменение стиля кнопки при наведении */
+/* MARK */
+input[type="submit"]:hover {
+    background-color: #3030b0;
 }
