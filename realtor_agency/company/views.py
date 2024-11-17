@@ -1,11 +1,13 @@
 from datetime import date, datetime
+import json
+import re
 from django.forms import ValidationError
 from django.http import JsonResponse
 from .models import Contact
 from .forms import ContactForm, ReviewForm, PropertyForm
 import logging
 import requests
-from agency.models import Property, Sale, Cart, CartItem, User, Profile
+from agency.models import Employer, Property, Sale, Cart, CartItem, User, Profile
 from django.db.models import Avg, Max, Count, Sum
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.shortcuts import render, get_object_or_404, redirect
@@ -13,8 +15,144 @@ from django.contrib import messages
 from .utils import get_user_time
 from company.models import Article, CompanyInfo, Dictionary, Vacancy, Review, Coupon, Sponsor
 from django.contrib import admin
+import requests
+from django.core.files.base import ContentFile
+from urllib.parse import urlparse
+import os
+from django.core.paginator import Paginator
+from django.http import JsonResponse
+from django.template.loader import render_to_string
 
 logger = logging.getLogger(__name__)
+
+@login_required  
+def get_contacts(request):
+    if request.method == 'GET':
+        contacts = Contact.objects.all().select_related('employer').values(
+            'id',
+            'employer__first_name',
+            'employer__last_name',
+            'employer__job',
+            'employer__phone_number',
+            'employer__email',
+            'description',
+            'image',
+            'website', 
+        )
+        contacts_list = list(contacts)
+        for contact in contacts_list:
+            if contact['image']:
+                contact['image'] = request.build_absolute_uri(contact['image'])
+            else:
+                contact['image'] = ''  
+        return JsonResponse({'contacts': contacts_list})
+    return JsonResponse({'error': 'Invalid request method.'}, status=400)
+
+@login_required 
+def add_contact(request):
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            first_name = data.get('first_name', '').strip()
+            last_name = data.get('last_name', '').strip()
+            job_description = data.get('job_description', '').strip()
+            phone_number = data.get('phone_number', '').strip()
+            email = data.get('email', '').strip()
+            website = data.get('website', '').strip()
+            photo_url = data.get('photo', '').strip()
+
+            # Валидация обязательных полей
+            if not all([first_name, last_name, job_description, phone_number, email]):
+                return JsonResponse({'success': False, 'error': 'All fields except website are required.'}, status=400)
+
+            # Валидация URL для website
+            url_pattern = re.compile(r'^(http:\/\/|https:\/\/).*\.(php|html)$')
+            if website and not url_pattern.match(website):
+                return JsonResponse({'success': False, 'error': 'Invalid Website URL format.'}, status=400)
+
+            # Валидация номера телефона
+            phone_pattern = re.compile(r'^(\+375|8)\s?\(?\d{2}\)?\s?\d{3}[-\s]?\d{2}[-\s]?\d{2}$')
+            if not phone_pattern.match(phone_number):
+                return JsonResponse({'success': False, 'error': 'Invalid phone number format.'}, status=400)
+
+            # Создание или получение объекта Employer
+            employer, created = Employer.objects.get_or_create(
+                first_name=first_name,
+                last_name=last_name,
+                job=job_description,
+                phone_number=phone_number,
+                email=email
+            )
+
+            # Обработка изображения по URL
+            image_file = None
+            if photo_url:
+                try:
+                    response = requests.get(photo_url)
+                    if response.status_code == 200:
+                        parsed_url = urlparse(photo_url)
+                        filename = os.path.basename(parsed_url.path)
+                        image_content = ContentFile(response.content)
+                        image_file = ContentFile(image_content.read(), name=filename)
+                    else:
+                        return JsonResponse({'success': False, 'error': 'Failed to download image from URL.'}, status=400)
+                except Exception as e:
+                    return JsonResponse({'success': False, 'error': f'Error downloading image: {str(e)}'}, status=400)
+
+            # Создание нового контакта
+            contact = Contact.objects.create(
+                employer=employer,
+                description=job_description,
+                website=website  # Предполагается, что в модели Contact есть поле 'website'
+            )
+
+            # Сохранение изображения, если оно было загружено
+            if image_file:
+                contact.image.save(image_file.name, image_file, save=True)
+
+            return JsonResponse({'success': True, 'contact': {
+                'id': contact.id,
+                'first_name': contact.employer.first_name,
+                'last_name': contact.employer.last_name,
+                'job_description': contact.employer.job,
+                'phone_number': contact.employer.phone_number,
+                'email': contact.employer.email,
+                'description': contact.description,
+                'website': contact.website,
+                'image': contact.image.url if contact.image else '',
+            }})
+        except json.JSONDecodeError:
+            return JsonResponse({'success': False, 'error': 'Invalid JSON.'}, status=400)
+        except Exception as e:
+            return JsonResponse({'success': False, 'error': str(e)}, status=500)
+    return JsonResponse({'success': False, 'error': 'Invalid request method.'}, status=400)
+
+@login_required  
+def reward_contacts(request):
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            contact_ids = data.get('contact_ids', [])
+
+            if not contact_ids:
+                return JsonResponse({'success': False, 'error': 'No contacts selected for reward.'}, status=400)
+
+            contacts = Contact.objects.filter(id__in=contact_ids).select_related('employer')
+            if not contacts.exists():
+                return JsonResponse({'success': False, 'error': 'No valid contacts found.'}, status=400)
+
+            names = [f"{contact.employer.first_name} {contact.employer.last_name}" for contact in contacts]
+
+            # Создание текста премирования
+            reward_text = f"Congratulations to: {', '.join(names)} for their well-deserved reward!"
+
+            return JsonResponse({'success': True, 'reward_text': reward_text})
+        except json.JSONDecodeError:
+            return JsonResponse({'success': False, 'error': 'Invalid JSON.'}, status=400)
+        except Exception as e:
+            return JsonResponse({'success': False, 'error': str(e)}, status=500)
+    return JsonResponse({'success': False, 'error': 'Invalid request method.'}, status=400)
+
 
 @login_required
 def add_review(request):
@@ -180,8 +318,8 @@ def apply_coupon(request):
 def home(request):
     latest_article = Article.objects.first()
     user_info = get_user_time()
-    properties = Property.objects.all()
-    sponsors = Sponsor.objects.all() 
+    properties_list = Property.objects.all()
+    sponsors = Sponsor.objects.all()
 
     sort_price = request.GET.get('sort_price', 'none')
     sort_area = request.GET.get('sort_area', 'none')
@@ -200,37 +338,57 @@ def home(request):
         else:
             logger.error("Failed to retrieve quote from API")
 
+    # Фильтрация по цене и площади
     if min_price:
-        properties = properties.filter(price__gte=min_price)
+        properties_list = properties_list.filter(price__gte=min_price)
     if max_price:
-        properties = properties.filter(price__lte=max_price)
+        properties_list = properties_list.filter(price__lte=max_price)
     if min_area:
-        properties = properties.filter(square_meters__gte=min_area)
+        properties_list = properties_list.filter(square_meters__gte=min_area)
     if max_area:
-        properties = properties.filter(square_meters__lte=max_area)
+        properties_list = properties_list.filter(square_meters__lte=max_area)
     if title:
-        properties = properties.filter(title__icontains=title)
+        properties_list = properties_list.filter(title__icontains=title)
 
+    # Сортировка по цене
     if sort_price != 'none':
-        properties = properties.order_by(
+        properties_list = properties_list.order_by(
             'price' if sort_price == 'ascending_price' else '-price'
         )
+    
+    # Сортировка по площади
     if sort_area != 'none':
-        properties = properties.order_by(
+        properties_list = properties_list.order_by(
             'square_meters' if sort_area == 'ascending_area' else '-square_meters'
         )
-    sponsors = Sponsor.objects.all()  # Fetch all sponsors
+
+    # Пагинация: 3 элемента на страницу
+    paginator = Paginator(properties_list, 3)  # 3 свойства на страницу
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    # Определение, является ли пользователь администратором
+    is_admin = request.user.is_staff or request.user.is_superuser
+
     context = {
         'latest_article': latest_article,
         'username': request.user.username if request.user.is_authenticated else None,
-        'user_timezone': user_info['user_timezone'],
-        'current_date_formatted': user_info['current_date_formatted'],
-        'calendar_text': user_info['calendar_text'],
-        'properties': properties,
+        'user_timezone': user_info.get('user_timezone', 'UTC'),
+        'current_date_formatted': user_info.get('current_date_formatted', datetime.now().strftime('%Y-%m-%d')),
+        'calendar_text': user_info.get('calendar_text', ''),
+        'page_obj': page_obj,
+        'properties': page_obj.object_list,
         'quote': api_quote,
-        'sponsors': sponsors
+        'sponsors': sponsors,
+        'is_admin': is_admin,
     }
+
     logger.info("Home page accessed")
+
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+        properties_html = render_to_string('partials/_property_list.html', context, request=request)
+        return JsonResponse({'properties_html': properties_html})
+
     return render(request, 'home.html', context)
 
 def client_list_view(request):
@@ -489,11 +647,7 @@ def dictionary(request):
 
 
 def contacts(request):
-    contacts = Contact.objects.all()
-    context = {
-        'contacts': contacts,
-    }
-    return render(request, 'contacts.html', context)
+    return render(request, 'contacts.html')
 
 
 def privacy_policy(request):

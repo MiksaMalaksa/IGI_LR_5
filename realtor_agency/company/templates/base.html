@@ -233,6 +233,12 @@
         {% block content %}
         {% endblock %}
     </main>
+
+    {% block scripts %}
+<script src="{% static 'js/slider.js' %}"></script>
+<script src="{% static 'js/script_proto.js' %}"></script>
+
+{% endblock %}
 </body>
 
 </html>

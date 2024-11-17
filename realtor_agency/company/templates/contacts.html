@@ -1,34 +1,81 @@
+<!-- contacts.html -->
+
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Contacts{% endblock %}
 
 {% block content %}
 <div class="contacts-container">
     <h1>Contacts</h1>
-    {% if user.is_superuser %}
-        <a href="{% url 'contact_create' %}" class="button add-contact">Add Contact</a>
-    {% endif %}
-    {% if contacts %}
-        <ul class="contacts-list">
-            {% for contact in contacts %}
-                <li class="contact-item">
-                    <img src="{{ contact.image.url }}" class="contact-image">
-                    <h2>{{ contact.employer.first_name }} {{ contact.employer.last_name }}</h2>
-                    <p class="job-title"><strong>Job:</strong> {{ contact.employer.job }}</p>
-                    <p class="contact-info"><strong>Phone:</strong> {{ contact.employer.phone_number }}</p>
-                    <p class="contact-info"><strong>Email:</strong> <a href="mailto:{{ contact.employer.email }}" class="email-link">{{ contact.employer.email }}</a></p>
-                    <p class="description">{{ contact.description }}</p>
-                    {% if user.is_superuser %}
-                        <div class="admin-buttons">
-                            <a href="{% url 'contact_update' contact.pk %}" class="button edit-button">Edit</a>
-                            <a href="{% url 'contact_delete' contact.pk %}" class="button delete-button">Delete</a>
-                        </div>
-                    {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p class="no-contacts-message">No contacts for now!</p>
-    {% endif %}
+    <div class="controls">
+        <button id="add-contact-btn" class="button add-contact">Add Contact</button>
+        <div class="filter-group">
+            <input type="text" id="filter-input" placeholder="Enter text to filter" />
+            <button id="filter-btn" class="button filter-button">Find</button>
+        </div>
+        <button id="reward-btn" class="button reward-button">Reward</button>
+    </div>
+    <table id="contacts-table">
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th data-column="employer__first_name" class="sortable">First Name</th>
+                <th data-column="employer__last_name" class="sortable">Last Name</th>
+                <th>Photo</th>
+                <th data-column="employer__job" class="sortable">Job Description</th>
+                <th data-column="employer__phone_number" class="sortable">Phone Number</th>
+                <th data-column="employer__email" class="sortable">Email</th>
+                <th data-column="website" class="sortable">Website</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Данные будут загружены через JavaScript -->
+        </tbody>
+    </table>
+    <div id="pagination">
+        <!-- Пагинация будет генерироваться через JavaScript -->
+    </div>
+    <div id="reward-text" class="reward-text"></div>
+    <div id="contact-card" class="contact-card">
+        <!-- Карточка с полной информацией о контакте будет отображаться здесь -->
+    </div>
+
+    <!-- Модальное окно для добавления контакта -->
+    <div id="add-contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Contact</h2>
+            <form id="add-contact-form">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required />
+
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required />
+
+                <label for="job_description">Job Description:</label>
+                <textarea id="job_description" name="job_description" required></textarea>
+
+                <label for="phone_number">Phone Number:</label>
+                <input type="text" id="phone_number" name="phone_number" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="website">Website URL:</label>
+                <input type="url" id="website" name="website" />
+
+                <label for="photo">Photo URL:</label>
+                <input type="url" id="photo" name="photo" />
+
+                <button type="submit" id="submit-add-contact" class="button submit-button" disabled>Добавить в таблицу</button>
+                <div id="form-message" class="form-message"></div>
+            </form>
+        </div>
+    </div>
 </div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/contacts.js' %}"></script>
 {% endblock %}

@@ -1,0 +1,44 @@
+<!-- templates/partials/_property_list.html -->
+
+<!-- Property Cards -->
+<div class="property-grid">
+    {% for property in properties %}
+    <div class="property-card">
+        <h3 class="property-title">{{ property.title }}</h3>
+        <p>Price: {{ property.price }}</p>
+        <p>Location: {{ property.location }}</p>
+        <p>Floor: {{ property.floor }}</p>
+        <p>Square Meters: {{ property.square_meters }}</p>
+        <a href="{% url 'property_detail' property.id %}">
+            <img src="{{ property.image.url }}" alt="{{ property.title }}" class="property-img">
+        </a>
+        {% if is_admin %}
+        <div class="admin-actions">
+            <button class="btn-change">Change</button>
+            <button class="btn-delete">Delete</button>
+        </div>
+        {% endif %}
+    </div> 
+    {% empty %}
+    <p class="no-properties">No properties available</p>
+    {% endfor %}
+</div>
+
+<!-- Пагинация -->
+<div class="pagination-container">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="#" class="page-link" data-page="1">&laquo; first</a>
+            <a href="#" class="page-link" data-page="{{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="#" class="page-link" data-page="{{ page_obj.next_page_number }}">next</a>
+            <a href="#" class="page-link" data-page="{{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>

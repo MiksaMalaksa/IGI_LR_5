@@ -1,26 +1,90 @@
+<!-- home.html -->
+
 {% extends 'base.html' %}
 {% load static %}
-
-<head>
-    <link rel="stylesheet" href="{% static 'css/home_style.css' %}">
-</head>
 
 {% block title %}Home{% endblock %}
 
 {% block content %}
 <!-- Company Header -->
 <header class="animated-header">
-    <h1 class="header-title" style="font-size: 3rem; font-family: 'Nunito', sans-serif; letter-spacing: 10px;">Card Housing</h1>
+    <h1 class="header-title">Card Housing</h1>
     <img src="{% static 'images/company_logo.jpg' %}" alt="Company Logo" class="company-logo">
 </header>
 
-<!-- Banners Section -->
+<section class="countdown-section">
+    <h2 class="section-title">Обратный отсчет</h2>
+    <div id="countdown">
+        <span id="hours">00</span> :
+        <span id="minutes">00</span> :
+        <span id="seconds">00</span>
+    </div>
+</section>
+
+<!-- Banners Section with Slider --> 
 <section class="banners">
     <h2 class="section-title">Why we?</h2>
-    <div class="banner-container">
-        <img src="{% static 'images/banner1.jpeg' %}" alt="Banner 1" class="banner-img">
-        <img src="{% static 'images/banner2.jpeg' %}" alt="Banner 2" class="banner-img">
-        <img src="{% static 'images/banner3.jpeg' %}" alt="Banner 3" class="banner-img">
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <a href="https://example.com/link1">
+                    <img src="{% static 'images/banner1.jpeg' %}" alt="Banner 1" class="banner-img">
+                    <div class="caption">Discover Your Dream Home</div>
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://example.com/link2">
+                    <img src="{% static 'images/banner2.jpeg' %}" alt="Banner 2" class="banner-img">
+                    <div class="caption">Quality You Can Trust</div>
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://example.com/link3">
+                    <img src="{% static 'images/banner3.jpeg' %}" alt="Banner 3" class="banner-img">
+                    <div class="caption">Your Future Starts Here</div>
+                </a>
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+        <div class="dotsis">
+            <span class="doti active" data-index="0"></span>
+            <span class="doti" data-index="1"></span>
+            <span class="doti" data-index="2"></span>
+        </div>
+        <div class="slide-number">1/3</div>
+    </div>
+    <form id="slider-form">
+        <label for="interval">Slide Interval (seconds):</label>
+        <input type="number" id="interval" name="interval" min="1" value="5">
+        <button type="button" id="set-interval">Set Interval</button>
+    </form>
+</section>
+
+<!-- Style Toggle Section -->
+<section class="style-toggle-section">
+    <h2 class="section-title">Customize Page Styles</h2>
+    <label>
+        <input type="checkbox" id="style-toggle-checkbox">
+        Enable Style Customization
+    </label>
+    <div id="style-controls" class="style-controls" style="display: none; margin-top: 20px;">
+        <div class="control-item">
+            <label for="font-size">Font Size:</label>
+            <input type="range" id="font-size" min="14" max="24" value="16">
+            <span id="font-size-value">16px</span>
+        </div>
+        <div class="control-item">
+            <label for="text-color">Text Color:</label>
+            <input type="color" id="text-color" value="#ffffff">
+        </div>
+        <div class="control-item">
+            <label for="background-color">Background Color:</label>
+            <input type="color" id="background-color" value="#1e1e30">
+        </div>
+    </div>
+    <div class="coloring-section">
+        <h2 id="coloring-text">Coloring!</h2>
     </div>
 </section>
 
@@ -38,11 +102,10 @@
     <div class="cloud small" style="top: 15%; left: 200px;"></div>
     <div class="cloud large" style="top: 5%;"></div>
     <div class="stone"></div>
-    <div class="card-text">Card Housing</div> <!-- Animated text -->
+    <div class="card-text">Card Housing</div>
 </div>
 
 <!-- Partners Section -->
-
 <section class="partners-section">
     <h2 class="section-title">Our Partners</h2>
     <div class="partner-logos">
@@ -53,7 +116,6 @@
         {% endfor %}
     </div>
 </section>
-
 
 <!-- Welcome Section -->
 <div class="welcome-container">
@@ -67,15 +129,14 @@
 
 <!-- Latest Article -->
 {% if latest_article %}
-<!-- Используем абсолютное позиционирование для отображения инфо о последней статье -->
-<h2 style="position: relative; top: 20px; margin-bottom: 50px;"> <!-- Добавлен отступ для последнего элемента -->
+<h2 class="latest-article-title">
     <a href="{% url 'article_detail' latest_article.id %}" class="latest-news-link">
         {{ latest_article.title }}
     </a>
     - the latest piece of news!
 </h2>
 {% else %}
-<p style="margin-bottom: 50px;">No articles for now!</p> <!-- Отступ добавлен к последнему элементу -->
+<p class="no-articles">No articles for now!</p>
 {% endif %}
 
 <!-- Filter Section -->
@@ -116,32 +177,256 @@
     </form>
 </section>
 
-<!-- Property Cards -->
-<div class="property-grid">
-    {% for property in properties %}
-    <div class="property-card">
-        <h3 class="property-title">{{ property.title }}</h3>
-        <p>Price: {{ property.price }}</p>
-        <p>Location: {{ property.location }}</p>
-        <p>Floor: {{ property.floor }}</p>
-        <p>Square Meters: {{ property.square_meters }}</p>
-        <a href="{% url 'property_detail' property.id %}"><img src="{{ property.image.url }}" alt="{{ property.title }}" class="property-img"></a>
-        {% if is_admin %}
-        <div class="admin-actions">
-            <button class="btn-change">Change</button>
-            <button class="btn-delete">Delete</button>
-        </div>
-        {% endif %}
-    </div>
-    {% empty %}
-    <p>No properties available</p>
-    {% endfor %}
+<!-- Property Cards and Pagination (Частичный шаблон) -->
+<div id="property-section">
+    {% include 'partials/_property_list.html' %}
 </div>
 
-<!-- Preloader -->
-<div class="preloader">
-    <div class="dot dot1"></div>
-    <div class="dot dot2"></div>
-    <div class="dot dot3"></div>
-</div>
+<!-- Date of Birth Section -->
+<section class="dob-section">
+    <h2 class="section-title">Enter Your Date of Birth</h2>
+    <form id="dob-form">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <button type="submit" class="btn-submit">Submit</button>
+    </form>
+    <div id="dob-message" class="dob-message"></div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // AJAX Пагинация
+        document.addEventListener('click', function(event) {
+            if (event.target.classList.contains('page-link')) {
+                event.preventDefault();
+                const page = event.target.getAttribute('data-page');
+                fetchPage(page);
+            }
+        });
+
+        function fetchPage(page) {
+            const urlParams = new URLSearchParams(window.location.search);
+            urlParams.set('page', page);
+            const url = `${window.location.pathname}?${urlParams.toString()}`;
+
+            fetch(url, {
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.properties_html) {
+                    document.getElementById('property-section').innerHTML = data.properties_html;
+                }
+            })
+            .catch(error => console.error('Error fetching page:', error));
+        }
+
+
+        function observePropertySection() {
+            const propertySection = document.getElementById('property-section');
+            const observer = new MutationObserver(() => {
+                setupCircularPagination();
+            });
+            observer.observe(propertySection, { childList: true, subtree: true });
+        }
+
+        setupCircularPagination();
+        observePropertySection();
+
+        // Изменение цвета текста "Coloring!"
+        const coloringText = document.getElementById('coloring-text');
+        const colors = ['#FF5733', '#33FF57', '#3357FF', '#F333FF', '#FF33A8'];
+        let colorIndex = 0;
+        let colorInterval = setInterval(changeColor, 1000);
+
+        function changeColor() {
+            coloringText.style.color = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        }
+
+        // Handle style customization changes to set color
+        const textColorPicker = document.getElementById('text-color');
+        textColorPicker.addEventListener('input', () => {
+            clearInterval(colorInterval);
+            coloringText.style.color = textColorPicker.value;
+        });
+    });
+</script>
+
+<!-- Slider Script -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Slider Functionality ---
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.doti');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const slideNumber = document.querySelector('.slide-number');
+    const intervalInput = document.getElementById('interval');
+    const setIntervalBtn = document.getElementById('set-interval');
+    let slideInterval = 5000; // 5 секунд по умолчанию
+    let timer;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+            dots[i].classList.toggle('active', i === index);
+        });
+        slideNumber.textContent = `${index + 1}/${slides.length}`;
+        slideIndex = index;
+    }
+
+    function nextSlide() {
+        let index = (slideIndex + 1) % slides.length;
+        showSlide(index);
+    }
+
+    function prevSlideFunc() {
+        let index = (slideIndex - 1 + slides.length) % slides.length;
+        showSlide(index);
+    }
+
+    function startSlideShow() {
+        timer = setInterval(nextSlide, slideInterval);
+    }
+
+    function resetSlideShow() {
+        clearInterval(timer);
+        startSlideShow();
+    }
+
+    // Инициализация
+    showSlide(slideIndex);
+    startSlideShow();
+
+    // Обработчики кнопок
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetSlideShow();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        prevSlideFunc();
+        resetSlideShow();
+    });
+
+    // Обработчики точек
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+            resetSlideShow();
+        });
+    });
+
+    // Обработка изменения интервала
+    setIntervalBtn.addEventListener('click', () => {
+        const newInterval = parseInt(intervalInput.value) * 1000;
+        if (isNaN(newInterval) || newInterval < 1000) {
+            alert('Please enter a valid number greater than 0.');
+            return;
+        }
+        slideInterval = newInterval;
+        resetSlideShow();
+    });
+
+    // Пауза при наведении
+    const slider = document.querySelector('.slider');
+    slider.addEventListener('mouseenter', () => {
+        clearInterval(timer);
+    });
+    slider.addEventListener('mouseleave', () => {
+        startSlideShow();
+    });
+    // --- Конец Slider Functionality ---
+});
+</script>
+
+<!-- Style Toggle Script -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const styleToggleCheckbox = document.getElementById('style-toggle-checkbox');
+    const styleControls = document.getElementById('style-controls');
+    const fontSizeSlider = document.getElementById('font-size');
+    const fontSizeValue = document.getElementById('font-size-value');
+    const textColorPicker = document.getElementById('text-color');
+    const backgroundColorPicker = document.getElementById('background-color');
+
+    // Показать или скрыть элементы управления стилями
+    styleToggleCheckbox.addEventListener('change', () => {
+        if (styleToggleCheckbox.checked) {
+            styleControls.style.display = 'block';
+        } else {
+            styleControls.style.display = 'none';
+        }
+    });
+
+    // Изменение размера шрифта
+    fontSizeSlider.addEventListener('input', () => {
+        const size = fontSizeSlider.value + 'px';
+        document.body.style.fontSize = size;
+        fontSizeValue.textContent = size;
+    });
+
+    // Изменение цвета текста
+    textColorPicker.addEventListener('input', () => {
+        document.body.style.color = textColorPicker.value;
+    });
+
+    // Изменение цвета фона страницы
+    backgroundColorPicker.addEventListener('input', () => {
+        document.body.style.backgroundColor = backgroundColorPicker.value;
+    });
+});
+</script>
+
+<!-- Date of Birth Form Script -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const dobForm = document.getElementById('dob-form');
+    const dobInput = document.getElementById('dob');
+    const dobMessage = document.getElementById('dob-message');
+
+    dobForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const dobValue = dobInput.value;
+        if (!dobValue) {
+            dobMessage.textContent = 'Please enter your date of birth.';
+            dobMessage.style.color = '#dc3545'; // Красный цвет
+            return;
+        }
+
+        const dobDate = new Date(dobValue);
+        const today = new Date();
+        let age = today.getFullYear() - dobDate.getFullYear();
+        const monthDiff = today.getMonth() - dobDate.getMonth();
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dobDate.getDate())) {
+            age--;
+        }
+
+        const dayOfWeek = dobDate.toLocaleDateString('en-US', { weekday: 'long' });
+
+        if (age >= 18) {
+            dobMessage.innerHTML = `
+                You are ${age} years old.<br>
+                You were born on a ${dayOfWeek}.
+            `;
+            dobMessage.style.color = '#28a745'; // Зеленый цвет
+        } else {
+            dobMessage.innerHTML = `
+                You are ${age} years old.<br>
+                You were born on a ${dayOfWeek}.<br>
+                <strong>Note:</strong> You need parental permission to use this site.
+            `;
+            dobMessage.style.color = '#ffc107'; // Желтый цвет
+            alert('You need parental permission to use this site.');
+        }
+    });
+});
+</script>
 {% endblock %}

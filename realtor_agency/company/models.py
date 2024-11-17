@@ -100,13 +100,15 @@ class Contact(models.Model):
         Employer, on_delete=models.CASCADE, default=None)
     description = models.TextField()
     image = models.ImageField(upload_to="contacts/", null=True, blank=True)
+    website = models.URLField(blank=True, null=True)  # Добавлено поле website
 
     class Meta:
         verbose_name = _("contact")
         verbose_name_plural = _("contacts")
 
     def __str__(self):
-        return self.employer.first_name if self.employer else 'No Employer'
+        return f"{self.employer.first_name} {self.employer.last_name}" if self.employer else 'No Employer'
+
 
 
 class Vacancy(models.Model):

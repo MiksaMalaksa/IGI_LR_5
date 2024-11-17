@@ -1,4 +1,6 @@
-/* General container styling */
+/* contacts.css */
+
+/* Общие стили контактов */
 .contacts-container {
     max-width: 1200px;
     margin: 50px auto;
@@ -18,119 +20,524 @@
     letter-spacing: 1.5px;
 }
 
-/* Contacts list grid layout */
-.contacts-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 0;
-    list-style-type: none;
-}
-
-/* Contact item styling */
-.contact-item {
-    background-color: #2c2c3b;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+.controls {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    /* Использование Flexbox */
-    display: flex;
-    flex-direction: column;
     align-items: center;
-}
-
-.contact-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Contact image styling */
-.contact-image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
-/* Contact details */
-h2 {
-    font-size: 1.8rem;
-    color: #6a11cb;
-    margin-bottom: 10px;
-}
-
-.job-title, .contact-info {
-    font-size: 1rem;
-    color: #ddd;
-    margin-bottom: 8px;
-}
-
-.description {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #bbb;
-}
-
-/* Admin buttons */
-.admin-buttons {
+.filter-group {
     display: flex;
-    justify-content: space-around;
-    margin-top: 15px;
-    width: 100%;
+    align-items: center;
+    gap: 10px;
 }
 
+.controls .button {
+    margin: 5px 0;
+}
+
+.controls input[type="text"] {
+    padding: 8px 12px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3a3a4d;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+.controls input[type="text"]:focus {
+    background-color: #444;
+    transform: scale(1.02);
+}
+
+/* Кнопки */
 .button {
-    padding: 12px 20px;
+    padding: 10px 20px;
+    margin: 5px 0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    width: 100px; /* Increased button width for better appearance */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: #fff;
 }
 
-.edit-button {
+.add-contact {
+    background-color: #28a745;
+}
+
+.add-contact:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.filter-button {
+    background-color: #17a2b8;
+}
+
+.filter-button:hover {
+    background-color: #138496;
+    transform: scale(1.05);
+}
+
+.reward-button {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.reward-button:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+}
+
+.submit-button {
     background-color: #007bff;
-    color: white;
 }
 
-.edit-button:hover {
+.submit-button:hover {
     background-color: #0069d9;
+    transform: scale(1.05);
 }
 
-.delete-button {
-    background-color: #dc3545;
-    color: white;
+/* Таблица */
+#contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-.delete-button:hover {
-    background-color: #c82333;
+#contacts-table th, #contacts-table td {
+    border: 1px solid #444;
+    padding: 12px;
+    text-align: center;
 }
 
-/* Email link styling */
-.email-link {
-    color: #6a11cb;
+#contacts-table th {
+    background-color: #343a40;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+#contacts-table th.sortable {
+    position: relative;
+    padding-right: 25px; /* Добавляем отступ справа для треугольников */
+}
+
+#contacts-table th.sortable::after {
+    content: '▲';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    color: #00FF00; /* Ярко-зелёный цвет */
+    pointer-events: none; /* Отключаем взаимодействие мыши с треугольниками */
+    transition: color 0.3s ease;
+}
+
+#contacts-table th.sortable.desc::after {
+    content: '▼';
+    color: #00FF00; /* Ярко-зелёный цвет */
+}
+
+#contacts-table th.sortable.asc::after {
+    content: '▲';
+    color: #00FF00; /* Ярко-зелёный цвет */
+}
+
+/* Изменение цвета треугольников при наведении на заголовок */
+#contacts-table th.sortable:hover::after {
+    color: #32CD32; /* Более светлый зелёный при наведении */
+}
+
+#contacts-table tbody tr {
+    background-color: #2c2c3b;
+    transition: background-color 0.3s ease;
+}
+
+#contacts-table tbody tr:hover {
+    background-color: #3a3a4d;
+}
+
+#contacts-table img.contact-photo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Пагинация */
+#pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#pagination .page-btn {
+    padding: 8px 12px;
+    margin: 0 3px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6c757d;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#pagination .page-btn.active, #pagination .page-btn:hover {
+    background-color: #495057;
+    transform: scale(1.05);
+}
+
+/* Карточка с полной информацией о контакте */
+.contact-card {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #2c2c3b;
+    border-radius: 10px;
+    display: none; /* Скрыта по умолчанию */
+}
+
+.contact-card-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.contact-card-image {
+    flex-shrink: 0;
+}
+
+.card-photo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.no-image {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.contact-card-info {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.contact-card-info h3 {
+    margin-bottom: 10px;
+    color: #ffc107;
+}
+
+.contact-card-info p {
+    margin: 5px 0;
+    color: #ccc;
+}
+
+/* Модальное окно */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Оставаться на месте */
+    z-index: 1001; /* Поверх других элементов */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включить прокрутку, если нужно */
+    background-color: rgba(0,0,0,0.7); /* Черный фон с прозрачностью */
+}
+
+.modal-content {
+    background-color: #2c2c3b;
+    margin: 10% auto; /* 10% от верхней и центрирование */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Ширина модального окна */
+    border-radius: 10px;
+    color: #fff;
+    position: relative;
+    max-width: 600px; /* Максимальная ширина */
+    box-sizing: border-box; /* Учитывать паддинги в ширине */
+}
+
+/* Медиа-запросы для модального окна */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #add-contact-form input, #add-contact-form textarea {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .close {
+        font-size: 24px;
+        top: 8px;
+        right: 20px;
+    }
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
 }
 
-.email-link:hover {
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#add-contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1rem;
+}
+
+#add-contact-form input, #add-contact-form textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #3a3a4d;
+    color: #fff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    box-sizing: border-box; /* Учитывать паддинги в ширине */
+}
+
+#add-contact-form textarea {
+    resize: vertical; /* Позволяет изменять высоту textarea */
+    min-height: 80px; /* Минимальная высота */
+}
+
+#add-contact-form input:focus, #add-contact-form textarea:focus {
+    background-color: #444;
+}
+
+#add-contact-form input:invalid, #add-contact-form textarea:invalid {
+    border-color: #dc3545;
+    background-color: #721c24;
+}
+
+#add-contact-form input.valid, #add-contact-form textarea.valid {
+    border-color: #28a745;
+    background-color: #155724;
+}
+
+#add-contact-form input.invalid, #add-contact-form textarea.invalid {
+    border-color: #dc3545;
+    background-color: #721c24;
+}
+
+#form-message {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #dc3545;
+}
+
+/* Прелоадер внутри таблицы */
+.table-preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-preloader .dot {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    background-color: #00FF00; /* Зеленый цвет */
+    border-radius: 50%;
+    animation: tablePreloader 1.4s infinite ease-in-out both;
+}
+
+.table-preloader .dot:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.table-preloader .dot:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes tablePreloader {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+
+/* Развернутая строка с полной информацией */
+.expanded-row {
+    background-color: #2c2c3b;
+}
+
+.expanded-row td {
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-card-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.contact-card-image {
+    flex-shrink: 0;
+}
+
+.card-photo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.no-image {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.contact-card-info {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.contact-card-info h3 {
+    margin-bottom: 10px;
+    color: #ffc107;
+}
+
+.contact-card-info p {
+    margin: 5px 0;
+    color: #ccc;
+}
+
+/* Премирование текста */
+.reward-text {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    display: none;
+}
+
+/* Email и Website ссылки */
+.email-link, .website-link {
+    color: #17a2b8;
+    text-decoration: none;
+}
+
+.email-link:hover, .website-link:hover {
     text-decoration: underline;
 }
 
-/* Message for no contacts */
-.no-contacts-message {
+/* Дополнительные стили */
+#contacts-table th.sortable {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contacts-table th.sortable.asc::after {
+    content: ' ▲';
+}
+
+#contacts-table th.sortable.desc::after {
+    content: ' ▼';
+}
+
+/* Карточка с полной информацией */
+.contact-card {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #2c2c3b;
+    border-radius: 10px;
+    display: none; /* Скрыта по умолчанию */
+}
+
+.contact-card-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.contact-card-image {
+    flex-shrink: 0;
+}
+
+.card-photo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.no-image {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+    color: #fff;
+    border-radius: 10px;
     font-size: 1.2rem;
-    color: #ff4d4d;
-    text-align: center;
-    margin-top: 50px;
+}
+
+.contact-card-info {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.contact-card-info h3 {
+    margin-bottom: 10px;
+    color: #ffc107;
+}
+
+.contact-card-info p {
+    margin: 5px 0;
+    color: #ccc;
 }

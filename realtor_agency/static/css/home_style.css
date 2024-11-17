@@ -1,4 +1,3 @@
-
 /* Header */
 .animated-header {
     text-align: center;
@@ -22,7 +21,6 @@
 .banner-container {
     display: flex;
     justify-content: center;
-
     gap: 20px;
 }
 
@@ -102,7 +100,6 @@
 }
 
 /* Filter Section */
-/* Filter Section */
 .filters-section {
     padding: 40px 20px 20px;
     background: #333;
@@ -153,13 +150,12 @@
     background: #2575fc;
 }
 
-/* Property Grid */
 .property-grid {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Spacing between items */
+    flex-wrap: nowrap; /* Запрет переноса */
+    gap: 20px; /* Расстояние между элементами */
     padding: 20px;
-    justify-content: space-between;
+    overflow-x: auto; /* Добавить прокрутку, если необходимо */
 }
 
 /* Property Card Styling */
@@ -167,21 +163,61 @@
     background-color: #333;
     padding: 20px;
     border-radius: 8px;
-    flex: 1 1 calc(20% - 20px); /* Ensure 4 items per row with spacing */
+    flex: 0 0 calc(33.333% - 20px); /* 3 элемента в ряд без переноса */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Курсор указателя */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .property-card:hover {
-    transform: translateY(-10px); /* Move the card slightly up */
+    transform: translateY(-10px); /* Поднятие карточки */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background-color: #444; /* Slightly change the background color */
+    background-color: #444; /* Изменение цвета фона */
+}
+
+.property-card img {
+    width: 200px; /* Фиксированная ширина */
+    height: 200px; /* Фиксированная высота */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.property-card:hover img {
+    transform: scale(1.05); /* Лёгкое увеличение изображения */
+}
+
+@media (max-width: 768px) {
+    .property-grid {
+        flex-wrap: wrap; /* Разрешить перенос на меньших экранах */
+        justify-content: center;
+    }
+
+    .property-card {
+        flex: 0 0 calc(50% - 20px); /* 2 элемента в ряд на планшетах */
+    }
+}
+
+@media (max-width: 480px) {
+    .property-card {
+        flex: 0 0 100%; /* 1 элемент в ряд на мобильных */
+    }
+
+    .property-card img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .property-card img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
     border-radius: 8px;
     margin-bottom: 10px;
     transition: transform 0.3s ease;
@@ -223,38 +259,6 @@
     background: #f44336;
 }
 
-/* Preloader */
-.preloader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-}
-
-.dot {
-    width: 15px;
-    height: 15px;
-    margin: 5px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #32CD32, #00FF00);
-    animation: pulse 1.5s infinite ease-in-out;
-}
-
-.dot1 { animation-delay: 0s; }
-.dot2 { animation-delay: 0.3s; }
-.dot3 { animation-delay: 0.6s; }
-
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.5);
-        opacity: 0.5;
-    }
-}
-
 /* Property Detail Page Styles */
 .property-detail-container {
     background-color: #2C3E50; /* A soft dark-blue tone */
@@ -276,12 +280,12 @@
 }
 
 .property-image {
-    max-width: 100%;  /* Установим максимальную ширину */
-    height: auto;  /* Автоматическая высота в зависимости от ширины */
+    max-width: 100%;  /* Set maximum width */
+    height: auto;  /* Automatic height based on width */
     display: block;
-    margin: 0 auto;  /* Центровка изображения */
+    margin: 0 auto;  /* Center the image */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Небольшая тень для улучшения стиля */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Small shadow for better style */
 }
 
 /* Action Section */
@@ -349,6 +353,10 @@
     .filter-item {
         width: 100%;
     }
+
+    .property-card {
+        flex: 1 1 calc(50% - 20px); /* 2 items per row */
+    }
 }
 
 @media (max-width: 480px) {
@@ -373,7 +381,324 @@
     }
 
     .property-grid {
-        margin-bottom: 50px; /* Add larger spacing after each section */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .property-card {
+        flex: 1 1 100%; /* 1 item per row */
+    }
+
+    .slider {
+        width: 100%;
     }
 }
+
+/* Slider Styles */
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%; /* Restrict the width */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(58, 0, 128, 0.7); /* Semi-transparent dark purple */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* Navigation Arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 50%;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.next {
+    right: 20px;
+}
+
+.prev {
+    left: 20px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Pagination Dots */
+.dotsis {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    position: relative;
+}
+
+.doti {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bb86fc; /* Bright purple */
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.doti.active {
+    background-color: #6a0dad; /* Dark purple */
+}
+
+.slide-number {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Form Styles */
+#slider-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#slider-form label {
+    margin-right: 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#slider-form input {
+    padding: 5px;
+    width: 60px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+}
+
+#slider-form button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6a11cb;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#slider-form button:hover {
+    background-color: #2575fc;
+}
+
+/* Restrict width and height of all images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Property Images */
+.property-img {
+    width: 100%; /* Ensure images are responsive */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Remove pulsation (if any) */
+.doti {
+    animation: none;
+}
+
+/* Style Toggle Section */
+.style-toggle-section {
+    padding: 20px;
+    background-color: #2c2c3b;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.style-toggle-section h2 {
+    margin-bottom: 15px;
+    color: #e6e6fa;
+}
+
+.style-controls .control-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+}
+
+.style-controls label {
+    min-width: 150px;
+}
+
+.style-controls input[type="range"] {
+    width: 200px;
+}
+
+/* Date of Birth Section */
+.dob-section {
+    padding: 20px;
+    background-color: #2c2c3b;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.dob-section h2 {
+    margin-bottom: 15px;
+    color: #e6e6fa;
+}
+
+#dob-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#dob-form input[type="date"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+}
+
+.btn-submit {
+    padding: 10px 20px;
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #2575fc;
+}
+
+.dob-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Пагинация */
+.pagination-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    clear: both;
+}
+
+.step-links a {
+    margin: 0 5px;
+    padding: 8px 12px;
+    background-color: #6c757d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.step-links a:hover {
+    background-color: #495057;
+}
+
+.step-links .current {
+    margin: 0 5px;
+    padding: 8px 12px;
+    background-color: #343a40;
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* Стиль для кнопок пагинации */
+.page-link {
+    cursor: pointer;
+}
+
+/* Текст "Coloring!" */
+.coloring-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#coloring-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #FF5733;
+    transition: color 1s ease;
+}
+
+/* Additional Styles for Responsiveness and UX */
+@media (max-width: 1200px) {
+    .property-card {
+        flex: 1 1 calc(33.333% - 20px); /* 3 items per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .property-card {
+        flex: 1 1 calc(50% - 20px); /* 2 items per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .property-card {
+        flex: 1 1 100%; /* 1 item per row */
+    }
+}
+
 

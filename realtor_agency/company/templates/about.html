@@ -1,6 +1,87 @@
 {% extends 'base.html' %}
 
+{% load static %}  
+
 {% block title %}About Our Company{% endblock %}
+
+{% block styles %}
+<style>
+    /* Основной контейнер */
+    .about-container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f7fa;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    /* Стилизация формы и элементов ввода */
+    .date-form-container {
+        margin-bottom: 30px;
+        padding: 20px;
+        border: 1px solid #dfe4ea;
+        border-radius: 8px;
+        background: linear-gradient(145deg, #e3effe, #efefef);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .date-form-container h2 {
+        color: #333;
+        font-size: 20px;
+    }
+
+    .date-form-container label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .date-form-container input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    /* Стилизация кнопок */
+    .add-button, .download-button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        text-align: center;
+        background: linear-gradient(45deg, #76b852, #8DC26F);
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    .add-button:hover, .download-button:hover {
+        background: linear-gradient(45deg, #8DC26F, #76b852);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transform: translateY(-2px);
+    }
+
+    /* Адаптивность */
+    @media (max-width: 600px) {
+        .about-container {
+            padding: 15px;
+        }
+
+        .add-button, .download-button {
+            width: auto;
+            display: block;
+            margin: auto;
+        }
+    }
+</style>
+{% endblock %}
 
 {% block content %}
 <div class="about-container">
@@ -28,6 +109,32 @@
         </div>
     </section>
     {% endif %}
+
+    <!-- Форма для добавления даты -->
+    <div class="date-form-container">
+        <h2>Добавить Дату</h2>
+        <form id="dateForm">
+            <label>День:
+                <input type="number" id="day" min="1" max="31" required>
+            </label>
+            <label>Месяц:
+                <input type="number" id="month" min="1" max="12" required>
+            </label>
+            <label>Год:
+                <input type="number" id="year" min="1" required>
+            </label>
+            <button type="submit" class="add-button">Добавить</button>
+        </form>
+    </div>
+    <div class="display-dates">
+        <h2>Все Даты</h2>
+        <div id="allDates"></div>
+    </div>
+    <div class="display-spring-dates">
+        <h2>Весенние Даты</h2>
+        <div id="springDates"></div>
+        <button id="downloadButton" class="download-button">Сохранить Весенние Даты</button>
+    </div>
 
     {% if company_info.history %}
     <section class="company-section">
@@ -83,4 +190,8 @@
     <p>No info right now!</p>
     {% endif %}
 </div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/script_proto.js' %}"></script>
 {% endblock %}
