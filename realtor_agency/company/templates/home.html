@@ -3,9 +3,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
+<head>
+    <link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+</head>
+
 {% block title %}Home{% endblock %}
 
 {% block content %}
+
 <!-- Company Header -->
 <header class="animated-header">
     <h1 class="header-title">Card Housing</h1>
@@ -123,9 +128,22 @@
     <p class="welcome-text">Hello {{ username }} {{ user_timezone }} - {{ current_date_formatted }}</p>
     {% if quote %}
     <p class="quote">Quote of the moment: {{ quote }}</p>
+    <button id="speakQuote" class="speak-button">Read Quote Aloud</button>
     {% endif %}
     {% endif %}
 </div>
+
+<!-- Geolocation Section -->
+<section class="geolocation-section">
+    <h2 class="section-title">Your Location</h2>
+    <p id="location">Fetching your location...</p>
+</section>
+
+<!-- Battery Status Section -->
+<section class="battery-section">
+    <h2 class="section-title">Battery Status</h2>
+    <p id="batteryStatus">Fetching battery status...</p>
+</section>
 
 <!-- Latest Article -->
 {% if latest_article %}
@@ -198,7 +216,7 @@
 {% block scripts %}
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // AJAX Пагинация
+        // AJAX Pagination
         document.addEventListener('click', function(event) {
             if (event.target.classList.contains('page-link')) {
                 event.preventDefault();
@@ -226,16 +244,51 @@
             .catch(error => console.error('Error fetching page:', error));
         }
 
+        // Обработка кнопок "Предыдущая" и "Следующая"
+        const prevButton = document.querySelector('.pagination-container .prev');
+        const nextButton = document.querySelector('.pagination-container .next');
 
+        // Функция для получения текущей страницы и общего количества страниц
+        function getPaginationInfo() {
+            const currentPageElement = document.querySelector('.pagination-container .current');
+            let currentPage = 1;
+            let totalPages = 1;
+            if (currentPageElement) {
+                currentPage = parseInt(currentPageElement.textContent);
+                totalPages = parseInt(currentPageElement.getAttribute('data-total-pages'));
+            }
+            return { currentPage, totalPages };
+        }
+
+        // Обработчик кнопки "Предыдущая"
+        if (prevButton) {
+            prevButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                const { currentPage, totalPages } = getPaginationInfo();
+                const newPage = currentPage - 1 < 1 ? totalPages : currentPage - 1;
+                fetchPage(newPage);
+            });
+        }
+
+        // Обработчик кнопки "Следующая"
+        if (nextButton) {
+            nextButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                const { currentPage, totalPages } = getPaginationInfo();
+                const newPage = currentPage + 1 > totalPages ? 1 : currentPage + 1;
+                fetchPage(newPage);
+            });
+        }
+
+        // Наблюдатель за изменениями в разделе свойств для обновления пагинации
         function observePropertySection() {
             const propertySection = document.getElementById('property-section');
             const observer = new MutationObserver(() => {
-                setupCircularPagination();
+                // Обновляем информацию о пагинации после изменения контента
             });
             observer.observe(propertySection, { childList: true, subtree: true });
         }
 
-        setupCircularPagination();
         observePropertySection();
 
         // Изменение цвета текста "Coloring!"
@@ -245,16 +298,73 @@
         let colorInterval = setInterval(changeColor, 1000);
 
         function changeColor() {
-            coloringText.style.color = colors[colorIndex];
-            colorIndex = (colorIndex + 1) % colors.length;
+            if (coloringText) {
+                coloringText.style.color = colors[colorIndex];
+                colorIndex = (colorIndex + 1) % colors.length;
+            }
         }
 
         // Handle style customization changes to set color
         const textColorPicker = document.getElementById('text-color');
-        textColorPicker.addEventListener('input', () => {
-            clearInterval(colorInterval);
-            coloringText.style.color = textColorPicker.value;
-        });
+        if (textColorPicker) {
+            textColorPicker.addEventListener('input', () => {
+                clearInterval(colorInterval);
+                if (coloringText) {
+                    coloringText.style.color = textColorPicker.value;
+                }
+            });
+        }
+
+        // Geolocation API
+        const locationElement = document.getElementById('location');
+        if (navigator.geolocation && locationElement) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const { latitude, longitude } = position.coords;
+                    locationElement.textContent = `Latitude: ${latitude.toFixed(4)}, Longitude: ${longitude.toFixed(4)}`;
+                },
+                (error) => {
+                    locationElement.textContent = 'Unable to retrieve your location.';
+                    console.error('Geolocation error:', error);
+                }
+            );
+        } else if (locationElement) {
+            locationElement.textContent = 'Geolocation is not supported by your browser.';
+        }
+
+        // Battery Status API
+        const batteryStatusElement = document.getElementById('batteryStatus');
+        if ('getBattery' in navigator && batteryStatusElement) {
+            navigator.getBattery().then(function(battery) {
+                function updateBatteryStatus() {
+                    const level = battery.level * 100;
+                    const charging = battery.charging ? 'Yes' : 'No';
+                    batteryStatusElement.textContent = `Battery Level: ${level}% | Charging: ${charging}`;
+                }
+
+                updateBatteryStatus();
+
+                battery.addEventListener('levelchange', updateBatteryStatus);
+                battery.addEventListener('chargingchange', updateBatteryStatus);
+            });
+        } else if (batteryStatusElement) {
+            batteryStatusElement.textContent = 'Battery Status API is not supported by your browser.';
+        }
+
+        // Speech Synthesis API
+        const speakButton = document.getElementById('speakQuote');
+        const quoteText = document.querySelector('.quote');
+        if (speakButton && quoteText) {
+            speakButton.addEventListener('click', () => {
+                const text = quoteText.textContent;
+                if ('speechSynthesis' in window) {
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    window.speechSynthesis.speak(utterance);
+                } else {
+                    alert('Speech Synthesis is not supported in your browser.');
+                }
+            });
+        }
     });
 </script>
 

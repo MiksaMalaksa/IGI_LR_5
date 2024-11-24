@@ -1,13 +1,167 @@
-<!-- contacts.html -->
 
-{% extends 'base.html' %}
-{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+    <style>
+        /* CSS code */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
 
-{% block title %}Contacts{% endblock %}
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-{% block content %}
-<div class="contacts-container">
-    <h1>Contacts</h1>
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .filter-group {
+            display: flex;
+        }
+
+        .filter-group input {
+            margin-right: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        table th {
+            cursor: pointer;
+            background-color: #eee;
+            position: relative;
+        }
+
+        table th.sortable::after {
+            content: '';
+            position: absolute;
+            right: 10px;
+            border: 6px solid transparent;
+            border-top-color: #000;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        table th.sortable.desc::after {
+            border-top-color: transparent;
+            border-bottom-color: #000;
+        }
+
+        .pagination {
+            margin-top: 10px;
+        }
+
+        .pagination button {
+            margin-right: 5px;
+        }
+
+        #contact-details {
+            margin-top: 20px;
+        }
+
+        #contact-details img {
+            max-width: 200px;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+        }
+
+        .success-message {
+            color: green;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        input.invalid, textarea.invalid {
+            border: 1px solid red;
+            background-color: pink;
+        }
+
+        input.valid, textarea.valid {
+            border: 1px solid green;
+            background-color: #e0ffe0;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            width: 400px;
+            position: relative;
+        }
+
+        .close-button {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 1000;
+        }
+
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #333;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contacts</h1>
+    </header>
     <div class="controls">
         <button id="add-contact-btn" class="button add-contact">Add Contact</button>
         <div class="filter-group">
@@ -20,62 +174,400 @@
         <thead>
             <tr>
                 <th>Select</th>
-                <th data-column="employer__first_name" class="sortable">First Name</th>
-                <th data-column="employer__last_name" class="sortable">Last Name</th>
+                <th data-column="fullName" class="sortable">Full Name</th>
                 <th>Photo</th>
-                <th data-column="employer__job" class="sortable">Job Description</th>
-                <th data-column="employer__phone_number" class="sortable">Phone Number</th>
-                <th data-column="employer__email" class="sortable">Email</th>
-                <th data-column="website" class="sortable">Website</th>
+                <th data-column="description" class="sortable">Description</th>
+                <th data-column="phone" class="sortable">Phone</th>
+                <th data-column="email" class="sortable">Email</th>
             </tr>
         </thead>
         <tbody>
-            <!-- Данные будут загружены через JavaScript -->
+            <!-- Data will be loaded via JavaScript -->
         </tbody>
     </table>
-    <div id="pagination">
-        <!-- Пагинация будет генерироваться через JavaScript -->
+    <div class="pagination" id="pagination">
+        <!-- Pagination buttons will be generated here -->
     </div>
     <div id="reward-text" class="reward-text"></div>
-    <div id="contact-card" class="contact-card">
-        <!-- Карточка с полной информацией о контакте будет отображаться здесь -->
+    <div id="contact-details" class="contact-details">
+        <!-- Contact details will be displayed here -->
     </div>
 
-    <!-- Модальное окно для добавления контакта -->
+    <!-- Modal for Adding Contact -->
     <div id="add-contact-modal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close-button" id="close-modal">&times;</span>
             <h2>Add New Contact</h2>
             <form id="add-contact-form">
-                <label for="first_name">First Name:</label>
-                <input type="text" id="first_name" name="first_name" required />
+                <label for="fullName">Full Name (ФИО):</label>
+                <input type="text" id="fullName" name="fullName" required />
+                <div class="error-message" id="fullName-error"></div>
 
-                <label for="last_name">Last Name:</label>
-                <input type="text" id="last_name" name="last_name" required />
+                <label for="photo">Photo (URL):</label>
+                <input type="text" id="photo" name="photo" required />
+                <div class="error-message" id="photo-error"></div>
 
-                <label for="job_description">Job Description:</label>
-                <textarea id="job_description" name="job_description" required></textarea>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+                <div class="error-message" id="description-error"></div>
 
-                <label for="phone_number">Phone Number:</label>
-                <input type="text" id="phone_number" name="phone_number" required />
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" required />
+                <div class="error-message" id="phone-error"></div>
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required />
+                <div class="error-message" id="email-error"></div>
 
-                <label for="website">Website URL:</label>
-                <input type="url" id="website" name="website" />
-
-                <label for="photo">Photo URL:</label>
-                <input type="url" id="photo" name="photo" />
-
-                <button type="submit" id="submit-add-contact" class="button submit-button" disabled>Добавить в таблицу</button>
+                <button type="submit" id="submit-add-contact" class="button submit-button" disabled>Add to Table</button>
                 <div id="form-message" class="form-message"></div>
             </form>
         </div>
     </div>
-</div>
-{% endblock %}
 
-{% block scripts %}
-<script src="{% static 'js/contacts.js' %}"></script>
-{% endblock %}
+    <!-- JavaScript code -->
+    <script>
+        // JavaScript code
+
+        // Sample data fetched from server (simulate with an array)
+        let contactsData = [
+            // at least 10 records
+            {
+                id: 1,
+                fullName: 'Ivan Ivanov',
+                photo: 'https://via.placeholder.com/100',
+                description: 'Worked on project X.',
+                phone: '80291112233',
+                email: 'ivanov@example.com'
+            },
+            {
+                id: 2,
+                fullName: 'Petr Petrov',
+                photo: 'https://via.placeholder.com/100',
+                description: 'Developed feature Y.',
+                phone: '8 (029) 1112233',
+                email: 'petrov@example.com'
+            },
+            {
+                id: 3,
+                fullName: 'Sidor Sidorov',
+                photo: 'https://via.placeholder.com/100',
+                description: 'Managed team Z.',
+                phone: '+375 (29) 111-22-33',
+                email: 'sidorov@example.com'
+            },
+            {
+                id: 4,
+                fullName: 'Anna Smirnova',
+                photo: 'https://via.placeholder.com/100',
+                description: 'Designed UI components.',
+                phone: '+375 (29) 222 33 44',
+                email: 'smirnova@example.com'
+            },
+            {
+                id: 5,
+                fullName: 'Maria Kozlova',
+                photo: 'https://via.placeholder.com/100',
+                description: 'QA Specialist.',
+                phone: '80293334455',
+                email: 'kozlova@example.com'
+            },
+            {
+                id: 6,
+                fullName: 'Dmitry Volkov',
+                photo: 'https://via.placeholder.com/100',
+                description: 'DevOps Engineer.',
+                phone: '8 (029) 6667788',
+                email: 'volkov@example.com'
+            },
+            {
+                id: 7,
+                fullName: 'Olga Popova',
+                photo: 'https://via.placeholder.com/100',
+                description: 'HR Manager.',
+                phone: '+375 (29) 999-00-11',
+                email: 'popova@example.com'
+            },
+            {
+                id: 8,
+                fullName: 'Sergey Sokolov',
+                photo: 'https://via.placeholder.com/100',
+                description: 'Backend Developer.',
+                phone: '+375 (29) 888 77 66',
+                email: 'sokolov@example.com'
+            },
+            {
+                id: 9,
+                fullName: 'Elena Lebedeva',
+                photo: 'https://via.placeholder.com/100',
+                description: 'Project Manager.',
+                phone: '80294445566',
+                email: 'lebedeva@example.com'
+            },
+            {
+                id: 10,
+                fullName: 'Alexey Morozov',
+                photo: 'https://via.placeholder.com/100',
+                description: 'Data Scientist.',
+                phone: '8 (029) 7778899',
+                email: 'morozov@example.com'
+            }
+        ];
+
+        // Simulate data fetching from server
+        function fetchContacts() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(contactsData);
+                }, 500);
+            });
+        }
+
+        let currentPage = 1;
+        const rowsPerPage = 3;
+        let totalPages = 1;
+        let currentData = [];
+
+        // Load contacts and initialize table
+        async function init() {
+            const data = await fetchContacts();
+            currentData = data;
+            totalPages = Math.ceil(currentData.length / rowsPerPage);
+            displayTable();
+            setupPagination();
+        }
+
+        // Display contacts in table
+        function displayTable() {
+            const tbody = document.querySelector('#contacts-table tbody');
+            tbody.innerHTML = '';
+            const start = (currentPage - 1) * rowsPerPage;
+            const end = start + rowsPerPage;
+            const pageData = currentData.slice(start, end);
+
+            pageData.forEach(contact => {
+                const tr = document.createElement('tr');
+                tr.addEventListener('click', () => showDetails(contact));
+                tr.innerHTML = `
+                    <td><input type="checkbox" data-id="${contact.id}" class="select-checkbox"></td>
+                    <td>${contact.fullName}</td>
+                    <td><img src="${contact.photo}" alt="${contact.fullName}" width="50"></td>
+                    <td>${contact.description}</td>
+                    <td>${contact.phone}</td>
+                    <td>${contact.email}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Setup pagination buttons
+        function setupPagination() {
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';
+
+            const prevBtn = document.createElement('button');
+            prevBtn.textContent = 'Previous';
+            prevBtn.disabled = currentPage === 1;
+            prevBtn.addEventListener('click', () => {
+                currentPage--;
+                displayTable();
+                setupPagination();
+            });
+            pagination.appendChild(prevBtn);
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageBtn = document.createElement('button');
+                pageBtn.textContent = i;
+                pageBtn.disabled = i === currentPage;
+                pageBtn.addEventListener('click', () => {
+                    currentPage = i;
+                    displayTable();
+                    setupPagination();
+                });
+                pagination.appendChild(pageBtn);
+            }
+
+            const nextBtn = document.createElement('button');
+            nextBtn.textContent = 'Next';
+            nextBtn.disabled = currentPage === totalPages;
+            nextBtn.addEventListener('click', () => {
+                currentPage++;
+                displayTable();
+                setupPagination();
+            });
+            pagination.appendChild(nextBtn);
+        }
+
+        // Sorting functionality
+        const headers = document.querySelectorAll('.sortable');
+        let sortDirection = 'asc';
+        let sortColumn = '';
+
+        headers.forEach(header => {
+            header.addEventListener('click', () => {
+                const column = header.getAttribute('data-column');
+                if (sortColumn === column) {
+                    sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+                } else {
+                    sortDirection = 'asc';
+                }
+                sortColumn = column;
+                headers.forEach(h => h.classList.remove('asc', 'desc'));
+                header.classList.add(sortDirection);
+                sortData();
+                displayTable();
+            });
+        });
+
+        function sortData() {
+            currentData.sort((a, b) => {
+                if (a[sortColumn] < b[sortColumn]) {
+                    return sortDirection === 'asc' ? -1 : 1;
+                }
+                if (a[sortColumn] > b[sortColumn]) {
+                    return sortDirection === 'asc' ? 1 : -1;
+                }
+                return 0;
+            });
+        }
+
+        // Filtering functionality
+        const filterBtn = document.getElementById('filter-btn');
+        filterBtn.addEventListener('click', () => {
+            const query = document.getElementById('filter-input').value.toLowerCase();
+            currentData = contactsData.filter(contact => {
+                return Object.values(contact).some(value =>
+                    value.toString().toLowerCase().includes(query)
+                );
+            });
+            totalPages = Math.ceil(currentData.length / rowsPerPage);
+            currentPage = 1;
+            displayTable();
+            setupPagination();
+        });
+
+        // Show contact details
+        function showDetails(contact) {
+            const detailsDiv = document.getElementById('contact-details');
+            detailsDiv.innerHTML = `
+                <h2>Contact Details</h2>
+                <p><strong>Full Name:</strong> ${contact.fullName}</p>
+                <p><strong>Description:</strong> ${contact.description}</p>
+                <p><strong>Phone:</strong> ${contact.phone}</p>
+                <p><strong>Email:</strong> ${contact.email}</p>
+                <img src="${contact.photo}" alt="${contact.fullName}">
+            `;
+        }
+
+        // Add contact modal functionality
+        const addContactBtn = document.getElementById('add-contact-btn');
+        const modal = document.getElementById('add-contact-modal');
+        const closeModal = document.getElementById('close-modal');
+
+        addContactBtn.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            resetForm();
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                resetForm();
+            }
+        });
+
+        // Form validation and submission
+        const addContactForm = document.getElementById('add-contact-form');
+        const submitBtn = document.getElementById('submit-add-contact');
+
+        const validators = {
+            fullName: value => value.trim() !== '',
+            photo: value => /^https?:\/\/.+\.(php|html)$/.test(value),
+            description: value => value.trim() !== '',
+            phone: value => /^(8029\d{7}|8 \(029\) \d{7}|\+375 \(29\) \d{3}-\d{2}-\d{2}|\+375 \(29\) \d{3} \d{2} \d{2})$/.test(value),
+            email: value => /\S+@\S+\.\S+/.test(value)
+        };
+
+        const formFields = ['fullName', 'photo', 'description', 'phone', 'email'];
+        const formValues = {};
+
+        formFields.forEach(field => {
+            const input = document.getElementById(field);
+            input.addEventListener('input', () => {
+                const isValid = validators[field](input.value);
+                if (isValid) {
+                    input.classList.remove('invalid');
+                    input.classList.add('valid');
+                    document.getElementById(`${field}-error`).textContent = '';
+                } else {
+                    input.classList.remove('valid');
+                    input.classList.add('invalid');
+                    document.getElementById(`${field}-error`).textContent = 'Invalid input';
+                }
+                formValues[field] = isValid;
+                checkFormValidity();
+            });
+        });
+
+        function checkFormValidity() {
+            const isFormValid = Object.values(formValues).every(value => value);
+            submitBtn.disabled = !isFormValid;
+        }
+
+        addContactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const newContact = {
+                id: contactsData.length + 1,
+                fullName: document.getElementById('fullName').value,
+                photo: document.getElementById('photo').value,
+                description: document.getElementById('description').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value
+            };
+            contactsData.push(newContact);
+            currentData = contactsData;
+            totalPages = Math.ceil(currentData.length / rowsPerPage);
+            currentPage = totalPages;
+            displayTable();
+            setupPagination();
+            modal.style.display = 'none';
+            resetForm();
+        });
+
+        function resetForm() {
+            addContactForm.reset();
+            formFields.forEach(field => {
+                const input = document.getElementById(field);
+                input.classList.remove('valid', 'invalid');
+                document.getElementById(`${field}-error`).textContent = '';
+            });
+            submitBtn.disabled = true;
+        }
+
+        // Reward functionality
+        const rewardBtn = document.getElementById('reward-btn');
+        rewardBtn.addEventListener('click', () => {
+            const selectedCheckboxes = document.querySelectorAll('.select-checkbox:checked');
+            const selectedNames = Array.from(selectedCheckboxes).map(checkbox => {
+                const id = parseInt(checkbox.getAttribute('data-id'));
+                const contact = contactsData.find(c => c.id === id);
+                return contact.fullName;
+            });
+            if (selectedNames.length > 0) {
+                const rewardText = document.getElementById('reward-text');
+                rewardText.textContent = `Congratulations: ${selectedNames.join(', ')} on your reward!`;
+            } else {
+                alert('Please select at least one employee to reward.');
+            }
+        });
+
+        // Initialize the table
+        init();
+
+    </script>
+</body>
+</html>

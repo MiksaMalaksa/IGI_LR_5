@@ -9525,3 +9525,1629 @@ Traceback (most recent call last):
 django.template.exceptions.TemplateSyntaxError: 'static' takes at least one argument (path to file)
 Not Found: /path/to/border-image.png
 Not Found: /path/to/border-image.png
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/11" 200 308
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 590, in statistics
+    popular_category = Category.objects.annotate(property_count=Count('property')).order_by('-property_count').first()
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/query.py", line 1680, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1194, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/aggregates.py", line 63, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/expressions.py", line 1073, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ~~~~~~~~~~~~~~~~~~~~~~^
+        query, allow_joins, reuse, summarize, for_save
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/expressions.py", line 895, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 2010, in resolve_ref
+    join_info = self.setup_joins(
+        field_list, self.get_meta(), self.get_initial_alias(), can_reuse=reuse
+    )
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1863, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1768, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'property' into field. Choices are: id, name, properties
+Not Found: /favicon.ico
+/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 589, in statistics
+    popular_category = Category.objects.annotate(property_count=Count('property')).order_by('-property_count').first()
+                       ^^^^^^^^
+NameError: name 'Category' is not defined
+/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 589, in statistics
+    popular_category = Category.objects.annotate(property_count=Count('property')).order_by('-property_count').first()
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/query.py", line 1680, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1194, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/aggregates.py", line 63, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/expressions.py", line 1073, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ~~~~~~~~~~~~~~~~~~~~~~^
+        query, allow_joins, reuse, summarize, for_save
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/expressions.py", line 895, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 2010, in resolve_ref
+    join_info = self.setup_joins(
+        field_list, self.get_meta(), self.get_initial_alias(), can_reuse=reuse
+    )
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1863, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1768, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'property' into field. Choices are: id, name, properties
+/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 623, in statistics
+    category_counts = Category.objects.values('property_types__name').annotate(
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/query.py", line 1360, in values
+    clone = self._values(*fields, **expressions)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/query.py", line 1355, in _values
+    clone.query.set_values(fields)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 2500, in set_values
+    self.add_fields(field_names, True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 2195, in add_fields
+    join_info = self.setup_joins(
+        name.split(LOOKUP_SEP), opts, alias, allow_many=allow_m2m
+    )
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1863, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1768, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'property_types' into field. Choices are: id, name, properties
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 623, in statistics
+    category_counts = Category.objects.values('property_types__name').annotate(
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/query.py", line 1360, in values
+    clone = self._values(*fields, **expressions)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/query.py", line 1355, in _values
+    clone.query.set_values(fields)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 2500, in set_values
+    self.add_fields(field_names, True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 2195, in add_fields
+    join_info = self.setup_joins(
+        name.split(LOOKUP_SEP), opts, alias, allow_many=allow_m2m
+    )
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1863, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1768, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'property_types' into field. Choices are: id, name, properties
+/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: users/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 657, in statistics
+    return render(request, 'statistics.html', context)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/backends/django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/backends/django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: users/base.html
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/11" 200 308
+/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/defaulttags.py", line 1035, in find_library
+    return parser.libraries[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'json_script'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 664, in statistics
+    return render(request, 'statistics.html', context)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/defaulttags.py", line 1097, in load
+    lib = find_library(parser, name)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/defaulttags.py", line 1037, in find_library
+    raise TemplateSyntaxError(
+    ...<5 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: 'json_script' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+debugger_tags
+highlighting
+i18n
+indent_text
+l10n
+log
+static
+syntax_color
+tz
+widont
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/defaulttags.py", line 1035, in find_library
+    return parser.libraries[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'json_script'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 664, in statistics
+    return render(request, 'statistics.html', context)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/defaulttags.py", line 1097, in load
+    lib = find_library(parser, name)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/defaulttags.py", line 1037, in find_library
+    raise TemplateSyntaxError(
+    ...<5 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: 'json_script' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+debugger_tags
+highlighting
+i18n
+indent_text
+l10n
+log
+static
+syntax_color
+tz
+widont
+/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/realtor_agency/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'json_script'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 664, in statistics
+    return render(request, 'statistics.html', context)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 563, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 319: 'json_script', expected 'endblock'. Did you forget to register or load this tag?
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'json_script'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 664, in statistics
+    return render(request, 'statistics.html', context)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 563, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 319: 'json_script', expected 'endblock'. Did you forget to register or load this tag?
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'json_script'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 664, in statistics
+    return render(request, 'statistics.html', context)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 563, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 319: 'json_script', expected 'endblock'. Did you forget to register or load this tag?
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'json_script'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 664, in statistics
+    return render(request, 'statistics.html', context)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 563, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 319: 'json_script', expected 'endblock'. Did you forget to register or load this tag?
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'json_script'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 664, in statistics
+    return render(request, 'statistics.html', context)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 563, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 319: 'json_script', expected 'endblock'. Did you forget to register or load this tag?
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'json_script'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 664, in statistics
+    return render(request, 'statistics.html', context)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 563, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 319: 'json_script', expected 'endblock'. Did you forget to register or load this tag?
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'json_script'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 664, in statistics
+    return render(request, 'statistics.html', context)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 563, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 319: 'json_script', expected 'endblock'. Did you forget to register or load this tag?
+Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'json_script'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 664, in statistics
+    return render(request, 'statistics.html', context)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 563, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 319: 'json_script', expected 'endblock'. Did you forget to register or load this tag?
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/11" 200 308
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/11" 200 308
+Admin accessed property list
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/11" 200 308
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /path/to/border-image.png
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/11" 200 308
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/11" 200 308
+Admin accessed property list
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/11" 200 308
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/11" 200 308
+Admin accessed property list
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/young-african-american-man-doing-laundry.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22_jie3JBU.46.09.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22.46.09.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/11" 200 308
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/11" 200 308
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/11" 200 308
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/11" 200 308
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/11" 200 308
+Admin accessed property list
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/11" 200 308
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/young-african-american-man-doing-laundry.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22.46.09.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22_jie3JBU.46.09.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22_jie3JBU.46.09.png
+Not Found: /api/contacts/contacts/young-african-american-man-doing-laundry.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22.46.09.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /favicon.ico
+Not Found: /api/contacts/contacts/young-african-american-man-doing-laundry.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22.46.09.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22_jie3JBU.46.09.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/young-african-american-man-doing-laundry.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22.46.09.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22_jie3JBU.46.09.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/young-african-american-man-doing-laundry.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22.46.09.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22_jie3JBU.46.09.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/11" 200 308
+Starting new HTTPS connection (1): api.nationalize.io:443
+https://api.nationalize.io:443 "GET /?name=miksa HTTP/11" 200 308
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/young-african-american-man-doing-laundry.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22.46.09.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22_jie3JBU.46.09.png
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/young-african-american-man-doing-laundry.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22.46.09.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22_jie3JBU.46.09.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Starting new HTTPS connection (1): www.apple.html:443
+Bad Request: /api/contacts/add/
+Starting new HTTPS connection (1): www.google.com:443
+https://www.google.com:443 "GET /url?sa=i&url=https%3A%2F%2Fwww.etsy.com%2Fin-en%2Flisting%2F1438067022%2Flink-legend-of-zelda-tears-of-the&psig=AOvVaw1-FvWWhWzQ-KsfpYHPFF-I&ust=1732190364036000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCOij4Y7u6okDFQAAAAAdAAAAABAE HTTP/11" 200 None
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/url_isbc2jp
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22_jie3JBU.46.09.png
+Not Found: /api/contacts/contacts/young-african-american-man-doing-laundry.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22.46.09.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/young-african-american-man-doing-laundry.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22_jie3JBU.46.09.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22.46.09.png
+Not Found: /api/contacts/contacts/url_isbc2jp
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/url_isbc2jp
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22.46.09.png
+Not Found: /api/contacts/contacts/young-african-american-man-doing-laundry.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22_jie3JBU.46.09.png
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/young-african-american-man-doing-laundry.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22_jie3JBU.46.09.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22.46.09.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22.46.09.png
+Not Found: /api/contacts/contacts/young-african-american-man-doing-laundry.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22_jie3JBU.46.09.png
+Not Found: /api/contacts/contacts/url_isbc2jp
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/url_isbc2jp
+Not Found: /api/contacts/contacts/kero.jpg
+Not Found: /api/contacts/contacts/kero.jpg
+Not Found: /api/contacts/contacts/kero.jpg
+Not Found: /api/contacts/contacts/kero.jpg
+Not Found: /api/contacts/contacts/kero.jpg
+Not Found: /api/contacts/contacts/kero.jpg
+Not Found: /api/contacts/contacts/kero.jpg
+Not Found: /api/contacts/contacts/kero.jpg
+Not Found: /api/contacts/contacts/kero.jpg
+Not Found: /api/contacts/contacts/kero.jpg
+Not Found: /api/contacts/contacts/kero.jpg
+Not Found: /api/contacts/contacts/kero.jpg
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22_jie3JBU.46.09.png
+Not Found: /api/contacts/contacts/young-african-american-man-doing-laundry.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22.46.09.png
+Not Found: /api/contacts/contacts/url_isbc2jp
+Not Found: /api/contacts/contacts/kero.jpg
+Not Found: /api/contacts/contacts/kero.jpg
+Not Found: /api/contacts/contacts/kero.jpg
+Not Found: /api/contacts/contacts/kero.jpg
+Not Found: /api/contacts/contacts/kero.jpg
+Not Found: /api/contacts/contacts/url_isbc2jp
+Not Found: /api/contacts/contacts/url_isbc2jp
+Not Found: /api/contacts/contacts/url_isbc2jp
+Not Found: /api/contacts/contacts/url_isbc2jp
+Not Found: /api/contacts/contacts/url_isbc2jp
+Not Found: /api/contacts/contacts/url_isbc2jp
+Not Found: /api/contacts/contacts/url_isbc2jp
+Not Found: /api/contacts/contacts/url_isbc2jp
+Not Found: /api/contacts/contacts/url_isbc2jp
+Internal Server Error: /contacts/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/defaulttags.py", line 1035, in find_library
+    return parser.libraries[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 732, in contacts
+    return render(request, 'contacts.html')
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/defaulttags.py", line 1097, in load
+    lib = find_library(parser, name)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/defaulttags.py", line 1037, in find_library
+    raise TemplateSyntaxError(
+    ...<5 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: 'media' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+debugger_tags
+highlighting
+i18n
+indent_text
+l10n
+log
+static
+syntax_color
+tz
+widont
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/young-african-american-man-doing-laundry.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22_jie3JBU.46.09.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22.46.09.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/young-african-american-man-doing-laundry.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22_jie3JBU.46.09.png
+Not Found: /api/contacts/contacts/Screenshot_2024-11-16_at_22.46.09.png
+Not Found: /api/contacts/contacts/man-presenting-something_1.png
+Not Found: /api/contacts/contacts/Grad.jpeg
+Not Found: /api/contacts/contacts/man-smiling-with-hands-hips.png
+Not Found: /contacts/styles.css
+Not Found: /contacts/scripts.js
+Not Found: /path/to/border-image.png
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Not Found: /path/to/border-image.png
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Not Found: /favicon.ico
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Not Found: /path/to/border-image.png
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Not Found: /path/to/border-image.png
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed
+Internal Server Error: /vacancies/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 744, in vacancies
+    return render(request, 'vacancies.html', context)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 563, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 8: 'static', expected 'endblock'. Did you forget to register or load this tag?
+Internal Server Error: /vacancies/
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endwith'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/company/views.py", line 744, in vacancies
+    return render(request, 'vacancies.html', context)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michailmalashkevich/Uni/Strweb5/IGI_LR_5/realtor_agency/myvenv/lib/python3.13/site-packages/django/template/base.py", line 563, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 137: 'endwith', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): favqs.com:443
+https://favqs.com:443 "GET /api/qotd HTTP/11" 200 None
+Home page accessed

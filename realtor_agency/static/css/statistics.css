@@ -1,116 +1,57 @@
+/* statistics.css */
+
 /* General styling for the container */
 .statistics-container {
-    max-width: 1200px; /* Максимальная ширина для контейнера */
-    margin: 50px auto; /* Центрирование контейнера */
-    padding: 20px; /* Внутренние отступы */
-    background-color: #1d1d2e; /* Фон контейнера */
-    border-radius: 15px; /* Скругленные углы */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Тень для объема */
-    color: #f5f5f7; /* Цвет текста */
-    font-family: 'Nunito', sans-serif; /* Шрифт */
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 50px auto; /* Center the container */
+    padding: 20px; /* Internal padding */
+    background-color: #1d1d2e; /* Container background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+    color: #f5f5f7; /* Text color */
+    font-family: 'Nunito', sans-serif; /* Font */
 }
 
-/* Section Title Styling - стилизация заголовка секции */
+/* Section Title Styling */
 .section-title {
-    font-size: 2.2rem; /* Размер шрифта заголовка */
-    text-align: left; /* Выравнивание текста заголовка по левому краю */
-    color: #ffffff; /* Цвет текста заголовка */
-    margin-bottom: 20px; /* Отступ снизу */
-    text-transform: uppercase; /* Преобразование текста заголовка в верхний регистр */
-    border-bottom: 2px solid #4b4bf0; /* Линия под заголовком */
-    padding-bottom: 10px; /* Отступ для линии под заголовком */
+    font-size: 2.2rem; /* Title font size */
+    text-align: left; /* Align title to the left */
+    color: #ffffff; /* Title text color */
+    margin-bottom: 20px; /* Space below the title */
+    text-transform: uppercase; /* Uppercase text */
+    border-bottom: 2px solid #4b4bf0; /* Line below the title */
+    padding-bottom: 10px; /* Padding for the line */
 }
 
-/* Table Styling - оформление таблицы */
-.styled-table {
-    width: 100%; /* Таблица занимает всю ширину контейнера */
-    border-collapse: collapse; /*! Убираем двойные границы между ячейками */
-    margin-bottom: 30px; /* Отступ снизу */
-    background-color: #2c2c3b; /* Фон таблицы */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Тень для объема */
-    border-radius: 8px; /* Скругленные углы таблицы */
-    overflow: hidden; /* Для корректного отображения скругленных углов */
-    text-align: center; /* Центрирование содержимого ячеек */
-}
-
-/*! Table Header - оформление заголовка таблицы */
-.table-header {
-    font-size: 1.8rem; /* Размер шрифта заголовка таблицы */
-    color: #ffffff; /* Цвет текста */
-    text-align: center; /* Центрирование текста */
-    margin-bottom: 10px; /* Отступ снизу */
-}
-
-/* Table Heading - оформление заголовков столбцов */
-.styled-table th {
-    background-color: #4b4bf0; /* Фон заголовков */
-    color: white; /* Цвет текста */
-    font-weight: bold; /* Жирный шрифт для заголовков */
-    padding: 15px; /* Внутренние отступы */
-}
-
-/* Table Body - оформление ячеек */
-.styled-table td {
-    background-color: #333; /* Фон для ячеек */
-    color: #ddd; /* Цвет текста */
-    padding: 15px; /* Внутренние отступы */
-    vertical-align: middle; /* Вертикальное выравнивание содержимого */
-    text-align: center; /* Горизонтальное выравнивание содержимого */
-}
-
-/*! Empty Cells - оформление пустых ячеек */
-.empty-cell {
-    background-color: #ff6f61; /* Фон для пустых ячеек */
-    font-weight: bold; /* Жирный шрифт */
-    color: #fff; /* Белый текст для пустых ячеек */
-}
-
-/* Table Row Hover Effect - эффект наведения на строки таблицы */
-.styled-table tr:hover {
-    background-color: #444; /* Изменение фона при наведении */
-}
-
-/* Alternating Row Colors - чередование цветов строк */
-.styled-table tr:nth-child(even) {
-    background-color: #2f2f3e; /* Цвет для четных строк */
-}
-
-.styled-table tr:nth-child(odd) {
-    background-color: #333; /* Цвет для нечетных строк */
-}
-
-/* Chart Container - оформление контейнера для диаграмм */
+/* Chart Container */
 .chart-container {
-    position: relative; /* Позиционирование контейнера для графиков */
-    height: 400px; /* Высота контейнера */
-    width: 100%; /* Ширина контейнера */
-    margin-bottom: 40px; /* Отступ снизу */
+    position: relative; /* Positioning */
+    height: 400px; /* Height of the chart */
+    width: 100%; /* Width of the chart */
+    margin-bottom: 40px; /* Space below the chart */
 }
 
-/* Canvas Container - контейнер для холста (графики) */
-.canvas-container {
-    height: 100%; /* Высота холста */
-    width: 100%; /* Ширина холста */
-}
-
+/* Canvas Styling */
 .chart-canvas {
-    width: 100% !important; /* Ширина холста */
-    height: 100% !important; /* Высота холста */
+    width: 100% !important; /* Canvas width */
+    height: 100% !important; /* Canvas height */
 }
 
-/* Floating Action Button - пример кнопки для взаимодействия с графиком */
-.floating-action-btn {
-    position: absolute; /* Абсолютное позиционирование кнопки */
-    bottom: 20px; /* Отступ от нижнего края контейнера */
-    right: 20px; /* Отступ от правого края контейнера */
-    padding: 10px 20px; /* Внутренние отступы */
-    background-color: #4b4bf0; /* Цвет кнопки */
-    color: white; /* Цвет текста кнопки */
-    border-radius: 50px; /* Скругленные углы для кнопки */
-    cursor: pointer; /* Курсор при наведении */
-    transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+/* Save Button Styling */
+.save-button {
+    display: block;
+    margin: 10px auto 50px auto; /* Center the button with top margin */
+    padding: 12px 25px; /* Button padding */
+    color: white; /* Button text color */
+    background-color: #4CAF50; /* Initial background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.floating-action-btn:hover {
-    background-color: #333; /* Изменение фона при наведении */
+.save-button:hover {
+    background-color: #e88f0a; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
 }

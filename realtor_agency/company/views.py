@@ -22,6 +22,7 @@ import os
 from django.core.paginator import Paginator
 from django.http import JsonResponse
 from django.template.loader import render_to_string
+import math
 
 logger = logging.getLogger(__name__)
 
@@ -552,42 +553,123 @@ def profile(request):
 
     return render(request, 'profile.html', context)
 
+def seriesApproximation(x, n_terms):
+    """
+    Calculate the series approximation for 1 / (1 - x).
+    Series: sum from n=0 to n_terms-1 of x^n
+    """
+    return sum(x**n for n in range(n_terms))
 
 def statistics(request):
-    clients = User.objects.order_by('username').values('username', 'email')
-    properties = Property.objects.order_by('title')
+    # 1. Retrieve all client data
+    clients = User.objects.order_by('username').values('username', 'email', 'first_name', 'last_name')
 
-    total_sales = Sale.objects.aggregate(Sum('sale_price'))['sale_price__sum']
-    avg_sales = Sale.objects.aggregate(Avg('sale_price'))['sale_price__avg']
-    max_sales = Sale.objects.aggregate(Max('sale_price'))['sale_price__max']
+    # 2. Retrieve all property data
+    properties = Property.objects.order_by('title').values('title')
 
-    popular_category = Property.objects.values('property_types__name').annotate(
-        count=Count('id')).order_by('-count').first()
+    # 3. Calculate Sales Statistics
+    total_sales = Sale.objects.aggregate(Sum('sale_price'))['sale_price__sum'] or 0
+    avg_sales = Sale.objects.aggregate(Avg('sale_price'))['sale_price__avg'] or 0
+    max_sales = Sale.objects.aggregate(Max('sale_price'))['sale_price__max'] or 0
+    sales_count = Sale.objects.count()
 
-    category_counts = Property.objects.values('property_types__name').annotate(
-        count=Count('id')).order_by('-count')
+    # Calculate Median Sales
+    if sales_count == 0:
+        median_sales = 0
+    else:
+        sorted_sales = Sale.objects.order_by('sale_price')
+        mid_index = sales_count // 2
+        if sales_count % 2 != 0:
+            median_sales = sorted_sales[mid_index].sale_price
+        else:
+            lower = sorted_sales[mid_index - 1].sale_price
+            upper = sorted_sales[mid_index].sale_price
+            median_sales = (lower + upper) / 2
 
-    profitable_property = Sale.objects.values('property__title').annotate(
+    # Calculate Mode Sales
+    mode_sales_data = Sale.objects.values('sale_price').annotate(
+        count=Count('sale_price')).order_by('-count').first()
+    mode_sales = mode_sales_data['sale_price'] if mode_sales_data else 0
+
+    # 4. Determine Most Profitable Property
+    most_profitable_property = Sale.objects.values('property__title').annotate(
         total_profit=Sum('sale_price')
     ).order_by('-total_profit').first()
+    most_profitable_property_title = most_profitable_property['property__title'] if most_profitable_property else "N/A"
 
-    total_clients = User.objects.count()
+    # 5. Compile Client Purchase Counts
     client_purchase_counts = Sale.objects.values('buyer__username').annotate(
         purchase_count=Count('id')).order_by('-purchase_count')
 
+    # 6. Generate Series Data for Function Approximation (1 / (1 - x))
+    # Define the range of x values from -0.9 to 0.9 in steps of 0.02
+    x_values = []
+    series_values = []
+    math_values = []
+    epsilon_values = []
+    n_terms = 10  # Number of terms in the series approximation
+    step = 0.02
+    x = -0.9
+    while x <= 0.9:
+        x_rounded = round(x, 2)
+        x_values.append(x_rounded)
+
+        # Series approximation: sum from n=0 to n_terms-1 of x^n
+        series_fx = seriesApproximation(x_rounded, n_terms)
+        series_values.append(round(series_fx, 5))
+
+        # Actual function value
+        if x_rounded == 1:
+            math_fx = float('inf')  # Avoid division by zero
+        else:
+            math_fx = 1 / (1 - x_rounded)
+        math_values.append(round(math_fx, 5) if math_fx != float('inf') else '∞')
+
+        # Calculate error epsilon
+        if math_fx != float('inf'):
+            epsilon = abs(math_fx - series_fx)
+            epsilon_values.append(round(epsilon, 5))
+        else:
+            epsilon_values.append('∞')
+
+        x += step
+
+    # Prepare series_data for the template
+    series_data = []
+    for i in range(len(x_values)):
+        series_data.append({
+            'x': x_values[i],
+            'n_terms': n_terms,
+            'series_fx': series_values[i],
+            'math_fx': math_values[i],
+            'epsilon': epsilon_values[i]
+        })
+
+    # 7. Pass All Context Variables to the Template
     context = {
         'clients': clients,
         'properties': properties,
-        'total_sales': total_sales,
-        'avg_sales': avg_sales,
-        'max_sales': max_sales,
-        'popular_category': popular_category,
-        'most_profitable_property': profitable_property,
-        'category_counts': list(category_counts),
-        'total_clients': total_clients,
+        'total_sales': round(total_sales, 2),
+        'avg_sales': round(avg_sales, 2),
+        'max_sales': round(max_sales, 2),
+        'median_sales': round(median_sales, 2),
+        'mode_sales': round(mode_sales, 2),
+        'most_profitable_property': most_profitable_property_title,
         'client_purchase_counts': client_purchase_counts,
+        'series_data': series_data,
+        'n_terms': n_terms,  # Ensure this is included for the chart label
+        'total_clients': User.objects.count(),
     }
+
     return render(request, 'statistics.html', context)
+
+
+def seriesApproximation(x, n_terms):
+    """
+    Calculate the series approximation for 1 / (1 - x).
+    Series: sum from n=0 to n_terms-1 of x^n
+    """
+    return sum(x**n for n in range(n_terms))
 
 
 def client_age_statistics_view(request):

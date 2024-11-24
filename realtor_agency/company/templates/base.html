@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My Company{% endblock %}</title>
     {% load static %}
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="{% static 'images/apple.png' %}">
+    
+    <!-- General Stylesheets -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/home_style.css' %}">
     <link rel="stylesheet" href="{% static 'css/company_info.css' %}">
@@ -21,13 +25,13 @@
     <link rel="stylesheet" href="{% static 'css/reviews_form.css' %}">
     <link rel="stylesheet" href="{% static 'css/news_style.css' %}">
     <link rel="stylesheet" href="{% static 'css/coupons.css' %}">
-    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
     <link rel="stylesheet" href="{% static 'css/cart.css' %}">
     <link rel="stylesheet" href="{% static 'css/statistics.css' %}">
     <link rel="stylesheet" href="{% static 'css/house.css' %}">
     <link rel="stylesheet" href="{% static 'css/detail.css' %}">
-    <!--<link rel="stylesheet" href="{% static 'css/demo.css' %}"> -->
-
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    
+    <!-- Inline Styles -->
     <style>
         :root {
             --color-bg1: rgb(34, 0, 64);
@@ -54,9 +58,7 @@
             text-align: center;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
             z-index: 999;
-            /* Ensure header stays on top */
             position: relative;
-            /* Ensure it isn't affected by absolute elements */
         }
 
         .nav-menu {
@@ -68,98 +70,12 @@
             border-radius: 8px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
             z-index: 1000;
-            /* Ensure navigation stays on top */
             position: relative;
-            /* Prevent it from being pushed by absolute elements */
         }
 
         .nav-menu li {
             margin: 0 15px;
         }
-
-        .certificate-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .certificate-gradient-border {
-            position: relative;
-            padding: 40px;
-            background: linear-gradient(135deg, #f1f1f1, #fefefe);
-            border-radius: 25px;
-            border: 15px solid;
-            border-image: linear-gradient(45deg, #ff6a00, #ee0979, #ff6a00) 1;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            text-align: center;
-            font-family: 'Georgia', serif;
-        }
-
-        .certificate-content {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        .certificate-title {
-            font-size: 36px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .certificate-subtitle {
-            font-size: 24px;
-            color: #777;
-            margin-bottom: 25px;
-        }
-
-        .certificate-section h2 {
-            color: #333;
-            /* Цвет должен совпадать с остальными заголовками */
-        }
-
-        .certificate-logo .company-logo-small {
-            max-width: 100px;
-            height: auto;
-            margin: 10px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Подпись справа */
-        .certificate-signature {
-            position: absolute;
-            right: 40px;
-            bottom: 40px;
-            text-align: right;
-            max-width: 10px;
-            max-height: 10px;
-        }
-
-        .signature-text {
-            font-size: 14px;
-            color: #333;
-        }
-
-        .signature-image-small {
-            max-width: 150px;
-            height: auto;
-            margin-top: 10px;
-        }
-
-        .certificate-footer {
-            font-size: 18px;
-            color: #555;
-            margin-top: 40px;
-            font-style: italic;
-        }
-
 
         .nav-menu a {
             display: block;
@@ -173,7 +89,6 @@
             font-size: 16px;
             transition: all 0.3s ease;
             z-index: 1001;
-            /* Ensure the links are clickable */
         }
 
         .nav-menu a:hover {
@@ -188,6 +103,7 @@
             color: white;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
             .nav-menu {
                 flex-direction: column;
@@ -201,6 +117,10 @@
             }
         }
     </style>
+
+    <!-- Additional Head Block for Child Templates -->
+    {% block head %}
+    {% endblock %}
 </head>
 
 <body>
@@ -217,28 +137,37 @@
                 <li><a href="{% url 'reviews' %}">Reviews</a></li>
                 <li><a href="{% url 'coupons' %}">Promos</a></li>
                 {% if user.is_authenticated %}
-                <li><a href="{% url 'logout' %}">Logout</a></li>
-                <li><a href="{% url 'profile' %}">Profile</a></li>
-                {% if user.is_superuser %}
-                <li><a href="{% url 'property_list' %}">Manage Properties</a></li>
-                {% endif %}
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                    <li><a href="{% url 'profile' %}">Profile</a></li>
+                    {% if user.is_superuser %}
+                        <li><a href="{% url 'property_list' %}">Manage Properties</a></li>
+                    {% endif %}
                 {% else %}
-                <li><a href="{% url 'login' %}">Login</a></li>
-                <li><a href="{% url 'register' %}">Register</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'register' %}">Register</a></li>
                 {% endif %}
             </ul>
         </nav>
     </header>
+
     <main>
         {% block content %}
         {% endblock %}
     </main>
 
+    <!-- Scripts Block for Child Templates -->
     {% block scripts %}
-<script src="{% static 'js/slider.js' %}"></script>
-<script src="{% static 'js/script_proto.js' %}"></script>
-
-{% endblock %}
+        <!-- General JavaScript Files -->
+        <script src="{% static 'js/slider.js' %}"></script>
+        <script src="{% static 'js/script_proto.js' %}"></script>
+        <script src="{% static 'js/contacts.js' %}"></script>
+        
+        <!-- Chart.js Library -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        
+        <!-- Chart.js Annotation Plugin -->
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.1.0/dist/chartjs-plugin-annotation.min.js"></script>
+    {% endblock %}
 </body>
 
 </html>

@@ -1,137 +1,312 @@
 {% extends 'base.html' %}
-
-{% block title %}
-    Statistics
-{% endblock %}
-
 {% load static %}
 
-<head>
-    <link rel="stylesheet" href="{% static 'css/statistics.css' %}">
-</head>
+{% block title %}
+    Function Approximation Chart
+{% endblock %}
+
+{% block head %}
+    <!-- Include Math.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
+    <!-- Include Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Optional: Include a CSS Reset or your own styles -->
+    <style>
+        /* Table Styling with Dark Purple/Blue Theme */
+        .data-table-container {
+            width: 90%;
+            margin: 40px auto;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #2c2c54; /* Dark background for the table */
+            color: #f0f0f0; /* Light text color for readability */
+        }
+
+        th, td {
+            border: 1px solid #444; /* Subtle border for cells */
+            text-align: right;
+            padding: 12px 8px;
+        }
+
+        th {
+            background-color: #4B0082; /* Dark Purple */
+            color: #ffffff; /* White text for contrast */
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        tr:nth-child(even) {
+            background-color: #3a0ca3; /* Slightly lighter purple for even rows */
+        }
+
+        tr:nth-child(odd) {
+            background-color: #2c2c54; /* Darker purple for odd rows */
+        }
+
+        tr:hover {
+            background-color: #5a189a; /* Highlight color on hover */
+            color: #ffffff; /* Ensure text remains white on hover */
+        }
+
+        /* Responsive Adjustments */
+        @media screen and (max-width: 768px) {
+            .chart-container, .data-table-container {
+                width: 100%;
+                padding: 0 10px;
+            }
+
+            th, td {
+                padding: 10px 6px;
+                font-size: 14px;
+            }
+        }
+
+        /* Optional: Style for Table Headers */
+        th:first-child, td:first-child {
+            text-align: left; /* Align the first column to the left for better readability */
+        }
+    </style>
+{% endblock %}
 
 {% block content %}
 <div class="statistics-container">
-    <h1 class="section-title">Statistics</h1>
+    <h1 class="section-title">Function Approximation Chart</h1>
 
-    <h2 class="table-header">Clients</h2>
-    <table class="styled-table">
-        <thead>
-            <tr>
-                <th>Username</th>
-                <th>Email</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for client in clients %}
-            <tr>
-                <td>{{ client.username }}</td>
-                <td>{{ client.email }}</td>
-            </tr>
-            {% empty %}
-            <tr>
-                <td colspan="2" class="empty-cell">No clients available</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-
-    <h2 class="section-title">Sales Summary</h2>
-    <p><strong>Total Sales:</strong> {{ total_sales }}</p>
-    <p><strong>Average Sale:</strong> {{ avg_sales }}</p>
-    <p><strong>Max Sale:</strong> {{ max_sales }}</p>
-
-    <h2 class="section-title">Popular and Profitable Categories</h2>
-    <p><strong>Most Popular Category:</strong> {{ popular_category.property_types__name }}</p>
-    <p><strong>Most Profitable Property:</strong> {{ most_profitable_property.property__title }} with total profit of ${{ most_profitable_property.total_profit }}</p>
-
-    <h2 class="table-header">Client Purchases</h2>
-    <table class="styled-table">
-        <thead>
-            <tr>
-                <th>Username</th>
-                <th>Purchase Count</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for client_purchase in client_purchase_counts %}
-            <tr>
-                <td>{{ client_purchase.buyer__username }}</td>
-                <td>{{ client_purchase.purchase_count }}</td>
-            </tr>
-            {% empty %}
-            <tr>
-                <td colspan="2" class="empty-cell">No purchase data available</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-
-    <h2 class="section-title">Sales Charts</h2>
-    <div class="chart-container">
-        <canvas id="salesChart" class="chart-canvas"></canvas>
+    <div class="chart-container" style="position: relative; width: 90%; margin: 0 auto;">
+        <canvas id="myChart" width="800" height="400"></canvas>
     </div>
-    <div class="chart-container">
-        <canvas id="categoryChart" class="chart-canvas"></canvas>
+    
+    <!-- Save Chart Button -->
+    <div style="text-align: center; margin-top: 20px;">
+        <button 
+            id="saveChartButton" 
+            style="
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            "
+            onmouseover="this.style.backgroundColor='#45a049'" 
+            onmouseout="this.style.backgroundColor='#4CAF50'"
+        >
+            Save Chart
+        </button>
     </div>
-    <div class="chart-container">
-        <canvas id="popularityChart" class="chart-canvas"></canvas>
+    
+    <!-- Data Table -->
+    <div class="data-table-container">
+        <h2 class="section-subtitle" style="text-align: center; color: #ffffff;">Computed Values</h2>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>x</th>
+                    <th>Exact ln(1+x)</th>
+                    <th>Series Approximation (n=5)</th>
+                    <th>Series Approximation (n=10)</th>
+                    <th>Series Approximation (n=20)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be populated by JavaScript -->
+            </tbody>
+        </table>
     </div>
+</div>
+{% endblock %}
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% block scripts %}
+    {{ block.super }}
+    
+    <!-- JavaScript for Chart.js Integration and Table Population -->
     <script>
-        // Sales Chart
-        const salesCtx = document.getElementById('salesChart').getContext('2d');
-        const salesChart = new Chart(salesCtx, {
-            type: 'bar',
-            data: {
-                labels: ['Total Sales', 'Average Sale', 'Max Sale'],
-                datasets: [{
-                    label: 'Sales Data',
-                    data: [{{ total_sales }}, {{ avg_sales }}, {{ max_sales }}],
-                    backgroundColor: ['rgba(54, 162, 235, 0.6)', 'rgba(75, 192, 192, 0.6)', 'rgba(153, 102, 255, 0.6)'],
-                    borderColor: ['rgba(54, 162, 235, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)'],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: { beginAtZero: true }
-                },
-                responsive: true,
-                maintainAspectRatio: false
+        // Wait for the DOM to fully load
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if Chart.js is loaded
+            if (typeof Chart === 'undefined') {
+                console.error('Chart.js is not loaded.');
+                return;
             }
-        });
 
-        // Popularity Chart (Pie)
-        const popularityCtx = document.getElementById('popularityChart').getContext('2d');
-        const popularityChart = new Chart(popularityCtx, {
-            type: 'pie',
-            data: {
-                labels: [{% for category in category_counts %}'{{ category.property_types__name }}',{% endfor %}],
-                datasets: [{
-                    label: 'Popular Property Types',
-                    data: [{% for category in category_counts %}{{ category.count }},{% endfor %}],
-                    backgroundColor: ['rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(255, 206, 86, 0.6)', 'rgba(75, 192, 192, 0.6)', 'rgba(153, 102, 255, 0.6)', 'rgba(255, 159, 64, 0.6)'],
-                    borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { position: 'top' },
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                return context.label + ': ' + context.raw;
+            // Get the canvas element where the chart will be rendered
+            const ctx = document.getElementById('myChart').getContext('2d');
+
+            // Define the range of x values from 0.1 to 1 with a step of 0.01
+            const xValues = [];
+            for (let x = 0.1; x <= 1; x += 0.01) {
+                xValues.push(parseFloat(x.toFixed(2)));
+            }
+
+            // Function to calculate the exact ln(1+x) using Math.js
+            function calculateExactLn(x) {
+                return math.log(1 + x);
+            }
+
+            // Function to calculate the series approximation of ln(1+x) up to n terms
+            function calculateSeriesLn(x, n) {
+                let sum = 0;
+                for (let i = 1; i <= n; i++) {
+                    const term = Math.pow(-1, i + 1) * Math.pow(x, i) / i;
+                    sum += term;
+                }
+                return sum;
+            }
+
+            // Prepare datasets for exact function and series approximations
+            const exactValues = xValues.map(x => calculateExactLn(x));
+
+            // Define different values of n for series approximation
+            const nValues = [5, 10, 20];
+            const seriesColors = ['rgba(54, 162, 235, 1)', 'rgba(255, 99, 132, 1)', 'rgba(255, 206, 86, 1)'];
+            const seriesLabels = nValues.map(n => `Series Approximation (n=${n})`);
+            const seriesDatasets = nValues.map((n, index) => {
+                const data = xValues.map(x => calculateSeriesLn(x, n));
+                return {
+                    label: seriesLabels[index],
+                    data: data,
+                    borderColor: seriesColors[index],
+                    backgroundColor: seriesColors[index],
+                    fill: false,
+                    tension: 0.1,
+                    borderWidth: 2,
+                    pointRadius: 0, // Hide points for smoother lines
+                };
+            });
+
+            // Dataset for exact ln(1+x)
+            const exactDataset = {
+                label: 'Exact ln(1+x)',
+                data: exactValues,
+                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                fill: false,
+                tension: 0.1,
+                borderWidth: 2,
+                pointRadius: 0, // Hide points for smoother lines
+            };
+
+            // Combine all datasets
+            const allDatasets = [exactDataset, ...seriesDatasets];
+
+            // Create the Chart.js chart
+            const myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: xValues,
+                    datasets: allDatasets
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        duration: 2000, // 2 seconds for the animation
+                        easing: 'easeInOutQuart'
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Comparison of Exact ln(1+x) and Series Approximations',
+                            font: {
+                                size: 18
                             }
+                        },
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                usePointStyle: true,
+                                pointStyle: 'line'
+                            }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                        }
+                        // Annotation plugin can be added here if needed
+                    },
+                    interaction: {
+                        mode: 'nearest',
+                        axis: 'x',
+                        intersect: false
+                    },
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'x',
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'ln(1+x)',
+                                font: {
+                                    size: 14
+                                }
+                            },
+                            beginAtZero: false
                         }
                     }
                 }
+            });
+
+            console.log('Chart.js and necessary libraries loaded');
+
+            // Save Chart Functionality
+            const saveButton = document.getElementById('saveChartButton');
+            saveButton.addEventListener('click', function () {
+                // Convert the chart to a base64 image
+                const link = document.createElement('a');
+                link.href = myChart.toBase64Image();
+                link.download = 'function_approximation_chart.png';
+                // Trigger the download
+                link.click();
+            });
+
+            // Populate the Data Table
+            const dataTableBody = document.querySelector('#dataTable tbody');
+
+            // Precompute series approximations
+            const seriesData = nValues.map(n => xValues.map(x => calculateSeriesLn(x, n)));
+
+            // Iterate through each x value and append a row to the table
+            for (let i = 0; i < xValues.length; i++) {
+                const row = document.createElement('tr');
+
+                // Create cells for x, exact ln(1+x), and series approximations
+                const xCell = document.createElement('td');
+                xCell.textContent = xValues[i].toFixed(2);
+                row.appendChild(xCell);
+
+                const exactCell = document.createElement('td');
+                exactCell.textContent = exactValues[i].toFixed(6);
+                row.appendChild(exactCell);
+
+                // Append series approximation cells
+                seriesData.forEach(dataSet => {
+                    const seriesCell = document.createElement('td');
+                    seriesCell.textContent = dataSet[i].toFixed(6);
+                    row.appendChild(seriesCell);
+                });
+
+                dataTableBody.appendChild(row);
             }
         });
     </script>
-</div>
 {% endblock %}
